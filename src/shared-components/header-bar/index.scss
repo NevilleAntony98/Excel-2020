@@ -1,0 +1,39 @@
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
+
+.competitions-header {
+    display: flex;
+    background-color: $header-bar-background;
+    color: white;
+    align-items: center;
+    padding: 0.5rem 4rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px -2px black;
+
+    @include mobile-view {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title {
+        margin-right: auto;
+        font-size: 2rem;
+        text-decoration: none;
+        color: $color-title-dark;
+        padding: 1rem;
+
+        @include mobile-view {
+            margin: 1rem;
+        }
+    }
+
+    .subtitle {
+        margin-left: auto;
+        font-size: 1.3rem;
+        font-weight: 300;
+
+        @include mobile-view {
+            margin: 0.5rem;
+        }
+    }
+}
