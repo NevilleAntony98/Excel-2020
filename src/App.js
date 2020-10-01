@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 
 import Home from './pages/Home';
 import Events from './pages/Events';
-import Competitions from './pages/Competitions';
+import Competitions from './pages/competitions';
 import Schedule from './pages/Schedule';
 import Contacts from './pages/Contacts';
 
