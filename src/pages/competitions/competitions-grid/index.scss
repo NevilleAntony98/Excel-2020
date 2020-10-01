@@ -1,0 +1,38 @@
+@import "../../../sass/variables";
+@import "../../../sass/mixins";
+
+.competition-grid {
+    .sort-filter-box {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 0rem 14vw;
+
+        @include mobile-view {
+            padding: 0rem 10vw;
+        }
+
+        .drop-down {
+            min-width: 10rem;
+        }
+    }
+
+    .competition-cards-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 3rem;
+        column-gap: 3rem;
+
+        text-align: center;
+        padding: 2rem 14vw;
+
+        @include mobile-view {
+            padding: 1rem 10vw;
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        @include tablet-view {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+}
