@@ -1,0 +1,20 @@
+.sidebar-container {
+  height: 100%;
+  width: 20%;
+  z-index: 1;
+  background-color: green;
+  position: fixed;
+  top: 0;
+}
+.sidebar-pic {
+  background-color: blueviolet;
+  height: 20%;
+}
+.sidebar-row {
+  display: flex;
+  padding: 4px;
+  font-weight: bold;
+}
+.sidebar-row:hover {
+  background-color: limegreen;
+}
