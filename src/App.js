@@ -3,13 +3,21 @@ import React from "react";
 
 import Navbar from "./components/Navbar";
 
+import useWindowDimensions from "./hooks/useWindowDimensions";
+
 import "./App.scss";
 
 const App = () => {
   return (
     <div className="app-container">
       <Navbar />
-      <div style={{position: "fixed", top: '0', left:'5%'}}>
+      <div
+        style={{
+          position: "fixed",
+          top: "0",
+          left: useWindowDimensions().width < 800 ? "0" : "5%",
+        }}
+      >
         MAIN123456789nysabcdefghijklmnop
       </div>
       {/* <Switch>

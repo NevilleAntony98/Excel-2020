@@ -4,11 +4,12 @@ import Sidebar from "./Sidebar";
 import SmallSidebar from "./SmallSidebar";
 import Bottombar from './Bottombar';
 
+import useWindowDimensions from '../hooks/useWindowDimensions';
+
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
 
-  return isMobile ? (
+  return useWindowDimensions().width < 800 ? (
     <Bottombar />
   ) : isSidebarOpen ? (
     <Sidebar setIsSidebarOpen={setIsSidebarOpen} />
