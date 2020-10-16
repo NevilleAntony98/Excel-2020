@@ -1,0 +1,24 @@
+.smallSidebar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 2%;
+  padding: 20px;
+  background-color: brown;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.smallSidebar-startContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 35%;
+}
+.smallSidebar-endContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 35%;
+}

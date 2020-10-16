@@ -1,29 +1,19 @@
 import React, { useState } from "react";
 
 import Sidebar from "./Sidebar";
-
-import "./Navbar.css";
-
-const Topbar = ({ setIsSidebarOpen }) => {
-  return (
-    <div className="navbar-container">
-      <div onClick={() => setIsSidebarOpen(true)}>=</div>
-      <div className="navbar-endContainer">
-        <div>P1</div>
-        <div>P2</div>
-      </div>
-    </div>
-  );
-};
+import SmallSidebar from "./SmallSidebar";
+import Bottombar from './Bottombar';
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-  return (
-    <>
-      <Topbar setIsSidebarOpen={setIsSidebarOpen} />
-      {isSidebarOpen && <Sidebar setIsSidebarOpen={setIsSidebarOpen} />}
-    </>
+  return isMobile ? (
+    <Bottombar />
+  ) : isSidebarOpen ? (
+    <Sidebar setIsSidebarOpen={setIsSidebarOpen} />
+  ) : (
+    <SmallSidebar setIsSidebarOpen={setIsSidebarOpen} />
   );
 };
 

@@ -7,9 +7,11 @@ import "./App.scss";
 
 const App = () => {
   return (
-    <div>
+    <div className="app-container">
       <Navbar />
-      MAIN
+      <div style={{position: "fixed", top: '0', left:'5%'}}>
+        MAIN123456789nysabcdefghijklmnop
+      </div>
       {/* <Switch>
                   <Route path="/home" component={Home} />
                   <Route path="/competitions" component={Competitions} />

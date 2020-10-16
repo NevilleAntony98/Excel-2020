@@ -5,6 +5,7 @@
   background-color: green;
   position: fixed;
   top: 0;
+  left: 0;
 }
 .sidebar-pic {
   background-color: blueviolet;
