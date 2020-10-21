@@ -1,7 +1,5 @@
 import React from "react";
 
-import useWindowDimensions from "../hooks/useWindowDimensions";
-
 import "./SmallSidebar.css";
 
 const SmallSidebar = ({ setIsSidebarOpen }) => {
