@@ -6,6 +6,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  overflow-y: auto;
 }
 .sidebar-pic {
   background-color: blueviolet;
@@ -13,7 +14,7 @@
 }
 .sidebar-row {
   display: flex;
-  padding: 4px;
+  padding: 14px 4px;
   font-weight: bold;
 }
 .sidebar-row:hover {

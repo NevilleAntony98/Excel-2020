@@ -6,15 +6,3 @@
   padding: 20px;
   background-color: brown;
 }
-.smallSidebar-startContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 35%;
-}
-.smallSidebar-endContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 35%;
-}

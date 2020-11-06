@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from "react";
 import "./Sidebar.css";
 
 const Sidebar = ({ setIsSidebarOpen }) => {
-    
   const useOutsideAlerter = (ref) => {
     useEffect(() => {
       function handleClickOutside(event) {
@@ -26,10 +25,28 @@ const Sidebar = ({ setIsSidebarOpen }) => {
     <div className="sidebar-container" ref={wrapperRef}>
       <div className="sidebar-pic">Pic</div>
       <div className="sidebar-row" onClick={() => setIsSidebarOpen(false)}>
-        Hello
+        Home
       </div>
       <div className="sidebar-row" onClick={() => setIsSidebarOpen(false)}>
-        Hi
+        Schedule
+      </div>
+      <div className="sidebar-row" onClick={() => setIsSidebarOpen(false)}>
+        Competitions
+      </div>
+      <div className="sidebar-row" onClick={() => setIsSidebarOpen(false)}>
+        Events
+      </div>
+      <div className="sidebar-row" onClick={() => setIsSidebarOpen(false)}>
+        Contacts
+      </div>
+      <div className="sidebar-row" onClick={() => setIsSidebarOpen(false)}>
+        Facebook
+      </div>
+      <div className="sidebar-row" onClick={() => setIsSidebarOpen(false)}>
+        Twitter
+      </div>
+      <div className="sidebar-row" onClick={() => setIsSidebarOpen(false)}>
+        Github
       </div>
     </div>
   );
