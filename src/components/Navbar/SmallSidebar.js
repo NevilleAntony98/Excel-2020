@@ -11,19 +11,24 @@ import events from "../../assets/svg/events.svg";
 
 const SmallSidebar = ({ setIsSidebarOpen }) => {
   return (
-    <div className="smallSidebar-container">
+    <div className="smallSidebarContainer">
       <img
-        alt=""
+        alt="expand menu"
         src={hamburgerMenu}
         onClick={() => setIsSidebarOpen(true)}
-        height="20px"
-        width="20px"
+        className="smallSidebarIcon"
       />
-      <img alt="home" src={home} height="20px" width="20px" />
-      <img alt="schedule" src={schedule} height="20px" width="20px" />
-      <img alt="competitions" src={competitions} height="20px" width="20px" />
-      <img alt="events" src={events} height="20px" width="20px" />
-      <img alt="contacts" src={contacts} height="20px" width="20px" />
+      <div className="smallSidebarInnerContainer">
+        <img alt="home" src={home} className="smallSidebarIcon" />
+        <img alt="schedule" src={schedule} className="smallSidebarIcon" />
+        <img
+          alt="competitions"
+          src={competitions}
+          className="smallSidebarIcon"
+        />
+        <img alt="events" src={events} className="smallSidebarIcon" />
+        <img alt="contacts" src={contacts} className="smallSidebarIcon" />
+      </div>
     </div>
   );
 };
