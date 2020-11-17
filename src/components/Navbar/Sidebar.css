@@ -17,6 +17,8 @@
   padding: 14px 4px;
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 .sidebar-row:hover {
   background-color: limegreen;

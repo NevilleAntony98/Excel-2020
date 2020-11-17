@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { NavLink } from "react-router-dom";
 
 import home from "../../assets/svg/home.svg";
 import schedule from "../../assets/svg/schedule.svg";
@@ -33,26 +34,46 @@ const Sidebar = ({ setIsSidebarOpen }) => {
   return (
     <div className="sidebar-container" ref={wrapperRef}>
       <div className="sidebar-pic">Pic</div>
-      <div className="sidebar-row" onClick={() => setIsSidebarOpen(false)}>
+      <NavLink
+        to="/"
+        className="sidebar-row"
+        onClick={() => setIsSidebarOpen(false)}
+      >
         <img alt="home" src={home} className="sidebarIcon" />
         Home
-      </div>
-      <div className="sidebar-row" onClick={() => setIsSidebarOpen(false)}>
+      </NavLink>
+      <NavLink
+        to="/schedule"
+        className="sidebar-row"
+        onClick={() => setIsSidebarOpen(false)}
+      >
         <img alt="schedule" src={schedule} className="sidebarIcon" />
         Schedule
-      </div>
-      <div className="sidebar-row" onClick={() => setIsSidebarOpen(false)}>
+      </NavLink>
+      <NavLink
+        to="/competitions"
+        className="sidebar-row"
+        onClick={() => setIsSidebarOpen(false)}
+      >
         <img alt="competitions" src={competitions} className="sidebarIcon" />
         Competitions
-      </div>
-      <div className="sidebar-row" onClick={() => setIsSidebarOpen(false)}>
+      </NavLink>
+      <NavLink
+        to="/events"
+        className="sidebar-row"
+        onClick={() => setIsSidebarOpen(false)}
+      >
         <img alt="events" src={events} className="sidebarIcon" />
         Events
-      </div>
-      <div className="sidebar-row" onClick={() => setIsSidebarOpen(false)}>
+      </NavLink>
+      <NavLink
+        to="/contacts"
+        className="sidebar-row"
+        onClick={() => setIsSidebarOpen(false)}
+      >
         <img alt="contacts" src={contacts} className="sidebarIcon" />
         Contacts
-      </div>
+      </NavLink>
       <div className="sidebar-rowSocial">
         <img alt="facebook" src={facebook} className="sidebarSocialIcon" />
         <img alt="instagram" src={instagram} className="sidebarSocialIcon" />

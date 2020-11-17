@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import "./Bottombar.css";
 
@@ -11,13 +12,13 @@ import excelLogo from "../../assets/svg/excelLogo.svg";
 const Bottombar = () => {
   return (
     <div className="bottombar-container">
-      <div>
+      <NavLink to="/schedule">
         <img alt="Schedule" src={schedule} height="20px" width="20px" />
-      </div>
-      <div>
+      </NavLink>
+      <NavLink to="/competitions">
         <img alt="Competitions" src={competitions} height="20px" width="20px" />
-      </div>
-      <div>
+      </NavLink>
+      <NavLink to="/">
         <img
           alt="Home"
           src={excelLogo}
@@ -25,13 +26,13 @@ const Bottombar = () => {
           width="60px"
           style={{ marginTop: "-24px" }}
         />
-      </div>
-      <div>
+      </NavLink>
+      <NavLink to="/events">
         <img alt="Events" src={events} height="20px" width="20px" />
-      </div>
-      <div>
+      </NavLink>
+      <NavLink to="/contacts">
         <img alt="Contacts" src={contacts} height="20px" width="20px" />
-      </div>
+      </NavLink>
     </div>
   );
 };

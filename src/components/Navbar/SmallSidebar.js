@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import "./SmallSidebar.css";
 
@@ -19,15 +20,25 @@ const SmallSidebar = ({ setIsSidebarOpen }) => {
         className="smallSidebarIcon"
       />
       <div className="smallSidebarInnerContainer">
-        <img alt="home" src={home} className="smallSidebarIcon" />
-        <img alt="schedule" src={schedule} className="smallSidebarIcon" />
-        <img
-          alt="competitions"
-          src={competitions}
-          className="smallSidebarIcon"
-        />
-        <img alt="events" src={events} className="smallSidebarIcon" />
-        <img alt="contacts" src={contacts} className="smallSidebarIcon" />
+        <NavLink to="/">
+          <img alt="home" src={home} className="smallSidebarIcon" />
+        </NavLink>
+        <NavLink to="/schedule">
+          <img alt="schedule" src={schedule} className="smallSidebarIcon" />
+        </NavLink>
+        <NavLink to="/competitions">
+          <img
+            alt="competitions"
+            src={competitions}
+            className="smallSidebarIcon"
+          />
+        </NavLink>
+        <NavLink to="/events">
+          <img alt="events" src={events} className="smallSidebarIcon" />
+        </NavLink>
+        <NavLink to="/contacts">
+          <img alt="contacts" src={contacts} className="smallSidebarIcon" />
+        </NavLink>
       </div>
     </div>
   );
