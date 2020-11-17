@@ -1,19 +1,19 @@
-import React, { useEffect, useRef } from "react";
-import { NavLink } from "react-router-dom";
+import React, {useEffect, useRef} from 'react';
+import {NavLink} from 'react-router-dom';
 
-import home from "../../assets/svg/home.svg";
-import schedule from "../../assets/svg/schedule.svg";
-import competitions from "../../assets/svg/competitions.svg";
-import contacts from "../../assets/svg/contacts.svg";
-import events from "../../assets/svg/events.svg";
-import facebook from "../../assets/svg/facebook.svg";
-import instagram from "../../assets/svg/instagram.svg";
-import twitter from "../../assets/svg/twitter.svg";
+import home from '../../assets/svg/home.svg';
+import schedule from '../../assets/svg/schedule.svg';
+import competitions from '../../assets/svg/competitions.svg';
+import contacts from '../../assets/svg/contacts.svg';
+import events from '../../assets/svg/events.svg';
+import facebook from '../../assets/svg/facebook.svg';
+import instagram from '../../assets/svg/instagram.svg';
+import twitter from '../../assets/svg/twitter.svg';
 
-import "./Sidebar.css";
+import './Sidebar.css';
 
-const Sidebar = ({ setIsSidebarOpen }) => {
-  const useOutsideAlerter = (ref) => {
+const Sidebar = ({setIsSidebarOpen}) => {
+  const useOutsideAlerter = ref => {
     useEffect(() => {
       function handleClickOutside(event) {
         if (ref.current && !ref.current.contains(event.target)) {
@@ -21,9 +21,9 @@ const Sidebar = ({ setIsSidebarOpen }) => {
         }
       }
 
-      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener('mousedown', handleClickOutside);
       return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
+        document.removeEventListener('mousedown', handleClickOutside);
       };
     }, [ref]);
   };
@@ -34,43 +34,23 @@ const Sidebar = ({ setIsSidebarOpen }) => {
   return (
     <div className="sidebar-container" ref={wrapperRef}>
       <div className="sidebar-pic">Pic</div>
-      <NavLink
-        to="/"
-        className="sidebar-row"
-        onClick={() => setIsSidebarOpen(false)}
-      >
+      <NavLink to="/" className="sidebar-row" onClick={() => setIsSidebarOpen(false)}>
         <img alt="home" src={home} className="sidebarIcon" />
         Home
       </NavLink>
-      <NavLink
-        to="/schedule"
-        className="sidebar-row"
-        onClick={() => setIsSidebarOpen(false)}
-      >
+      <NavLink to="/schedule" className="sidebar-row" onClick={() => setIsSidebarOpen(false)}>
         <img alt="schedule" src={schedule} className="sidebarIcon" />
         Schedule
       </NavLink>
-      <NavLink
-        to="/competitions"
-        className="sidebar-row"
-        onClick={() => setIsSidebarOpen(false)}
-      >
+      <NavLink to="/competitions" className="sidebar-row" onClick={() => setIsSidebarOpen(false)}>
         <img alt="competitions" src={competitions} className="sidebarIcon" />
         Competitions
       </NavLink>
-      <NavLink
-        to="/events"
-        className="sidebar-row"
-        onClick={() => setIsSidebarOpen(false)}
-      >
+      <NavLink to="/events" className="sidebar-row" onClick={() => setIsSidebarOpen(false)}>
         <img alt="events" src={events} className="sidebarIcon" />
         Events
       </NavLink>
-      <NavLink
-        to="/contacts"
-        className="sidebar-row"
-        onClick={() => setIsSidebarOpen(false)}
-      >
+      <NavLink to="/contacts" className="sidebar-row" onClick={() => setIsSidebarOpen(false)}>
         <img alt="contacts" src={contacts} className="sidebarIcon" />
         Contacts
       </NavLink>

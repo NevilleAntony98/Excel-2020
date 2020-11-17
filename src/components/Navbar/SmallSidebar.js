@@ -1,16 +1,16 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import {NavLink} from 'react-router-dom';
 
-import "./SmallSidebar.css";
+import './SmallSidebar.css';
 
-import hamburgerMenu from "../../assets/svg/hamburgerMenu.svg";
-import home from "../../assets/svg/home.svg";
-import schedule from "../../assets/svg/schedule.svg";
-import competitions from "../../assets/svg/competitions.svg";
-import contacts from "../../assets/svg/contacts.svg";
-import events from "../../assets/svg/events.svg";
+import hamburgerMenu from '../../assets/svg/hamburgerMenu.svg';
+import home from '../../assets/svg/home.svg';
+import schedule from '../../assets/svg/schedule.svg';
+import competitions from '../../assets/svg/competitions.svg';
+import contacts from '../../assets/svg/contacts.svg';
+import events from '../../assets/svg/events.svg';
 
-const SmallSidebar = ({ setIsSidebarOpen }) => {
+const SmallSidebar = ({setIsSidebarOpen}) => {
   return (
     <div className="smallSidebarContainer">
       <img
@@ -27,11 +27,7 @@ const SmallSidebar = ({ setIsSidebarOpen }) => {
           <img alt="schedule" src={schedule} className="smallSidebarIcon" />
         </NavLink>
         <NavLink to="/competitions">
-          <img
-            alt="competitions"
-            src={competitions}
-            className="smallSidebarIcon"
-          />
+          <img alt="competitions" src={competitions} className="smallSidebarIcon" />
         </NavLink>
         <NavLink to="/events">
           <img alt="events" src={events} className="smallSidebarIcon" />

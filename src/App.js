@@ -1,15 +1,15 @@
-import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import React from 'react';
+import {Switch, Route, Redirect} from 'react-router-dom';
 
-import Navbar from "./components/Navbar";
+import Navbar from './components/Navbar';
 
-import Home from "./pages/Home";
-import Events from "./pages/Events";
-import Competitions from "./pages/Competitions";
-import Schedule from "./pages/Schedule";
-import Contacts from "./pages/Contacts";
+import Home from './pages/Home';
+import Events from './pages/Events';
+import Competitions from './pages/Competitions';
+import Schedule from './pages/Schedule';
+import Contacts from './pages/Contacts';
 
-import "./App.scss";
+import './App.scss';
 
 const App = () => {
   return (
