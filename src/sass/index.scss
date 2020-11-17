@@ -16,6 +16,7 @@ body {
   background: $color-white;
   color: $color-black;
   font-family: $font-1;
+  overflow-y: scroll;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
