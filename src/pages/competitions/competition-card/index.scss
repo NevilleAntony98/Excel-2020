@@ -9,16 +9,16 @@
     color: $color-title-dark;
 
     border-radius: 6px;
-    background: $color-excel;
-    box-shadow:  5px 5px 10px #489dcf,
-                 -5px -5px 10px #62d5ff;
+    background: linear-gradient(145deg, #5bc6ff, #4da7db);
+    box-shadow:  5px 5px 15px #224a61,
+                 -5px -5px 15px #88ffff;
 
     @include desktop-view {
         transition: 0.3s;
 
         &:hover {
-            box-shadow:  10px 10px 20px #336f92,
-                         -10px -10px 20px #77ffff;
+            box-shadow:  9px 9px 18px #224a61,
+                        -9px -9px 18px #88ffff;
         }
     }
 
@@ -29,8 +29,8 @@
         margin-top: 1.5rem;
         padding: 2em;
 
-        box-shadow:  12px 12px 24px #208fcf,
-                     -12px -12px 24px #66deff;
+        box-shadow:  5px 5px 7px #224a61,
+                    -5px -5px 7px #88ffff;
 
         img {
             max-width: 6rem;
@@ -55,7 +55,7 @@
 
     .register-button {
         padding: 0.8rem 3.5rem;
-        margin: 1.5rem 0;
+        margin: 1.5rem 1rem;
 
         border: none;
         border-radius: 6px;
