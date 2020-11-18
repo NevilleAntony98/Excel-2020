@@ -1,0 +1,19 @@
+.smallSidebarContainer {
+  display: flex;
+  flex-direction: column;
+  width: 16px;
+  padding: 20px;
+  background-color: white;
+}
+.smallSidebarIcon {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+.smallSidebarInnerContainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 48px;
+  height: 50%;
+  justify-content: space-between;
+}
