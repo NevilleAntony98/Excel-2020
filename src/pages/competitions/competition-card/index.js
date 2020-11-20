@@ -1,32 +1,16 @@
 import React from 'react';
+import Popup from 'reactjs-popup';
 import { Spring, config } from 'react-spring/renderprops';
 
 import './index.scss'
+
+import CompetitionPopup from '../competition-popup'
 
 const excelIcon = require('../../../data/images/excel2020.png')
 
 export default class CompetitionCard extends React.Component {
     state = {
         imageIsReady: false
-    }
-
-    onRegisterClicked = () => {
-        console.log("Register clicked for " + this.props.competition.name);
-    }
-
-    registerElement = () => {
-        if (this.props.competition.needRegistration)
-            return (
-                <button onClick={this.onRegisterClicked} className="register-button">
-                    <span>Register</span>
-                </button>
-            )
-
-        return (
-            <span className="no-registration">
-                <i>No Registeration</i>
-            </span>
-        )
     }
 
     componentDidMount() {
@@ -69,17 +53,28 @@ export default class CompetitionCard extends React.Component {
             >
                 {props => (
                     <div style={props}>
-                        <div className="competition-card">
-                            <div className="icon">
-                                {!this.state.imageIsReady ?
-                                <this.PlaceholderIcon /> :
-                                <this.CompetitionIcon />}
+                        <Popup trigger={
+                            <div className="competition-card">
+                                <div className="icon">
+                                    {!this.state.imageIsReady ?
+                                    <this.PlaceholderIcon /> :
+                                    <this.CompetitionIcon />}
+                                </div>
+                                <div className="title">
+                                    <span>{this.props.competition.name}</span>
+                                </div>
+                                <div className="description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempus diam sem, id porta ipsum facilisis a.
+                                </div>
                             </div>
-                            <div className="title">
-                                <span>{this.props.competition.name}</span>
-                            </div>
-                            <this.registerElement />
-                        </div>
+                        } modal>
+                            {close => (
+                                    <CompetitionPopup
+                                    icon={this.props.competition.icon}
+                                    name={this.props.competition.name}
+                                    closeFunc={close}/>
+                            )}
+                        </Popup>
                     </div>
                 )}
             </Spring>
