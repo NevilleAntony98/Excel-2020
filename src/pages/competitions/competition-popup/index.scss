@@ -1,0 +1,134 @@
+@import "../../../sass/variables";
+@import "../../../sass/mixins";
+
+.popup-content-container {
+    background: white;
+
+    box-shadow:  5px 5px 15px #004e7a,
+                 -5px -5px 15px #002442;
+
+    display: flex;
+    flex-direction: row;
+    border-radius: 12px;
+    height: 35rem;
+
+    .popup-sidebar {
+        background-color: darken($color: $color-excel, $amount: 25);
+        display: flex;
+        flex-direction: column;
+        min-width: 15rem;
+        border-radius: 12px 0px 0 12px;
+
+        img {
+            padding: 1rem;
+            background-color: white;
+            border-radius: 9999px;
+            margin: 2rem auto 1rem;
+            max-width: 7rem;
+        }
+
+        .name {
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 0 2rem 1rem 2rem;
+            color: white;
+            overflow-wrap: break-word;
+        }
+
+        .register-button {
+            background-color: #e83849;
+            color: white;
+            margin: 0 2rem;
+            padding: 0.5rem;
+            font-size: 1.1rem;
+            border-radius: 9999px;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: 200ms ease-in-out;
+
+            &:hover {
+                background-color: darken($color: #EC5564, $amount: 20);
+                color: white;
+            }
+        }
+
+        .popup-stack-switcher {
+            ul {
+                list-style: none;
+                padding: 1rem 2rem;
+                text-align: center;
+                color: white;
+                font-size: 1.3rem;
+
+                li {
+                    padding: 0.5rem;
+                    margin: 0.3rem;
+                    cursor: pointer;
+                    border-radius: 12px;
+                    transition: 125ms ease-in-out;
+
+                    &:hover:not(.active) {
+                        background-color: darken($color: $color-excel, $amount: 30);
+                        color: white;
+                    }
+
+                    &.active {
+                        background-color: darken($color: $color-excel, $amount: 50);
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .popup-stack {
+        min-width: 30rem;
+        width: calc(100vw - 50rem);
+        padding: 1rem;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        overflow: hidden;
+        overflow-y: auto;
+
+        .close-container {
+            display: flex;
+            flex-direction: row-reverse;
+
+            .close-button {
+                position: fixed;;
+                width: 1.3rem;
+                height: auto;
+                cursor: pointer;
+
+                transition: 100ms ease-in-out;
+
+                &:hover {
+                    transform: scale(1.1);
+                    fill: red;
+                }
+            }
+        }
+
+        .section {
+            margin: 2rem;
+        }
+
+        .contact-section {
+            div {
+                display: flex;
+                flex-direction: column;
+                margin: 1.5rem 0;
+
+                .name {
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                }
+
+                .phone {
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}
