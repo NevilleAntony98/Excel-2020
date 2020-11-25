@@ -9,7 +9,8 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  return useWindowDimensions().width < 800 ? (
+  // In case anyone wonders what value to use here checkout the numbers in the mixins file
+  return useWindowDimensions().width < 600 ? (
     <Bottombar />
   ) : (
     <>
