@@ -1,7 +1,7 @@
 .sidebar-container {
   height: 100%;
   width: 18%;
-  z-index: 1;
+  z-index: 99;
   background-color: grey;
   position: fixed;
   top: 0;
