@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import { useEffect, useRef } from 'react';
 import {NavLink} from 'react-router-dom';
 
 import home from '../../assets/svg/home.svg';

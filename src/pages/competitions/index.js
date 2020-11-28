@@ -1,9 +1,9 @@
-import React from 'react';
+import { Component } from 'react';
 
 import CompetitionsGrid from './competitions-grid';
 import HeaderBar from '../../shared-components/header-bar'
 
-export default class CompetitionsPage extends React.Component {
+export default class CompetitionsPage extends Component {
     render() {
         return (
             <div className="collections-page">

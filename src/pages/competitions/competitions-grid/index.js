@@ -1,4 +1,4 @@
-import React from 'react';
+import { Component } from 'react';
 import axios from 'axios';
 
 import DropDown from 'react-dropdown';
@@ -7,7 +7,7 @@ import CompetitionCard from '../competition-card';
 import 'react-dropdown/style.css';
 import './index.scss'
 
-export default class CompetitionsGrid extends React.Component {
+export default class CompetitionsGrid extends Component {
     state = {
         // Sort type: name, datetime
         sortType: "name",

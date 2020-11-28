@@ -1,4 +1,4 @@
-import React from 'react';
+import { Component } from 'react';
 import Popup from 'reactjs-popup';
 import { Spring, config } from 'react-spring/renderprops';
 
@@ -8,7 +8,7 @@ import CompetitionPopup from '../competition-popup'
 
 const excelIcon = require('../../../data/images/excel2020.png')
 
-export default class CompetitionCard extends React.Component {
+export default class CompetitionCard extends Component {
     state = {
         imageIsReady: false
     }
