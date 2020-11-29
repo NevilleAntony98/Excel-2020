@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import ScheduleCard from './ScheduleCard';
 
-import './ScheduleMain.css';
+import './ScheduleMain.scss';
 
 const ScheduleMain = () => {
   const [scheduleData, setScheduleData] = useState([]);
@@ -42,7 +42,7 @@ const ScheduleMain = () => {
         ))}
       </div>
       {filteredData.events.map((item, id) => (
-        <ScheduleCard key={id} event={item} />
+        <ScheduleCard key={item.id} event={item} />
       ))}
     </div>
   );
