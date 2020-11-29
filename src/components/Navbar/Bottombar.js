@@ -6,7 +6,7 @@ import schedule from '../../assets/svg/schedule.svg';
 import competitions from '../../assets/svg/competitions.svg';
 import contacts from '../../assets/svg/contacts.svg';
 import events from '../../assets/svg/events.svg';
-import excelLogo from '../../assets/png/excelLogo.png';
+import excelLogo from '../../assets/png/excel2020.png';
 
 const Bottombar = () => {
   return (
@@ -18,7 +18,7 @@ const Bottombar = () => {
         <img alt="Competitions" src={competitions} height="20px" width="20px" />
       </NavLink>
       <NavLink to="/" className="bottombarHomeContainer">
-        <img alt="Home" src={excelLogo} className="bottombarHomeIcon"/>
+        <img alt="Home" src={excelLogo} className="bottombarHomeIcon" />
       </NavLink>
       <NavLink to="/events">
         <img alt="Events" src={events} height="20px" width="20px" />
