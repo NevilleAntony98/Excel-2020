@@ -14,7 +14,7 @@ const ScheduleCard = ({event}) => {
         <div>{dayjs(event.datetime).format('h:mm a')}</div>
         <div>
           <div className="scheduleCardTitle">{event.name}</div>
-          <div>{event.category.split('_').join(' ')}</div>
+          <div className="scheduleCardEventType">{event.category.split('_').join(' ')}</div>
           <div>{dayjs(event.datetime).format('D/M/YYYY')}</div>
         </div>
         <FlipIcon url={event.icon} alt={event.name} />
