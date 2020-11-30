@@ -1,4 +1,3 @@
-import React from 'react';
 import {Switch, Route, Redirect} from 'react-router-dom';
 
 import Navbar from './components/Navbar';
@@ -6,7 +5,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Events from './pages/Events';
 import Competitions from './pages/competitions';
-import Schedule from './pages/Schedule';
+import Schedule from './pages/schedule';
 import Contacts from './pages/Contacts';
 
 import './App.scss';

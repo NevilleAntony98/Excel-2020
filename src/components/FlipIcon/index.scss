@@ -1,0 +1,16 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.flipIcon {
+  background-color: $color-white;
+  border-radius: 50%;
+  box-shadow: 5px 5px 7px #224a61, -5px -5px 7px #88ffff;
+
+  max-width: 6rem;
+  max-height: 6rem;
+
+  @include mobile-view {
+    max-width: 4rem;
+    max-height: 4rem;
+  }
+}

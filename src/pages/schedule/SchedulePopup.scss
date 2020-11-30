@@ -1,0 +1,33 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.schedulePopupContainer {
+  margin: auto;
+  background: white;
+  box-shadow: 5px 5px 15px #004e7a, -5px -5px 15px #002442;
+  border-radius: 12px;
+  padding: 24px;
+}
+.schedulePopupTitle {
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 4px;
+}
+.schedulePopupOptionsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+
+  @include mobile-view {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @include tablet-view {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.schedulePopupButton {
+  display: flex;
+  justify-self: end;
+  margin: 12px 0 0 auto;
+}

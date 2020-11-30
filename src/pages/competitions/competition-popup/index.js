@@ -1,8 +1,8 @@
-import React from 'react';
+import { createRef, Component } from 'react';
 
 import './index.scss';
 
-export default class CompetitionPopup extends React.Component {
+export default class CompetitionPopup extends Component {
     state = {
         activeSection: "About"
     }
@@ -10,7 +10,7 @@ export default class CompetitionPopup extends React.Component {
     constructor(props) {
         super(props);
 
-        this.divRef = React.createRef();
+        this.divRef = createRef();
     }
 
     componentDidUpdate() {

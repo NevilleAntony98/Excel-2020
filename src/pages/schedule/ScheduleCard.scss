@@ -1,0 +1,27 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.scheduleCardContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 6px;
+  padding: 24px 0;
+  margin: 24px 0;
+  background: linear-gradient(145deg, #5bc6ff, #4da7db);
+  box-shadow: 5px 5px 15px #224a61, -5px -5px 15px #88ffff;
+
+  color: $color-title-dark;
+
+  @include desktop-view {
+    transition: 0.3s;
+    &:hover {
+      box-shadow: 9px 9px 18px #224a61, -9px -9px 18px #88ffff;
+    }
+  }
+}
+.scheduleCardTitle {
+  color: $color-title-dark;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
