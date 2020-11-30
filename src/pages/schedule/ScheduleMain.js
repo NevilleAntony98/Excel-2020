@@ -4,6 +4,7 @@ import Popup from 'reactjs-popup';
 
 import ScheduleCard from './ScheduleCard';
 import SchedulePopup from './SchedulePopup';
+import DeadEnd from '../../components/DeadEnd';
 
 import './ScheduleMain.scss';
 
@@ -76,7 +77,7 @@ const ScheduleMain = () => {
         ))}
       </div>
       {filteredData.events.length === 0 ? (
-        <div>Empty</div>
+        <DeadEnd title={'Nothing to see here'} subtitle={'Chose a different category to view more events!'} />
       ) : (
         filteredData.events.map((item, id) => <ScheduleCard key={item.id} event={item} />)
       )}
