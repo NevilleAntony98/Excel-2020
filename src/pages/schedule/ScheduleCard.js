@@ -1,6 +1,8 @@
 import dayjs from 'dayjs';
 import {useSpring, animated} from 'react-spring';
 
+import FlipIcon from '../../components/FlipIcon';
+
 import './ScheduleCard.scss';
 
 const ScheduleCard = ({event}) => {
@@ -9,7 +11,7 @@ const ScheduleCard = ({event}) => {
   return (
     <animated.div style={props}>
       <div className="scheduleCardContainer">
-        <img className="scheduleCardIcon" src={event.icon} alt={event.name} />
+        <FlipIcon url={event.icon} alt={event.name} />
         <div className="scheduleCardTitle">{event.name}</div>
         <div>{dayjs(event.datetime).format('D/M/YYYY h:mm a')}</div>
       </div>
