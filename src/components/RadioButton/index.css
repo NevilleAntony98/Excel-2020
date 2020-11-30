@@ -34,4 +34,5 @@
 .helper-text {
   color: #666;
   padding-right: 8px;
+  text-transform: capitalize;
 }

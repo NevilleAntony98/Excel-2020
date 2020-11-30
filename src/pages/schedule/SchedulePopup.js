@@ -4,10 +4,10 @@ import RadioButton from '../../components/RadioButton';
 
 import './SchedulePopup.scss';
 
-const SchedulePopup = ({filters}) => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedEventType, setSelectedEventType] = useState('All');
-  const [selectedEventStatus, setSelectedEventStatus] = useState('All');
+const SchedulePopup = ({filters, selectedFilters, setSelectedFilters, close}) => {
+  const [selectedCategory, setSelectedCategory] = useState(selectedFilters.category);
+  const [selectedEventType, setSelectedEventType] = useState(selectedFilters.eventType);
+  const [selectedEventStatus, setSelectedEventStatus] = useState(selectedFilters.eventStatus);
 
   return (
     <div className="schedulePopupContainer">
@@ -19,7 +19,7 @@ const SchedulePopup = ({filters}) => {
             key={id}
             value={item}
             selected={selectedCategory}
-            text={item}
+            text={item.split('_').join(' ')}
             onChange={setSelectedCategory}
           />
         ))}
@@ -32,7 +32,7 @@ const SchedulePopup = ({filters}) => {
             key={id}
             value={item}
             selected={selectedEventType}
-            text={item}
+            text={item.split('_').join(' ')}
             onChange={setSelectedEventType}
           />
         ))}
@@ -50,12 +50,21 @@ const SchedulePopup = ({filters}) => {
             key={id}
             value={item}
             selected={selectedEventStatus}
-            text={item}
+            text={item.split('_').join(' ')}
             onChange={setSelectedEventStatus}
           />
         ))}
       </div>
-      <button onClick={() => {}} className="schedulePopupButton">
+      <button
+        onClick={() => {
+          setSelectedFilters({
+            category: selectedCategory,
+            eventType: selectedEventType,
+            eventStatus: selectedEventStatus
+          });
+          close();
+        }}
+        className="schedulePopupButton">
         Go
       </button>
     </div>

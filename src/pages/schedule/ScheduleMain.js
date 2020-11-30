@@ -8,11 +8,16 @@ import SchedulePopup from './SchedulePopup';
 import './ScheduleMain.scss';
 
 const ScheduleMain = () => {
-  const [scheduleData, setScheduleData] = useState([]);
+  const [scheduleData, setScheduleData] = useState({day: 1, events: []});
   const [isLoading, setIsLoading] = useState(true);
   const [selectedDay, setSelectedDay] = useState(1);
-  const [filteredData, setFilteredData] = useState(scheduleData);
+  const [filteredData, setFilteredData] = useState({day: 1, events: []});
   const [filters, setFilters] = useState([]);
+  const [selectedFilters, setSelectedFilters] = useState({
+    category: 'All',
+    eventType: 'All',
+    eventStatus: 'All'
+  });
 
   useEffect(() => {
     axios
@@ -22,8 +27,8 @@ const ScheduleMain = () => {
       ])
       .then(
         axios.spread((response1, response2) => {
-          setScheduleData(response1.data);
           setFilters(response2.data);
+          setScheduleData(response1.data);
           setIsLoading(false);
         })
       )
@@ -31,17 +36,34 @@ const ScheduleMain = () => {
   }, []);
 
   useEffect(() => {
-    setFilteredData(scheduleData.find(e => e.day === selectedDay));
-  }, [scheduleData, selectedDay]);
-
-  console.log(filteredData);
+    if (!isLoading) {
+      let x = scheduleData.find(e => e.day === selectedDay).events;
+      if (selectedFilters.category !== 'All') {
+        x = x.filter(e => e.category === selectedFilters.category);
+      }
+      if (selectedFilters.eventType !== 'All') {
+        x = x.filter(e => e.eventType === selectedFilters.eventType);
+      }
+      if (selectedFilters.eventStatus !== 'All') {
+        x = x.filter(e => e.eventStatus === selectedFilters.eventStatus);
+      }
+      setFilteredData({day: selectedDay, events: x});
+    }
+  }, [scheduleData, selectedDay, selectedFilters, isLoading]);
 
   return isLoading ? (
     <div>Loading...</div>
   ) : (
     <div className="scheduleContainer">
       <Popup trigger={<div className="scheduleFilterText">Filter</div>}>
-        <SchedulePopup filters={filters} />
+        {close => (
+          <SchedulePopup
+            filters={filters}
+            selectedFilters={selectedFilters}
+            setSelectedFilters={setSelectedFilters}
+            close={close}
+          />
+        )}
       </Popup>
       <div className="scheduleDayContainer">
         {scheduleData.map((item, id) => (
@@ -53,9 +75,11 @@ const ScheduleMain = () => {
           </div>
         ))}
       </div>
-      {filteredData.events.map((item, id) => (
-        <ScheduleCard key={item.id} event={item} />
-      ))}
+      {filteredData.events.length === 0 ? (
+        <div>Empty</div>
+      ) : (
+        filteredData.events.map((item, id) => <ScheduleCard key={item.id} event={item} />)
+      )}
     </div>
   );
 };
