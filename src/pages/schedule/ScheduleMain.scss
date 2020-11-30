@@ -6,11 +6,22 @@
   min-width: 280px;
   margin: 0 auto;
 }
-.scheduleFilterText {
-  text-align: end;
+.scheduleFilter {
+  display: flex;
+  pointer-events: none;
+}
+.scheduleFilterSensitive {
+  display: flex;
+  align-items: center;
   padding: 12px 6px;
   font-weight: bold;
   cursor: pointer;
+  pointer-events: initial;
+}
+.scheduleFilterInsensitive {
+  display: flex;
+  flex-grow: 1;
+  cursor: default;
 }
 .scheduleDayContainer {
   display: flex;

@@ -6,6 +6,7 @@ import ScheduleCard from './ScheduleCard';
 import SchedulePopup from './SchedulePopup';
 import DeadEnd from '../../components/DeadEnd';
 
+import filterIcon from '../../assets/svg/filter.svg';
 import './ScheduleMain.scss';
 
 const ScheduleMain = () => {
@@ -56,7 +57,16 @@ const ScheduleMain = () => {
     <div>Loading...</div>
   ) : (
     <div className="scheduleContainer">
-      <Popup trigger={<div className="scheduleFilterText">Filter</div>}>
+      <Popup
+        trigger={
+          <div className="scheduleFilter">
+            <span className="scheduleFilterInsensitive" />
+            <div className="scheduleFilterSensitive">
+              <img src={filterIcon} alt="filter" height="20px" width="20px" />
+              Filter
+            </div>
+          </div>
+        }>
         {close => (
           <SchedulePopup
             filters={filters}
