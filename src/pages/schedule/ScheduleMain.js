@@ -4,14 +4,17 @@ import Popup from 'reactjs-popup';
 
 import ScheduleCard from './ScheduleCard';
 import SchedulePopup from './SchedulePopup';
+import DeadEnd from '../../components/DeadEnd';
+import Loader from '../../components/Loader';
 
+import filterIcon from '../../assets/svg/filter.svg';
 import './ScheduleMain.scss';
 
 const ScheduleMain = () => {
-  const [scheduleData, setScheduleData] = useState({day: 1, events: []});
+  const [scheduleData, setScheduleData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedDay, setSelectedDay] = useState(1);
-  const [filteredData, setFilteredData] = useState({day: 1, events: []});
+  const [filteredData, setFilteredData] = useState([]);
   const [filters, setFilters] = useState([]);
   const [selectedFilters, setSelectedFilters] = useState({
     category: 'All',
@@ -27,8 +30,8 @@ const ScheduleMain = () => {
       ])
       .then(
         axios.spread((response1, response2) => {
-          setFilters(response2.data);
           setScheduleData(response1.data);
+          setFilters(response2.data);
           setIsLoading(false);
         })
       )
@@ -36,7 +39,7 @@ const ScheduleMain = () => {
   }, []);
 
   useEffect(() => {
-    if (!isLoading) {
+    if (scheduleData.length !== 0) {
       let x = scheduleData.find(e => e.day === selectedDay).events;
       if (selectedFilters.category !== 'All') {
         x = x.filter(e => e.category === selectedFilters.category);
@@ -49,13 +52,22 @@ const ScheduleMain = () => {
       }
       setFilteredData({day: selectedDay, events: x});
     }
-  }, [scheduleData, selectedDay, selectedFilters, isLoading]);
+  }, [scheduleData, selectedDay, selectedFilters]);
 
   return isLoading ? (
-    <div>Loading...</div>
+    <Loader />
   ) : (
     <div className="scheduleContainer">
-      <Popup trigger={<div className="scheduleFilterText">Filter</div>}>
+      <Popup
+        trigger={
+          <div className="scheduleFilter">
+            <span className="scheduleFilterInsensitive" />
+            <div className="scheduleFilterSensitive">
+              <img src={filterIcon} alt="filter" height="20px" width="20px" />
+              Filter
+            </div>
+          </div>
+        }>
         {close => (
           <SchedulePopup
             filters={filters}
@@ -76,7 +88,7 @@ const ScheduleMain = () => {
         ))}
       </div>
       {filteredData.events.length === 0 ? (
-        <div>Empty</div>
+        <DeadEnd title={'Nothing to see here'} subtitle={'Chose a different category to view more events!'} />
       ) : (
         filteredData.events.map((item, id) => <ScheduleCard key={item.id} event={item} />)
       )}
