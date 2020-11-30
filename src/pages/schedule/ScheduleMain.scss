@@ -1,13 +1,21 @@
 @import '../../sass/variables';
 @import '../../sass/mixins';
 
+.scheduleContainer {
+  max-width: 75%;
+  min-width: 280px;
+  margin: 0 auto;
+}
+.scheduleFilterText {
+  text-align: end;
+  padding: 12px 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
 .scheduleDayContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  max-width: 75%;
-  min-width: 280px;
-  margin: auto;
   background-color: $background-color-light;
   border-radius: 6px;
 }
@@ -26,7 +34,6 @@
   background-color: #bbe7ff;
   border-radius: 6px;
 }
-
 .scheduleSelectedDay {
   display: flex;
   flex-grow: 1;
