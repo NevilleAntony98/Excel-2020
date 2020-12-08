@@ -1,0 +1,11 @@
+@import '../../../sass/variables';
+@import '../../../sass/mixins';
+
+.eventsContainer {
+  display: grid;
+  gap: 2rem;
+  max-width: 65%;
+  min-width: 280px;
+  margin: 0 auto;
+  padding: 2rem;
+}

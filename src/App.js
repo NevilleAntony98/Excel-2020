@@ -3,7 +3,7 @@ import {Switch, Route, Redirect} from 'react-router-dom';
 import Navbar from './components/Navbar';
 
 import Home from './pages/Home';
-import Events from './pages/Events';
+import Events from './pages/events';
 import Competitions from './pages/competitions';
 import Schedule from './pages/schedule';
 import Contacts from './pages/Contacts';
