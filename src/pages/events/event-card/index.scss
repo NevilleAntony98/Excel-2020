@@ -1,0 +1,72 @@
+@import '../../../sass/variables';
+@import '../../../sass/mixins';
+
+.eventCardContainer {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 8px;
+  color: white;
+  background: linear-gradient(145deg, #5bc6ff, #4da7db);
+  box-shadow:  5px 5px 15px #224a61,
+               -5px -5px 15px #88ffff;
+
+  @include desktop-view {
+    transition: 0.3s;
+    &:hover {
+      box-shadow: 9px 9px 18px #0a2231, -9px -9px 18px #78ffff;
+      transform: scale(1.01);
+    }
+  }
+
+  @include mobile-view  {
+    flex-direction: column;
+  }
+
+  .eventCardHeaderBox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto 0;
+    gap: 8px;
+    padding-top: 0.5rem;
+
+    .eventCardDate {
+      opacity: 0.7;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+    }
+
+    .flipIcon {
+      @include mobile-view {
+        max-width: 6rem;
+        max-height: 6rem;
+      }
+    }
+
+    .eventCardTitle {
+      @include desktop-view {
+        min-width: 8rem;
+      }
+    }
+  }
+
+  .eventInfoBox {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    line-height: 26px;
+
+    @include desktop-view {
+      padding-right: 2rem;
+    }
+
+    @include mobile-view {
+      text-align: center;
+    }
+
+    .eventCardIInfo {
+      margin-bottom: 1rem;
+    }
+  }
+}
