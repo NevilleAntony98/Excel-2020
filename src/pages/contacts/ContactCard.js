@@ -36,23 +36,23 @@ export default class ContactCard extends Component{
                         {/* <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
                         <ul class="contact-card-links">
                             <li>
-                                <a href="#" target="_blank" aria-label="facebook social link" class="icon icon-xs icon-facebook mr-3">
-                                <img src={phone}/>
+                                <a href="http://localhost:3000/#/" target="_blank" rel="noopener noreferrer" aria-label="facebook social link" class="icon icon-xs icon-facebook mr-3">
+                                <img src={phone} alt="phone"/>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" aria-label="twitter social link" class="icon icon-xs icon-twitter mr-3">
-                                <img src={email}/>
+                                <a href="http://localhost:3000/#/" target="_blank" rel="noopener noreferrer" aria-label="twitter social link" class="icon icon-xs icon-twitter mr-3">
+                                <img src={email} alt="email"/>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" aria-label="slack social link" class="icon icon-xs icon-slack mr-3">
-                                <img src={insta}/>
+                                <a href="http://localhost:3000/#/" target="_blank" rel="noopener noreferrer" aria-label="slack social link" class="icon icon-xs icon-slack mr-3">
+                                <img src={insta} alt="insta"/>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" aria-label="dribbble social link" class="icon icon-xs icon-dribbble mr-3">
-                                <img src={linkedin}/>
+                                <a href="http://localhost:3000/#/" target="_blank" rel="noopener noreferrer" aria-label="dribbble social link" class="icon icon-xs icon-dribbble mr-3">
+                                <img src={linkedin} alt="linkedin"/>
                                 </a>
                             </li>
                         </ul>

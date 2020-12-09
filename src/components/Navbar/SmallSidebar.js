@@ -2,7 +2,7 @@ import {NavLink} from 'react-router-dom';
 
 import './SmallSidebar.css';
 
-import hamburgerMenu from '../../assets/svg/hamburgerMenu.svg';
+// import hamburgerMenu from '../../assets/svg/hamburgerMenu.svg';
 import home from '../../assets/svg/home1.svg';
 import schedule from '../../assets/svg/schedule.svg';
 import competitions from '../../assets/svg/competitions.svg';
