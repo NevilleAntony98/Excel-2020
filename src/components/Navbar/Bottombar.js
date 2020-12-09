@@ -11,17 +11,17 @@ import excelLogo from '../../assets/png/excel2020.png';
 const Bottombar = () => {
   return (
     <div className="bottombarContainer">
-      <NavLink to="/schedule">
-        <img alt="Schedule" src={schedule} height="20px" width="20px" />
-      </NavLink>
       <NavLink to="/competitions">
         <img alt="Competitions" src={competitions} height="20px" width="20px" />
+      </NavLink>
+      <NavLink to="/events">
+        <img alt="Events" src={events} height="20px" width="20px" />
       </NavLink>
       <NavLink to="/" className="bottombarHomeContainer">
         <img alt="Home" src={excelLogo} className="bottombarHomeIcon" />
       </NavLink>
-      <NavLink to="/events">
-        <img alt="Events" src={events} height="20px" width="20px" />
+      <NavLink to="/schedule">
+        <img alt="Schedule" src={schedule} height="20px" width="20px" />
       </NavLink>
       <NavLink to="/contacts">
         <img alt="Contacts" src={contacts} height="20px" width="20px" />
