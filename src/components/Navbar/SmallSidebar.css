@@ -1,4 +1,5 @@
 .smallSidebarContainer {
+  position: fixed;
   display: flex;
   flex-direction: column;
   width: 16px;

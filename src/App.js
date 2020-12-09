@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import Events from './pages/Events';
 import Competitions from './pages/competitions';
 import Schedule from './pages/schedule';
-import Contacts from './pages/Contacts';
+import Contacts from './pages/contacts';
 
 import './App.scss';
 
@@ -14,6 +14,7 @@ const App = () => {
   return (
     <div className="app-container">
       <Navbar />
+      <div className="nav-shift">
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/competitions" component={Competitions} />
@@ -22,6 +23,7 @@ const App = () => {
         <Route exact path="/contacts" component={Contacts} />
         <Redirect to="/" />
       </Switch>
+      </div>
     </div>
   );
 };

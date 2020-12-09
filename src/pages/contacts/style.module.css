@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+.card{
+	position: relative;
+	height:17.5rem;
+	width:17.5rem;
+	background-color: black;
+	/* border-radius: 10px; */
+	z-index: 0;
+        transition: box-shadow 0.5s, transform 0.5s;
+        word-break: break-all !important;
+        
+}
+
+.card img{
+	position: relative;
+	height:17.5rem;
+	width:17.5rem;
+	/* border-radius: 10px; */
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.below-card{
+        font-family: 'Montserrat', sans-serif;
+	margin-top: 15px;
+	color: white;
+}
+
+.contact-overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	height: inherit;
+	width: inherit;
+	opacity: 0;
+	transition: .5s ease;
+	background-color:rgba(0,0,0,0.8);
+  }
+
+  .card:hover .contact-overlay {
+	opacity: 1;
+  }
+  
+  .card-info{
+	position: absolute;
+	left: 0;
+	margin: 0 auto;
+	padding: 0 10px;
+	bottom:3.5vh;
+	color:white;
+	font-style: 16px;
+	line-height: 24px;
+	z-index: 20;
+        opacity:1;
+        font-family: 'Montserrat', sans-serif;
+}
+
+  .card-info img{
+	height: 15px;
+	width: auto;
+	border-radius: initial;
+}
+a{
+	text-decoration: none;
+	color:white;
+}
+
+.contact-social {
+        padding-top: 10px;
+        width:25px !important;
+        height:25px !important;
+}
+
+.name{
+        font-weight: 600;
+        font-size: 1.25rem;
+}
+
+.desig{
+        color: #fda642;
+}
+
+
+/* 
+
+
+
+
+.bottom-right {
+        position: absolute;
+        bottom:2vw;
+        right: 2vw;
+        z-index: 20;
+        color: white;
+    }
+
+    .bottom-right img{
+            height: 32px;
+            width: auto;
+            border-radius: initial;
+    }
+
+    .card:hover{
+       background: black;
+       opacity:.9;
+       transform: scale(1);
+       transition: box-shadow 5px 20px 30px rgba(0,0,0,0.2)
+       }
+       
+       .card:hover .gradient-overlay{
+               opacity: 1;
+       }
+
+    .card-info{
+        position: absolute;
+        left: 0;
+        margin: 0 auto;
+        padding: 0 20px;
+        bottom:3.5vh;
+        color:white;
+        font-style: 16px;
+        line-height: 24px;
+        z-index: 20;
+        opacity:1;
+        font-family: 'Raleway', sans-serif;
+      }
+
+      .card-info .descp{
+              font-size: 1.5em;
+              font-weight: bolder;
+      }
+      .card-info .contact-info{
+        font-size: 1em;
+        font-weight: bold;
+}
+        
+       
+
+      .gradient-overlay:hover{
+        /* bg-gradient: 
+        background-image: -webkit-linear-gradient(rgba(0,0,0,0.00) 0%, rgba(0,0,0,.6) 85%);
+        background-image: -moz-linear-gradient(rgba(0,0,0,0.00) 0%, rgba(0,0,0,.6) 85%);
+        background-image: -o-linear-gradient(rgba(0,0,0,0.00) 0%, rgba(0,0,0,.6) 85%);
+        background-image: linear-gradient(rgba(0,0,0,0.00) 0%, rgba(0,0,0,.6) 85%);
+        background-color: rgba(0,0,0,0.9);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        right: 0;
+        opacity: 0;
+        z-index: 15;
+        border-radius: 10px;
+      } */
+
+      @media screen and (max-width:1300px){
+        .card{
+                height:17.5rem;
+	        width: 17.5rem;
+        }
+        .card img{
+                height:17.5rem;
+	        width:17.5rem;;
+        }
+        .card-info{
+                bottom:.5vh;
+                font-size: 16px;
+                line-height: 24px;
+          }
+        
+          .card-info img{
+                height: 10px;
+                width: 10px;
+        }
+        
+        .contact-social {
+                padding-top: 10px;
+                width:22px !important;
+                height:22px !important;
+        }
+}
+      @media screen and (max-width:600px){
+        .card-info{
+                bottom:.5vh;
+                font-size: 13px;
+                line-height: 20px;
+        }
+          .card-info img{
+                height: 10px;
+                width: 10px;
+        }
+        
+        .contact-social {
+                padding-top: 10px;
+                width:20px !important;
+                height:20px !important;
+        }
+}
+
+      @media screen and (max-width:450px){
+              .card{
+                      height: 75vw;
+                      width: 75vw;
+              }
+              .card img{
+                height: 75vw;
+                width: 75vw;
+              }
+        .card-info{
+                bottom:4.5vh;
+                font-size: 15px;
+                line-height: 24px;
+          }
+        
+          .card-info img{
+                height: 12px;
+                width: 12px;
+        }
+        
+        .contact-social {
+                padding-top: 10px;
+                width:24px !important;
+                height:24px !important;
+        }
+             
+}
+

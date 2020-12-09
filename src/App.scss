@@ -1,16 +1,21 @@
 @import './sass/mixins.scss';
 
 .app-container {
-  display: grid;
+  // display: grid;
 
   // first column is the sidebar in desktop view
-  grid-template-columns: calc(16px + 2*20px) auto;
+  // grid-template-columns: calc(16px + 2*20px) auto;
   height: 100vh;
   width: 100%;
-
   @include mobile-view {
-    grid-template-columns: auto;
+    // grid-template-columns: auto;
     // wrt to bottom bar
-    grid-template-rows: auto calc(2% + 2*20px);
+    // grid-template-rows: auto calc(2% + 2*20px);
   }
+}
+
+@media only screen and (min-width:600px){
+  .nav-shift{
+    margin-left: 56px;
+}
 }
