@@ -14,7 +14,7 @@ const EventsContainer = () => {
 
   useEffect(() => {
     axios
-      .get('https://staging.apis.excelmec.org/events/api/events')
+      .get('https://staging.events.excelmec.org/api/events')
       .then(res => {
         let events = res.data.filter(event => event.eventType !== "competition")
         setEventsData(events)
