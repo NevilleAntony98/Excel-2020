@@ -36,7 +36,7 @@ export default class CompetitionsGrid extends Component {
 
   getCompetitions = async () => {
     axios
-      .get('https://staging.apis.excelmec.org/events/api/events/type/competition')
+      .get('https://staging.events.excelmec.org/api/events/type/competition')
       .then(data => this.setState({competitions: data.data, loadingDone: true}))
       .catch(err => {
         console.log(err);
