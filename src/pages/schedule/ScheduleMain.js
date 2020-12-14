@@ -57,6 +57,7 @@ const ScheduleMain = () => {
   return isLoading ? (
     <Loader />
   ) : (
+    <div className="schedule">
     <div className="scheduleContainer">
       <Popup
         trigger={
@@ -92,6 +93,7 @@ const ScheduleMain = () => {
       ) : (
         filteredData.events.map((item, id) => <ScheduleCard key={item.id} event={item} />)
       )}
+    </div>
     </div>
   );
 };

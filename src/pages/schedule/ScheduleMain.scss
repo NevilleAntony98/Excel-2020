@@ -1,6 +1,11 @@
 @import '../../sass/variables';
 @import '../../sass/mixins';
 
+
+.schedule {
+  background-color: #c2eaff;
+  padding-bottom: 3rem;
+}
 .scheduleContainer {
   max-width: 75%;
   min-width: 280px;
@@ -27,8 +32,14 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: $background-color-light;
+  // background-color: $background-color-light;
+  background-color: transparent;  
   border-radius: 6px;
+
+  div {
+    font-variant-caps: petite-caps;
+    margin: 0 10px;
+  }
 }
 .scheduleDay {
   display: flex;
@@ -38,6 +49,13 @@
   justify-content: center;
   padding: 16px 0px;
   cursor: pointer;
+  background-color: #c2eaff;
+  border-color: #afd9f0 !important;
+  box-shadow: 6px 6px 12px #99c9e2, -6px -6px 12px #e5f5fd !important;
+  border: 0.0625rem solid rgba(243, 247, 250, 0.05);
+  border-radius: 6px;
+  transition: all .2s ease;
+
 }
 .scheduleDay:hover {
   opacity: 1;
@@ -50,9 +68,21 @@
   flex-grow: 1;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(145deg, #5bc6ff, #4da7db);
-  font-weight: bold;
+  // background: linear-gradient(145deg, #5bc6ff, #4da7db);
+  background-color: #c2eaff;
+  border-color: #a3d6f1;
+  box-shadow: inset 2px 2px 5px #99c5dd, inset -3px -3px 7px #c4e4f5;
+  // font-weight: bold;
   font-size: 1.1rem;
   border-radius: 6px;
   cursor: default;
+}
+
+@media only screen and (max-width:980px) {
+  .scheduleDayContainer{
+    div {
+      font-variant-caps: petite-caps;
+      margin: 0 5px;
+    }
+  }
 }

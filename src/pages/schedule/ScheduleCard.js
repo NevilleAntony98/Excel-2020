@@ -11,11 +11,11 @@ const ScheduleCard = ({event}) => {
   return (
     <animated.div style={props}>
       <div className="scheduleCardContainer">
-        <div>{dayjs(event.datetime).format('h:mm a')}</div>
+        <div className="scheduleCardTime">{dayjs(event.datetime).format('h:mm a')}</div>
         <div>
           <div className="scheduleCardTitle">{event.name}</div>
           <div className="scheduleCardEventType">{event.category.split('_').join(' ')}</div>
-          <div>{dayjs(event.datetime).format('D/M/YYYY')}</div>
+          {/* <div className="scheduleCardDay">{dayjs(event.datetime).format('D/M/YYYY')}</div> */}
         </div>
         <FlipIcon url={event.icon} alt={event.name} />
       </div>
