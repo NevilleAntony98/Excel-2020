@@ -17,10 +17,8 @@ const EventCard = ({event}) => {
           <span className="eventCardDate">{dayjs(event.datetime).format('D/M/YYYY')}</span>
         </div>
         <div className="eventInfoBox">
-          <span className="eventCardIInfo">{
-            event.about ||
-            "Donec ut tempor nulla, non euismod lorem. Nunc nec porta lacus, nec convallis mauris. Quisque ultrices imperdiet tellus quis consequat. Nulla at est non est placerat lobortis."
-          }</span>
+          <span className="eventCardInfo">
+            {event.about}</span>
         </div>
       </div>
     </animated.div>

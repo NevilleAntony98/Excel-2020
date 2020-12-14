@@ -1,6 +1,5 @@
 import {useEffect, useState} from 'react';
 import axios from 'axios';
-// import Popup from 'reactjs-popup';
 
 import EventCard from '../event-card';
 import DeadEnd from '../../../components/DeadEnd';
@@ -17,8 +16,21 @@ const EventsContainer = () => {
       .get('https://staging.events.excelmec.org/api/events')
       .then(res => {
         let events = res.data.filter(event => event.eventType !== "competition")
-        setEventsData(events)
-        setIsLoading(false)
+
+        let promises = []
+        events.forEach((event) => {
+          promises.push(axios.get("https://staging.events.excelmec.org/api/events/" + event.id))
+        })
+
+        Promise.all(promises).then((responses) => {
+          let eventsData = []
+          responses.forEach((response) => {
+            eventsData.push(response.data)
+          })
+
+          setEventsData(eventsData)
+          setIsLoading(false)
+        })
       })
       .catch(err => console.log(err));
   }, [])

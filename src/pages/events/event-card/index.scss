@@ -65,8 +65,23 @@
       text-align: center;
     }
 
-    .eventCardIInfo {
-      margin-bottom: 1rem;
+    .eventCardInfo {
+      margin: 1rem;
+      position: relative;
+      height: 12.6rem;
+      overflow: hidden;
+      white-space: pre-line;
+
+      &:after {
+        content: "";
+        text-align: right;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 70%;
+        height: 1.6rem;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), #c2eaff 80%);
+    }
     }
   }
 }
