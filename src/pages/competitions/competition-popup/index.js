@@ -4,7 +4,7 @@ import './index.scss';
 
 export default class CompetitionPopup extends Component {
     state = {
-        activeSection: "About"
+        activeSection: "About",
     }
 
     constructor(props) {
@@ -16,6 +16,10 @@ export default class CompetitionPopup extends Component {
     componentDidUpdate() {
         // To reset scroll when stack content is changed
         this.divRef.current.scrollTop = 0;
+    }
+
+    getSanitizedString = (string) => {
+        return string.replaceAll('\\\\n', '\n')
     }
 
     onAboutClicked = () => {
@@ -49,7 +53,7 @@ export default class CompetitionPopup extends Component {
     AboutSection = () => {
         return(
             <div className="about-section section">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempus diam sem, id porta ipsum facilisis a. Sed luctus sagittis magna, quis molestie augue condimentum eu. Vivamus tempor tristique leo convallis venenatis. Curabitur elit libero, lacinia sit amet risus eget, rhoncus pharetra lectus. Morbi sodales scelerisque quam quis congue. Curabitur scelerisque urna in ullamcorper commodo. Ut ut dui eu neque pharetra consectetur at vel diam. Morbi lacinia accumsan orci, in faucibus risus malesuada eget.
+                {this.getSanitizedString(this.props.competition.about)}
             </div>
         )
     }
@@ -57,9 +61,7 @@ export default class CompetitionPopup extends Component {
     FormatSection = () => {
         return(
             <div className="format-section section">
-                <p>Ut nec imperdiet eros, vitae malesuada dolor. Donec luctus mi at dapibus ultricies. Aliquam scelerisque felis vitae pretium scelerisque. Duis bibendum est ante, a pellentesque libero porta molestie. Ut sed aliquam est. Donec at ipsum quis metus eleifend porttitor vitae iaculis eros. Morbi vitae orci vel purus porttitor finibus. Maecenas aliquam urna non commodo varius. Praesent justo ante, cursus venenatis nibh a, accumsan ultrices mauris. Duis venenatis hendrerit sem, vel pulvinar massa ornare vitae. Maecenas ut magna auctor nibh eleifend fermentum nec eu nisl. Fusce ipsum urna, consectetur eget dui quis, cursus sagittis nisi. Sed orci nunc, consequat quis fringilla sed, porttitor a turpis. Maecenas est lectus, volutpat id tempor sit amet, lacinia vitae lorem.</p>
-
-                <p>Aenean non consequat quam. Quisque cursus arcu urna, sit amet vestibulum tortor accumsan in. In hac habitasse platea dictumst. Cras varius iaculis metus et commodo. Aenean laoreet arcu sit amet sem mattis dignissim. Curabitur vitae diam leo. Phasellus est lorem, euismod quis elit aliquam, pharetra fermentum urna. Integer laoreet mauris et mauris consectetur vestibulum. Vivamus nulla nunc, venenatis quis purus non, mollis volutpat risus. Ut a quam ut ante ultricies hendrerit. Integer auctor fermentum interdum. Nam iaculis id nisl ut dapibus. Ut ipsum ligula, condimentum vitae mattis eget, mattis ac est. Suspendisse ante purus, condimentum ac sollicitudin eu, mattis vitae arcu.</p>
+                {this.getSanitizedString(this.props.competition.format)}
             </div>
         )
     }
@@ -67,33 +69,7 @@ export default class CompetitionPopup extends Component {
     RulesSection = () => {
         return(
             <div className="rules-section section">
-                Sed odio mauris, euismod vitae nunc et, ultricies scelerisque ex. Curabitur lorem lectus, iaculis sit amet ullamcorper a, scelerisque at ligula. Aliquam in fringilla nibh. Nunc aliquet gravida fermentum.
-                <ul>
-                    <li>
-                        You do not talk about fight club...
-                    </li>
-                    <li>
-                        You DO NOT talk about the fight...until it is over
-                    </li>
-                    <li>
-                        Someone yells stop, goes limp, taps out, the fight is over
-                    </li>
-                    <li>
-                        Only 2 guys to a fight...
-                    </li>
-                    <li>
-                        One fight at a time, fellas
-                    </li>
-                    <li>
-                        No shirt, No shoes, No RATs
-                    </li>
-                    <li>
-                        The fight will go as long as it has to...
-                    </li>
-                    <li>
-                        If this is your first night at fight club, you have to fight
-                    </li>
-                </ul>
+                {this.getSanitizedString(this.props.competition.rules)}
             </div>
         )
     }
@@ -101,14 +77,18 @@ export default class CompetitionPopup extends Component {
     ContactSection = () => {
         return(
             <div className="contact-section section">
+                {this.props.competition.eventHead1 !== null &&
                 <div>
-                    <span className="name">Bill the Butcher</span>
-                    <span className="phone">+91 1234567890</span>
-                </div>
+                    <span className="name">{this.props.competition.eventHead1.name}</span>
+                    <a className="email" href={"mailto:" + this.props.competition.eventHead1.email}>{this.props.competition.eventHead1.email}</a>
+                    <span className="phone">{this.props.competition.eventHead1.phoneNumber}</span>
+                </div>}
+                {this.props.competition.eventHead2 !== null &&
                 <div>
-                    <span className="name">Daniel Plainview</span>
-                    <span className="phone">+91 1234567890</span>
-                </div>
+                    <span className="name">{this.props.competition.eventHead2.name}</span>
+                    <a className="email" href={"mailto:" + this.props.competition.eventHead2.email}>{this.props.competition.eventHead2.email}</a>
+                    <span className="phone">{this.props.competition.eventHead2.phoneNumber}</span>
+                </div>}
             </div>
         )
     }
@@ -117,7 +97,7 @@ export default class CompetitionPopup extends Component {
         return(
             <div className="popup-content-container">
                 <div className="popup-sidebar">
-                    <img className="competition-image" src={this.props.icon} alt={this.props.name}/>
+                    <img className="competition-image" src={this.props.competition.icon} alt={this.props.competition.name}/>
                     <span className="name">{this.props.name}</span>
                     <button className="register-button" onClick={this.onRegisterClicked}>Register</button>
                     <div className="popup-stack-switcher">

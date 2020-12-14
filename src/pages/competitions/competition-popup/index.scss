@@ -89,6 +89,7 @@
     line-height: 2rem;
     overflow: hidden;
     overflow-y: auto;
+    white-space: pre-line;
 
     .close-container {
       display: flex;
@@ -122,6 +123,11 @@
         .name {
           font-size: 1.3rem;
           font-weight: 600;
+        }
+
+        .email {
+          color: black;
+          font-style: italic;
         }
 
         .phone {

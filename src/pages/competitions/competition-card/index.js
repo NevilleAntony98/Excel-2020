@@ -1,6 +1,7 @@
 import {Component} from 'react';
 import Popup from 'reactjs-popup';
 import {Spring, config} from 'react-spring/renderprops';
+import axios from 'axios';
 
 import './index.scss';
 
@@ -41,6 +42,8 @@ export default class CompetitionCard extends Component {
     );
   };
 
+  getSanitizedString = (string) => string.replaceAll('\\\\n', '\n');
+
   render() {
     return (
       <Spring from={{opacity: 0, marginTop: -50}} to={{opacity: 1, marginTop: 0}} config={config.wobbly}>
@@ -55,17 +58,15 @@ export default class CompetitionCard extends Component {
                   <div className="title">
                     <span>{this.props.competition.name}</span>
                   </div>
-                  <div className="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempus diam sem, id porta
-                    ipsum facilisis a.
-                  </div>
+                  <i className="description">
+                    { this.getSanitizedString(this.props.competition.about) }
+                  </i>
                 </div>
               }
               modal>
               {close => (
                 <CompetitionPopup
-                  icon={this.props.competition.icon}
-                  name={this.props.competition.name}
+                  competition={this.props.competition}
                   closeFunc={close}
                 />
               )}

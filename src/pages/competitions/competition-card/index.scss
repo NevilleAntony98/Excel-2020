@@ -54,7 +54,26 @@
     }
 
     .description {
-        margin: 0 1rem 1rem 1rem;
+        // Dirty hack below because css still doesnt support multiline text ellipsize
+
+        margin: 1rem;
+        height: 12rem;
+        width: 250px;
+        position: relative;
+        height: 10.8rem;
+        overflow: hidden;
+        white-space: pre-line;
+
+        &:after {
+            content: "";
+            text-align: right;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 70%;
+            height: 1.6rem;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), #c2eaff 80%);
+        }
     }
 }
 

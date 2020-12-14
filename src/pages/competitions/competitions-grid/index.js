@@ -37,11 +37,26 @@ export default class CompetitionsGrid extends Component {
   getCompetitions = async () => {
     axios
       .get('https://staging.events.excelmec.org/api/events/type/competition')
-      .then(data => this.setState({competitions: data.data, loadingDone: true}))
+      .then(data => {
+          let promises = []
+
+          data.data.forEach((event) => {
+            promises.push(axios.get("https://staging.events.excelmec.org/api/events/" + event.id))
+          })
+
+          Promise.all(promises).then((responses) => {
+            let competitionsData = []
+            responses.forEach((response) => {
+              competitionsData.push(response.data)
+            })
+
+            this.setState({competitions: competitionsData, loadingDone: true})
+          })
+      })
       .catch(err => {
         console.log(err);
         return null;
-      });
+    });
   };
 
   getCategories = () => {
