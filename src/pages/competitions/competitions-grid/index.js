@@ -46,7 +46,7 @@ export default class CompetitionsGrid extends Component {
 
   getCategories = () => {
     axios
-      .get('https://staging.apis.excelmec.org/events/api/constants')
+      .get('https://staging.events.excelmec.org/api/constants')
       .then(data => {
         this.setState({categories: [...data.data.category]});
 

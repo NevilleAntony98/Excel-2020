@@ -6,19 +6,19 @@
     flex-direction: column;
     align-items: center;
 
-    color: $color-title-dark;
+    color: black;
 
     border-radius: 6px;
-    background: linear-gradient(145deg, #5bc6ff, #4da7db);
-    box-shadow:  5px 5px 15px #224a61,
-                 -5px -5px 15px #88ffff;
+    background: #c2eaff;
+    box-shadow:  6px 6px 12px #99c9e2,
+                -6px -6px 12px #e5f5fd;
 
     @include desktop-view {
         transition: 0.3s;
 
         &:hover {
-            box-shadow:  9px 9px 18px #224a61,
-                        -9px -9px 18px #88ffff;
+            box-shadow:  6px 6px 12px #5fa6cc,
+                        -6px -6px 12px #ffffff;
         }
     }
 
@@ -29,8 +29,8 @@
         margin-top: 1.5rem;
         padding: 2em;
 
-        box-shadow:  5px 5px 7px #224a61,
-                    -5px -5px 7px #88ffff;
+        box-shadow:  5px 5px 7px #99c9e2,
+                    -5px -5px 7px #e5f5fd;
 
         img {
             max-width: 6rem;
@@ -47,7 +47,7 @@
         margin-bottom: 1rem;
 
         span {
-            color: $color-title-dark;
+            color: black;
             font-weight: 600;
             font-size: 1.3rem;
         }
