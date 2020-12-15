@@ -25,19 +25,19 @@ export default class Home extends Component {
               <h1>OUR SPONSERS</h1>
               <div className="sponsers-grid">
                 <div className="sponser-container">
-                    <img src={litmus} />
+                    <img src={litmus} alt=""/>
                     <h1>CS-Tech Sponser</h1>
                 </div>
                 <div className="sponser-container">
-                    <img src={townscript} />
+                    <img src={townscript} alt=""/>
                     <h1>Ticketing Partner</h1>
                 </div>
                 <div className="sponser-container">
-                    <img src={eventoz} />
+                    <img src={eventoz} alt=""/>
                     <h1>Media Partner</h1>
                 </div>
                 <div className="sponser-container">
-                    <img src={thenewindianexp} />
+                    <img src={thenewindianexp} alt=""/>
                     <h1>Media Partner</h1>
                 </div>
               </div>
@@ -45,7 +45,7 @@ export default class Home extends Component {
             <div className="home-legacy">
               <h1>LEGACY</h1>
               <div className="legacy-container">
-                <img src={college} />
+                <img src={college} alt=""/>
                 <p>
                 Excel, the nation’s second and South India’s first ever fest of its kind started in 2001 by the students of Govt. Model Engineering College with a motto, Inspire, Innovate, Engineer. Over the years, Excel has grown exponentially, consistently playing host to some of the most talented students, the most illustrious speakers and the most reputed companies. Now gearing towards its 19th edition, Excel continues to excite the participants with its wide array of technical and non-technical events and with a promise to live upto its motto. What sets Excel apart is the drive towards delivering excellence. The fest is renowned for its quality, dynamism and active participation.
                 Excel 2018 incorporates a wide variety of technical, managerial and general events which includes both online and onsite competitions, workshops, summits, hackathons, exhibitions and so on.
@@ -53,14 +53,14 @@ export default class Home extends Component {
                 </p>
               </div>
               <div className="college-excel-logo">
-                <img src={meclogo} />
-                <img src={excel2020withtext} />
+                <img src={meclogo} alt=""/>
+                <img src={excel2020withtext} alt=""/>
               </div>
               <div className="previous-sites">
-                <img src={excel2019} />
-                <img src={excel2018} />
-                <img src={excel2017} />
-                <img src={excel2016} />
+                <img src={excel2019} alt=""/>
+                <img src={excel2018} alt=""/>
+                <img src={excel2017} alt=""/>
+                <img src={excel2016} alt=""/>
               </div>
             </div>
           </div>
