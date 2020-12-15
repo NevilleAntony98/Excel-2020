@@ -1,0 +1,102 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.home-register{
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  width: fit-content;
+  margin: 50px auto;
+  font-size: larger;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-radius: 8px;
+  color: black;
+  background: #c2eaff;
+  box-shadow:  6px 6px 12px #87c6e7,
+              -6px -6px 12px #f0faff;
+
+  @include desktop-view {
+    transition: 0.3s;
+    &:hover {
+      box-shadow: 9px 9px 18px #5fa6cc, -9px -9px 18px #ffffff;
+      transform: scale(1.01);
+    }
+  }
+
+}
+
+.home-sponsers{
+    padding: 40px;
+    .sponsers-grid{
+        display: grid;
+        grid-template-columns: repeat(4,minmax(0, 1fr));
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        grid-gap:70px;
+        .sponser-container{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 40px;
+            align-content: space-between;
+            justify-content: center;
+            align-items: center;
+            height: min-content;
+            background: #c2eaff;
+  box-shadow:  6px 6px 12px #87c6e7,
+              -6px -6px 12px #f0faff;
+            img{
+                width: 250px;
+            }
+            h1{
+                font-size: 20px;
+            }
+            @include desktop-view {
+                transition: 0.3s;
+                &:hover {
+                  box-shadow: 9px 9px 18px #5fa6cc, -9px -9px 18px #ffffff;
+                  transform: scale(1.01);
+                }
+              }
+        }
+    }
+}
+.home-legacy{
+    padding: 40px;
+    .legacy-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img{
+            width: 30%;
+        }
+        p{
+            width: 67%;
+        }
+    }
+    .college-excel-logo{
+        margin: 0  auto;
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        img{
+            width: 250px;
+            margin: 40px;
+        }
+    }
+    .previous-sites{
+        margin: 0  auto;
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        img{
+            width: 70px;
+            margin: 10px;
+        }
+    }
+}
