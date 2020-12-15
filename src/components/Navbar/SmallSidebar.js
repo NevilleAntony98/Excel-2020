@@ -1,4 +1,4 @@
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import './SmallSidebar.css';
 
@@ -9,7 +9,7 @@ import competitions from '../../assets/svg/competitions.svg';
 import contacts from '../../assets/svg/contacts.svg';
 import events from '../../assets/svg/events.svg';
 
-const SmallSidebar = ({setIsSidebarOpen}) => {
+const SmallSidebar = ({ setIsSidebarOpen }) => {
   return (
     <div className="smallSidebarContainer">
       {/* <img
@@ -19,20 +19,36 @@ const SmallSidebar = ({setIsSidebarOpen}) => {
         className="smallSidebarIcon"
       /> */}
       <div className="smallSidebarInnerContainer">
-        <NavLink to="/">
-          <img alt="home" src={home} className="smallSidebarIcon" />
+        <NavLink to="/" style={{ textDecoration: 'none' }}>
+          <div className="smallSidebarLink">
+            <img alt="home" src={home} className="smallSidebarIcon" />
+            <div className="linkText">Home</div>
+          </div>
         </NavLink>
-        <NavLink to="/competitions">
-          <img alt="competitions" src={competitions} className="smallSidebarIcon" />
+
+        <NavLink to="/competitions" style={{ textDecoration: 'none' }}>
+          <div className="smallSidebarLink"><img alt="competitions" src={competitions} className="smallSidebarIcon" />
+            <div className="linkText">Competitions</div>
+          </div>
         </NavLink>
-        <NavLink to="/events">
+        
+        <NavLink to="/events" style={{ textDecoration: 'none' }}>
+          <div className="smallSidebarLink">
           <img alt="events" src={events} className="smallSidebarIcon" />
+          <div className="linkText">Events</div>
+        </div>
         </NavLink>
-        <NavLink to="/schedule">
+        <NavLink to="/schedule" style={{ textDecoration: 'none' }}>
+          <div className="smallSidebarLink">
           <img alt="schedule" src={schedule} className="smallSidebarIcon" />
+          <div className="linkText">Schedule</div>
+        </div>
         </NavLink>
-        <NavLink to="/contacts">
+        <NavLink to="/contacts" style={{ textDecoration: 'none' }}>
+          <div className="smallSidebarLink">
           <img alt="contacts" src={contacts} className="smallSidebarIcon" />
+          <div className="linkText">Contacts</div>
+        </div>
         </NavLink>
       </div>
     </div>

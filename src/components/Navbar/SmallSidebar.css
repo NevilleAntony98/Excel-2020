@@ -3,19 +3,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 71px;
+  width: 100px;
   height: 100vh;
   /* padding: 20px; */
   background-color:#c2eaff;
   box-shadow: 0 1px 10px rgba(0,0,0,.12),0 1px 5px rgba(0,0,0,.24);
 }
-.smallSidebarIcon {
-  margin: 10px auto;
-  padding: 15px 0;
-  height: 20px;
-  width: 20px;
-  cursor: pointer;
-}
+
 .smallSidebarInnerContainer {
   color: rgb(98, 95, 95);
   display: flex;
@@ -23,4 +17,31 @@
   /* padding-top: 48px; */
   /* height: 50%; */
   justify-content: space-between;
+  width: 100%;
+}
+
+.smallSidebarLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100%; */
+  padding: 25px 0;
+}
+
+.smallSidebarLink:hover {
+  background-color: #b2dff8;
+  transition: 0.3s ease-in;
+}
+
+.smallSidebarIcon {
+	height: 20px;
+	width: 20px;
+  cursor: pointer;
+  padding-bottom: 13px;
+}
+
+.linkText {
+  font-size: 14px;
+  color: black;
 }
