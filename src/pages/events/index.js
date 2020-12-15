@@ -4,7 +4,7 @@ import EventsContainer from './events-container';
 const Events = () => {
   return (
     <div>
-      <HeaderBar title="Excel 2020" subtitle="Events" />
+      <HeaderBar title="Events" subtitle="Excel 2020" />
       <EventsContainer />
     </div>
   );
