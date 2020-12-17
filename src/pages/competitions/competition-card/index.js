@@ -1,7 +1,6 @@
 import {Component} from 'react';
 import Popup from 'reactjs-popup';
 import {Spring, config} from 'react-spring/renderprops';
-// import axios from 'axios';
 
 import './index.scss';
 
