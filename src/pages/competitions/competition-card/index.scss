@@ -13,6 +13,9 @@
     box-shadow:  6px 6px 12px #99c9e2,
                 -6px -6px 12px #e5f5fd;
 
+    border: .0625rem solid rgba(243,247,250,.05);
+    border-color:  #afd9f0;
+
     @include desktop-view {
         transition: 0.3s;
 
