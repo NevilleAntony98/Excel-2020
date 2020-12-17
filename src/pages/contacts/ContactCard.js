@@ -26,32 +26,32 @@ export default class ContactCard extends Component{
             <div className={styles["name"]}>{this.props.details.name}</div>
             <div className={styles["desig"]}>{this.props.details.desig}</div>
             </div> */}
-            <div class="contact-card">
-                    <div class="contact-card-img">
+            <div className="contact-card">
+                    <div className="contact-card-img">
                         <img src={this.props.details.img} alt="" />
                     </div>
-                    <div class="contact-card-body">
-                        <h3 class="contact-name">{this.props.details.name}</h3>
-                        <span class="contact-design">{this.props.details.desig}</span>
-                        {/* <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
-                        <ul class="contact-card-links">
+                    <div className="contact-card-body">
+                        <h3 className="contact-name">{this.props.details.name}</h3>
+                        <span className="contact-design">{this.props.details.desig}</span>
+                        {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
+                        <ul className="contact-card-links">
                             <li>
-                                <a href="http://localhost:3000/#/" target="_blank" rel="noopener noreferrer" aria-label="facebook social link" class="icon icon-xs icon-facebook mr-3">
+                                <a href="http://localhost:3000/#/" target="_blank" rel="noopener noreferrer" aria-label="facebook social link" className="icon icon-xs icon-facebook mr-3">
                                 <img src={phone} alt="phone"/>
                                 </a>
                             </li>
                             <li>
-                                <a href="http://localhost:3000/#/" target="_blank" rel="noopener noreferrer" aria-label="twitter social link" class="icon icon-xs icon-twitter mr-3">
+                                <a href="http://localhost:3000/#/" target="_blank" rel="noopener noreferrer" aria-label="twitter social link" className="icon icon-xs icon-twitter mr-3">
                                 <img src={email} alt="email"/>
                                 </a>
                             </li>
                             <li>
-                                <a href="http://localhost:3000/#/" target="_blank" rel="noopener noreferrer" aria-label="slack social link" class="icon icon-xs icon-slack mr-3">
+                                <a href="http://localhost:3000/#/" target="_blank" rel="noopener noreferrer" aria-label="slack social link" className="icon icon-xs icon-slack mr-3">
                                 <img src={insta} alt="insta"/>
                                 </a>
                             </li>
                             <li>
-                                <a href="http://localhost:3000/#/" target="_blank" rel="noopener noreferrer" aria-label="dribbble social link" class="icon icon-xs icon-dribbble mr-3">
+                                <a href="http://localhost:3000/#/" target="_blank" rel="noopener noreferrer" aria-label="dribbble social link" className="icon icon-xs icon-dribbble mr-3">
                                 <img src={linkedin} alt="linkedin"/>
                                 </a>
                             </li>
