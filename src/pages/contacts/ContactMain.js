@@ -60,9 +60,9 @@ export default class Contacts extends Component {
     render(){
         var grid = []
         for(var i=0 ; i<this.state.cardInfo.length ; i++){
-			var gridItem = <ContactCard details={this.state.cardInfo[i]} />
-               grid.push(gridItem) 
-        }  
+			var gridItem = <ContactCard key={i} details={this.state.cardInfo[i]} />
+               grid.push(gridItem)
+        }
     return(
         <div className="contacts">
             <div>
