@@ -2,6 +2,9 @@ import { createRef, Component } from 'react';
 
 import './index.scss';
 
+import location_icon from './location.svg'
+import reward_icon from './reward.svg'
+
 export default class CompetitionPopup extends Component {
     state = {
         activeSection: "About",
@@ -97,9 +100,28 @@ export default class CompetitionPopup extends Component {
         return(
             <div className="popup-content-container">
                 <div className="popup-sidebar">
-                    <img className="competition-image" src={this.props.competition.icon} alt={this.props.competition.name}/>
-                    <span className="name">{this.props.name}</span>
-                    <button className="register-button" onClick={this.onRegisterClicked}>Register</button>
+                    <div className="close-container-mobile" onClick={this.props.closeFunc}>
+                            <svg className="close-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 252 252"><path d="M164.612 87.388a9 9 0 00-12.728 0L126 113.272l-25.885-25.885a9 9 0 00-12.728 0 9 9 0 000 12.728L113.272 126l-25.885 25.885a9 9 0 006.364 15.364 8.975 8.975 0 006.364-2.636L126 138.728l25.885 25.885c1.757 1.757 4.061 2.636 6.364 2.636s4.606-.879 6.364-2.636a9 9 0 000-12.728L138.728 126l25.885-25.885a9 9 0 00-.001-12.727z"/></svg>
+                    </div>
+                    <div className="header-container">
+                        <div className="image-title-box">
+                            <img className="competition-image" src={this.props.competition.icon} alt={this.props.competition.name}/>
+                            <span className="name">{this.props.competition.name}</span>
+                        </div>
+                        <div className="reg-venue-prize-box">
+                            <div className="venue-prize-box">
+                                <span className="venue-label">
+                                    <img src={location_icon} alt="location"/>
+                                    <span>{this.props.competition.venue}</span>
+                                </span>
+                                <span className="prize-money">
+                                    <img src={reward_icon} alt="reward" />
+                                    <span>{this.props.competition.prizeMoney}</span>
+                                </span>
+                            </div>
+                            <button className="register-button" onClick={this.onRegisterClicked}>Register</button>
+                        </div>
+                    </div>
                     <div className="popup-stack-switcher">
                         <ul className="popup-nav">
                             <li className={this.state.activeSection === "About" ? "active" : ""} onClick={this.onAboutClicked}>About</li>
