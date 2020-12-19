@@ -22,11 +22,11 @@ const SmallSidebar = ({ setIsSidebarOpen }) => {
         className="smallSidebarIcon"
       /> */}
       <div className="smallSidebarInnerContainer">
-        <div className="navColors">
+        {/* <div className="navColors">
           <div className="red"></div>
           <div className="yellow"></div>
           <div className="green"></div>
-        </div>
+        </div> */}
 
         <div className="navbarProfile">
           <img src={profilepic} className="navbarProfileIcon" alt="default"></img>
