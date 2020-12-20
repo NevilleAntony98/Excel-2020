@@ -1,0 +1,71 @@
+@import '../../sass/mixins.scss';
+
+.profile-popup {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow:  4px 0px 12px #00000044;
+
+  .signed-in-text {
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem 2rem;
+    border-bottom: 1px solid #00000025;
+
+    small {
+      opacity: 0.7;
+    }
+  }
+
+  .buttons-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  button {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: start;
+    font-size: 0.9rem;
+    padding: 1rem 2rem;
+    transition: 0.1s ease-in-out;
+
+    &:first-child {
+      padding-bottom: 0.5rem;
+    }
+
+    &:last-child {
+      padding-top: 0.5rem;
+    }
+
+    &:hover {
+      background-color: #00000010;
+    }
+
+    svg {
+      height: 0.9rem;
+      width: auto;
+      padding-right: 8px;
+      opacity: 0.6;
+    }
+  }
+}
+
+.navbarProfile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    padding-bottom: 30px;
+  }
+
+  .navbarProfileIcon {
+    max-width: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
