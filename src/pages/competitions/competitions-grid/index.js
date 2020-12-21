@@ -151,7 +151,7 @@ export default class CompetitionsGrid extends Component {
           <DropDown
             options={this.sortOptions}
             onChange={this.onSortOptionChanged}
-            placeholder="Name"
+            placeholder="Sort By"
             className="drop-down"
           />
           <DropDown
