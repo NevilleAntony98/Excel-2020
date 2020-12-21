@@ -9,14 +9,16 @@
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
-    padding: 1.5rem 0;
+    padding: 1.5rem 5px;
     gap: 1rem;
 
     @include mobile-view {
-      grid-template-columns: auto;
-      grid-template-rows: auto auto;
-      justify-content: center;
-      gap: 0.6rem;
+      // grid-template-columns: auto auto;
+      // grid-template-rows: auto;
+      // justify-content: space-between;
+      // gap: 0.6rem;
+
+      font-size: 0.75rem;
     }
 
     .Dropdown-placeholder {
@@ -35,7 +37,7 @@
       }
 
       @include mobile-view {
-        min-width: 12rem;
+        max-width: 8rem;
       }
     }
   }
@@ -110,6 +112,11 @@
     box-shadow: 5px 5px 11px $shadow-dark, -5px -5px 11px $shadow-light;
     transition: none;
     cursor: pointer;
+
+    @include mobile-view{
+      padding: 10px;
+      // width: 100px;
+    }
   }
 
   &.is-open {
