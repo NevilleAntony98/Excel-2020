@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   height: 2%;
-  width: -webkit-fill-available;
+  /* width: 100vw; */
   width: -moz-available;
   padding: 20px;
   background-color: #c2eaff;
