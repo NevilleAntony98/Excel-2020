@@ -3,6 +3,7 @@
 
 .competition-grid {
   padding: 0 6vw;
+  padding-bottom: 70px;
 
   .sort-filter-box {
     display: grid;
@@ -41,11 +42,12 @@
 
   .competition-cards-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    // grid-template-columns: repeat(auto-fill,minmax(24rem,1fr));
     gap: 3rem;
 
     text-align: center;
-    padding: 2rem auto;
+    padding: 1.5rem 0;
 
     @include mobile-view {
       grid-template-columns: repeat(1, 1fr);
@@ -105,8 +107,9 @@
 .drop-down {
   .Dropdown-control {
     border-radius: 10px;
-    box-shadow: 5px 5px 11px #5fa6cc, -5px -5px 11px #e5f5fd;
+    box-shadow: 5px 5px 11px $shadow-dark, -5px -5px 11px $shadow-light;
     transition: none;
+    cursor: pointer;
   }
 
   &.is-open {
@@ -119,5 +122,32 @@
       border-radius: 0 0 10px 10px;
       box-shadow: 0px 7px 10px 1px #00000063;
     }
+  }
+}
+
+@media screen and (max-width:1700px){
+	.competition-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media screen and (max-width:1250px){
+	.competition-cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+
+@media screen and (max-width:580px){
+  .competition-grid {
+    padding: 0;
+    padding-bottom: 70px;
+  }
+	.competition-cards-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-gap: 0rem !important;
+    gap: 1rem !important;
   }
 }

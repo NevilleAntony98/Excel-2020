@@ -47,7 +47,7 @@ export default class CompetitionCard extends Component {
     return (
       <Spring from={{opacity: 0, marginTop: -50}} to={{opacity: 1, marginTop: 0}} config={config.wobbly}>
         {props => (
-          <div style={props}>
+          <div style={props} className="competition-card-container">
             <Popup
               trigger={
                 <div className="competition-card">
@@ -57,9 +57,12 @@ export default class CompetitionCard extends Component {
                   <div className="title">
                     <span>{this.props.competition.name}</span>
                   </div>
-                  <i className="description">
-                    { this.getSanitizedString(this.props.competition.about) }
-                  </i>
+                  <div className="category">
+                    <span>{this.props.competition.category.replace(/_/g, " ")}</span>
+                  </div>
+                  {/* <i className="description">
+                    { this.getSanitizedString(this.props.competition.about.split('.')[0]) }
+                  </i> */}
                 </div>
               }
               modal>
