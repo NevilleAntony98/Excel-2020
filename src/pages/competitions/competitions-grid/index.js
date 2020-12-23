@@ -56,7 +56,7 @@ export default class CompetitionsGrid extends Component {
     let categories = []
     let res = await axios.get('https://staging.events.excelmec.org/api/constants')
 
-    if (res.status == 200) {
+    if (res.status === 200) {
       categories = res.data.category
 
       categories.forEach(category => {

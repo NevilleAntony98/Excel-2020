@@ -8,8 +8,6 @@ import './index.scss'
 import DotLoader from '../../../../components/DotLoader'
 
 const UpdateMobilePopup = ({open, closeFunc}) => {
-    const ACCOUNTS_URL = "https://staging.accounts.excelmec.org"
-
     return(
         <Popup open={open} nested>
             <div className="update-mobile-popup">
