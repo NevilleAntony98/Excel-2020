@@ -1,0 +1,78 @@
+@import '../../../../sass/mixins.scss';
+
+.register-button {
+  background-color: #37b9ff;
+  color: white;
+  margin: 0 2rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  border-radius: 9999px;
+  box-shadow:  6px 6px 12px #99c9e2,
+              -6px -6px 12px #e5f5fd;
+  border: .0625rem solid #0086ce;
+  border-color:  #afd9f0;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+
+  @include mobile-view {
+    width: 10rem;
+    margin: 1rem auto;
+  }
+
+  @include desktop-view {
+    &:hover {
+      background-color: #0fabff;
+      transform: scale(1.05);
+      color: white;
+    }
+  }
+}
+
+.update-mobile-popup {
+  display: flex;
+  flex-direction: column;;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0px 0px 12px #00000055 ;
+
+  .close-container {
+    display: flex;
+    flex-direction: row-reverse;
+
+    svg {
+      height: 1rem;
+      width: auto;
+
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    box-sizing: border-box;
+
+    @include mobile-view {
+      width: 80vw;
+    }
+
+    .buttons-container {
+      display: flex;
+      gap: 0.5rem;
+      width: fit-content;
+      margin: auto;
+      margin-top: 1rem;
+
+      button {
+        border: none;
+        background-color: #0fabff;
+        border-radius: 6px;
+        color: white;
+        box-shadow: 0px 0px 8px #37b9ff99;
+        padding: 0.6rem;
+      }
+    }
+  }
+}

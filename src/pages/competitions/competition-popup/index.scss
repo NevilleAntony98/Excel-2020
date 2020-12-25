@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: row;
   border-radius: 12px;
-  height: 35rem;
+  height: 38rem;
 
   @include mobile-view {
     flex-direction: column;
@@ -83,7 +83,7 @@
         }
       }
 
-      .reg-venue-prize-box {
+      .reg-prize-box {
         display: flex;
         flex-direction: column;
 
@@ -93,63 +93,18 @@
           justify-content: flex-end;
         }
 
-        .venue-prize-box {
+        .prize-money, .team-size, .date {
           display: flex;
+          opacity: 0.8;
           justify-content: center;
-          gap: 1.5rem;
-          color: #000000aa;
-
-          @include mobile-view {
-            flex-direction: column;
-            gap: 6px;
-            align-items: center;
-          }
-
-          .venue-label {
-            display: flex;
-          }
-
-          .prize-money {
-            display: flex;
-          }
-
-          img {
-            max-width: 1rem;
-            max-height: 1rem;
-            margin-top: 1px;
-            margin-right: 2px;
-            opacity: 0.7;
-
-          }
+          padding: 1px;
         }
 
-        .register-button {
-          background-color: #37b9ff;
-          color: white;
-          margin: 0 2rem;
-          margin-top: 1rem;
-          padding: 0.5rem;
-          font-size: 1.1rem;
-          border-radius: 9999px;
-          box-shadow:  6px 6px 12px #99c9e2,
-                      -6px -6px 12px #e5f5fd;
-          border: .0625rem solid #0086ce;
-          border-color:  #afd9f0;
-          cursor: pointer;
-          transition: 200ms ease-in-out;
-
-          @include mobile-view {
-            width: 10rem;
-            margin: 1rem auto;
-          }
-
-          @include desktop-view {
-            &:hover {
-              background-color: #0fabff;
-              transform: scale(1.05);
-              color: white;
-            }
-          }
+        img {
+          max-width: 1rem;
+          max-height: 1rem;
+          margin-top: 3px;
+          margin-right: 3px;
         }
       }
     }
@@ -208,8 +163,6 @@
   }
 
   .popup-stack {
-    min-width: 30rem;
-    width: calc(100vw - 50rem);
     padding: 1rem;
     font-size: 1.2rem;
     line-height: 2rem;
@@ -227,9 +180,23 @@
       height: 100%;
     }
 
+    @include desktop-view {
+      min-width: 30rem;
+      width: calc(100vw - 50rem);
+    }
+
+    @include tablet-view {
+      min-width: 30rem;
+      width: calc(100vw - 50rem);
+    }
+
     .close-container {
       display: flex;
       flex-direction: row-reverse;
+
+      @include mobile-view {
+        display: none;
+      }
 
       .close-button {
         position: fixed;

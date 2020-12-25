@@ -1,0 +1,114 @@
+@import '../../../../sass/mixins.scss';
+
+.manage-section {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+
+    @include desktop-view {
+        margin-top: 2rem;
+    }
+
+    .button-group {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+
+        button {
+            background-color: transparent;
+            box-shadow: none;
+            padding: 0.5rem;
+            border: 1px solid #7cd1ff;
+            width: 14ch;
+            transition: 0.2s;
+
+            &:first-child {
+                border-radius: 6px 0 0 6px;
+                border-right: none;
+            }
+
+            &:last-child {
+                border-radius: 0 6px 6px 0;
+            }
+
+            &.active {
+                background-color: #0eabff;
+                color: white;
+                box-shadow: 2px 2px 10px #0eabff55;
+            }
+        }
+    }
+
+    .view-subpage {
+        display: flex;
+        flex-direction: column;
+
+        @include desktop-view {
+            margin-top: 1rem;
+        }
+
+        .team-members-box{
+            margin: auto;
+            margin-top: 1rem;
+            width: fit-content;
+            border: 1px solid #7cd1ff;
+            padding: 1rem 2rem 2rem;
+            border-radius: 6px;
+            text-align: center;
+
+            b {
+                border-bottom: 1px solid black;
+            }
+
+            .team-members-container {
+                margin-top: 1rem;
+
+                .impossible-state-empty {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+
+    .change-team-subpage {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 1rem;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 10rem;
+            margin: auto;
+            margin-top: 1rem;
+
+            input[type="number"] {
+                padding: 0.5rem;
+                border-radius: 4px;
+                border: 1px solid #00000044;
+                box-shadow: 0px 0px 3px #00000044;
+            }
+
+            input[type="submit"] {
+                background-color: #52c3ff;
+                padding: 0.5rem;
+                border-radius: 4px;
+                border: none;
+                color: white;
+                box-shadow: 2px 2px 10px #0eabff55;
+                width: fit-content;
+                margin: auto;
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}
+
+.dot-loader {
+    width: 3rem;
+    margin: auto;
+    margin-top: 2rem;
+}

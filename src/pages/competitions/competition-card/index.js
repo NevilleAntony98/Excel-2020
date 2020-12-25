@@ -1,6 +1,6 @@
-import {Component} from 'react';
+import {useEffect, useState} from 'react';
 import Popup from 'reactjs-popup';
-import {Spring, config} from 'react-spring/renderprops';
+import { Spring } from 'react-spring/renderprops';
 
 import './index.scss';
 
@@ -8,74 +8,56 @@ import CompetitionPopup from '../competition-popup';
 
 import excelIcon from '../../../assets/png/excel2020.png';
 
-export default class CompetitionCard extends Component {
-  state = {
-    imageIsReady: false
-  };
+const FlipImage = ({competition}) => {
+  const [isLoading, setIsLoading] = useState(true)
+  const img = new Image()
 
-  componentDidMount() {
-    const img = new Image();
-    img.src = this.props.competition.icon;
+  useEffect(() => {
+    img.src = competition.icon
+    img.onload = () => setIsLoading(false)
+  })
 
-    img.onload = () => {
-      this.setState({imageIsReady: true});
-    };
-  }
+  if (isLoading)
+    return <img src={excelIcon} alt={competition.name} />
 
-  PlaceholderIcon = () => {
-    return <img src={excelIcon} alt={this.props.competition.name} />;
-  };
-
-  CompetitionIcon = () => {
-    return (
+  return (
       <Spring
-        from={{transform: 'rotateY(360deg)'}}
-        to={{transform: 'rotateY(0deg)'}}
-        config={{tension: 200, friction: 40}}>
-        {props => (
-          <div style={props}>
-            <img src={this.props.competition.icon} alt={this.props.competition.name} />
-          </div>
-        )}
+      from={{transform: 'rotateY(360deg)'}}
+      to={{transform: 'rotateY(0deg)'}}
+      config={{tension: 200, friction: 40}}>
+      {props => (
+        <div style={props}>
+          <img src={competition.icon} alt={competition.name} />
+        </div>
+      )}
       </Spring>
-    );
-  };
-
-  getSanitizedString = (string) => string.replaceAll('\\\\n', '\n');
-
-  render() {
-    return (
-      <Spring from={{opacity: 0, marginTop: -50}} to={{opacity: 1, marginTop: 0}} config={config.wobbly}>
-        {props => (
-          <div style={props} className="competition-card-container">
-            <Popup
-              trigger={
-                <div className="competition-card">
-                  <div className="icon">
-                    {!this.state.imageIsReady ? <this.PlaceholderIcon /> : <this.CompetitionIcon />}
-                  </div>
-                  <div className="title">
-                    <span>{this.props.competition.name}</span>
-                  </div>
-                  <div className="category">
-                    <span>{this.props.competition.category.replace(/_/g, " ")}</span>
-                  </div>
-                  {/* <i className="description">
-                    { this.getSanitizedString(this.props.competition.about.split('.')[0]) }
-                  </i> */}
-                </div>
-              }
-              modal>
-              {close => (
-                <CompetitionPopup
-                  competition={this.props.competition}
-                  closeFunc={close}
-                />
-              )}
-            </Popup>
-          </div>
-        )}
-      </Spring>
-    );
-  }
+  )
 }
+
+const CompetitionCard = ({competition}) => {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <div className="competition-card-container">
+        <div className="competition-card" onClick={() => setOpen(true)}>
+          <div className="icon">
+            <FlipImage competition={competition} />
+          </div>
+          <div className="title">
+            <span>{competition.name}</span>
+          </div>
+          <div className="category">
+            <span>{competition.category.replace(/_/g, " ")}</span>
+          </div>
+        </div>
+      <Popup open={open} onClose={() => setOpen(false)} closeOnDocumentClick closeOnEscape nested>
+        <CompetitionPopup
+        open={open}
+        competition={competition}
+        closeFunc={() => setOpen(false)} />
+      </Popup>
+    </div>
+  );
+}
+
+export default CompetitionCard
