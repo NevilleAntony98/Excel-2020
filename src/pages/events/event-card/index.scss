@@ -4,13 +4,16 @@
 .eventCardContainer {
   display: flex;
   gap: 2rem;
-  padding: 2rem;
-  border-radius: 8px;
+  padding: 3rem;
+  border-radius: 0.55rem;
   color: black;
-  background: #c2eaff;
-  box-shadow:  6px 6px 12px #87c6e7,
-              -6px -6px 12px #f0faff;
-
+  background: $bg-color;
+  box-shadow:  6px 6px 12px $shadow-dark,
+  -6px -6px 12px $shadow-light;
+  border: .0625rem solid rgba(243,247,250,.05);
+  border-color:  $border-color;
+  
+  cursor: pointer;
   @include desktop-view {
     transition: 0.3s;
     &:hover {
@@ -31,6 +34,13 @@
     gap: 8px;
     padding-top: 0.5rem;
 
+    .eventCardType {
+      opacity: 0.7;
+      letter-spacing: 2px;
+      font-size: 1rem;
+      text-transform: capitalize;
+    }
+
     .eventCardDate {
       opacity: 0.7;
       letter-spacing: 2px;
@@ -44,17 +54,17 @@
       }
     }
 
-    .eventCardTitle {
-      @include desktop-view {
-        min-width: 8rem;
-      }
-    }
+    
   }
+
+
 
   .eventInfoBox {
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
-    margin: auto 0;
+    margin: 20px 0;
+    margin-left: 15px;
     line-height: 26px;
 
     @include desktop-view {
@@ -65,23 +75,117 @@
       text-align: center;
     }
 
+    .eventCardTitle {
+      font-size: 28px;
+      font-weight: 800;
+      // font-family: 'Lemon Milk';
+      text-transform: uppercase;
+      @include desktop-view {
+        // min-width: 8rem;
+        
+      }
+    }
+
     .eventCardInfo {
-      margin: 1rem;
+      margin: 1rem 0;
       position: relative;
-      height: 12.6rem;
+      // max-height: 4.6rem;
       overflow: hidden;
       white-space: pre-line;
 
-      &:after {
-        content: "";
-        text-align: right;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 70%;
-        height: 1.6rem;
-        background: linear-gradient(to right, rgba(255, 255, 255, 0), #c2eaff 80%);
+    //   &:after {
+    //     content: "";
+    //     text-align: right;
+    //     position: absolute;
+    //     bottom: 0;
+    //     right: 0;
+    //     width: 70%;
+    //     height: 1.6rem;
+    //     background: linear-gradient(to right, rgba(255, 255, 255, 0), #c2eaff 80%);
+    // }
     }
+  }
+}
+
+
+@media screen and (max-width:1500px){
+	
+.eventCardContainer {
+  gap: 2rem;
+  padding: 3rem;
+
+  }
+
+  .eventCardHeaderBox {
+    gap: 80px;
+    padding-top: 0.5rem;
+
+    .eventCardType {
+      opacity: 0.7;
+      margin-top: 10px;
+      letter-spacing: 2px;
+      font-size: 1rem;
+      text-transform: capitalize;
+    }
+
+    .eventCardDate {
+      opacity: 0.7;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+    }
+
+    .flipIcon {
+    }
+
+    
+  }
+
+
+
+  .eventInfoBox {
+    .eventCardTitle {
+      font-size: 25px !important;
+    }
+
+    .eventCardInfo {
+      font-size: 16px;
+      margin: 1rem 0;
+  }
+}
+}
+
+
+@media screen and (max-width:580px){
+  .eventCardContainer{
+    padding: 2rem;
+    .eventCardHeaderBox{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+      .eventCardType{
+        display: none;
+      }
+    }
+    .eventInfoBox {
+      margin-top: 5px;
+      margin-left: 0;
+    
+      .eventCardInfo {
+        // max-height: 6.6rem;
+
+      //   &:after {
+      //     content: "";
+      //     text-align: right;
+      //     position: absolute;
+      //     bottom: 0;
+      //     right: 0;
+      //     width: 70%;
+      //     height: 1.6rem;
+      //     background: linear-gradient(to right, rgba(255, 255, 255, 0), #c2eaff 80%);
+      // }
+      }
     }
   }
 }
