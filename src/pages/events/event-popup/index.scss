@@ -8,10 +8,12 @@
   box-shadow: 5px 5px 15px $shadow-dark, -5px -5px 15px $shadow-light;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   border-radius: 12px;
   height: 38rem;
 
+
+  font-family: $font-1;
   @include mobile-view {
     flex-direction: column;
     width: 100vw;

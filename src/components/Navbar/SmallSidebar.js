@@ -8,7 +8,7 @@ import competitions from '../../assets/svg/icons8-trophy-64.png';
 import events from '../../assets/svg/icons8-presentation-64.png';
 import schedule from '../../assets/svg/calendar--v4.png';
 import contacts from '../../assets/svg/icons8-phone-64.png';
-import logoutpic from '../../assets/svg/icons8-export-50.png';
+// import logoutpic from '../../assets/svg/icons8-export-50.png';
 
 
 import NavProfileIcon from './../NavProfileIcon'
@@ -52,9 +52,9 @@ const SmallSidebar = ({ setIsSidebarOpen }) => {
         </div>
         </NavLink>
       </div>
-      <div className="logout">
+      {/* <div className="logout">
           <img src={logoutpic} className="logoutIcon" alt="default"></img>
-        </div>
+        </div> */}
     </div>
   );
 };
