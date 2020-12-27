@@ -85,6 +85,36 @@
         }
       }
 
+      .event-register {
+        display: flex;
+        justify-content: center;
+      }
+
+      .hidden {
+        display: none;
+      }
+      
+      .event-register-button {
+        cursor: pointer;
+        background-color: #37b9ff;
+        color: white;
+        margin: 0 2rem;
+        margin-top: 1rem;
+        padding: 0.5rem 1.5rem;
+        font-size: 1.1rem;
+        border-radius: 9999px;
+        box-shadow: 6px 6px 12px #99c9e2, -6px -6px 12px #e5f5fd;
+        border: 0.0625rem solid #0086ce;
+        border-color: #afd9f0;
+        transition: 200ms ease-in-out;
+      }
+
+      .event-register-button:hover {
+        background-color: #0fabff;
+        transform: scale(1.05);
+        color: #fff;
+      }
+
       .reg-prize-box {
         display: flex;
         flex-direction: column;

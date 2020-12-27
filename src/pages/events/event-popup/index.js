@@ -67,9 +67,11 @@ const EventPopup = ({ event, closeFunc }) => {
                         <img className="event-image" src={event.icon} alt={event.name} />
                         <span className="name">{event.name}</span>
                     </div>
-                    {/* <div className="event-register">
-                        <p>{event.button}</p>
-                    </div> */}
+                    <div className={event.needRegistration? "event-register" : "hidden"}>
+                        <a href={event.registrationLink} target="_blank" rel="noreferrer">
+                            <button className="event-register-button">{event.button}</button>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div className="popup-stack" ref={divRef}>
