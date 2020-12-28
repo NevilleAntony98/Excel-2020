@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+@import "../../sass/variables";
+@import "../../sass/mixins";
 
 .contacts{
 	overflow-x: hidden;
 	// background-color: #e6e7ee;
-	background-color: #c2eaff;
+	background-color: $bg-color;
 	max-width: 100vw;
 	// margin-left: -16px;
 }

@@ -1,17 +1,28 @@
 @import "../../../sass/variables";
 @import "../../../sass/mixins";
 
+.competition-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .competition-card {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    color: black;
+    color: $color-black;
 
-    border-radius: 6px;
-    background: #c2eaff;
-    box-shadow:  6px 6px 12px #99c9e2,
-                -6px -6px 12px #e5f5fd;
+    height: 350px;
+    width: 350px;
+    border-radius: 0.55rem;
+    background: $bg-color;
+    box-shadow:  6px 6px 12px $shadow-dark,
+                -6px -6px 12px $shadow-light;
+
+    border: .0625rem solid rgba(243,247,250,.05);
+    border-color:  $border-color;
+
 
     @include desktop-view {
         transition: 0.3s;
@@ -26,15 +37,15 @@
         background-color: $color-white;
         border-radius: 9999px;
         margin: 1rem;
-        margin-top: 1.5rem;
+        margin-top: 2rem;
         padding: 2em;
 
-        box-shadow:  5px 5px 7px #99c9e2,
-                    -5px -5px 7px #e5f5fd;
+        box-shadow:  5px 5px 7px $shadow-dark,
+                    -5px -5px 7px $shadow-light;
 
         img {
-            max-width: 6rem;
-            max-height: 6rem;
+            max-width: 6.5rem;
+            max-height: 6.5rem;
 
             @include mobile-view {
                 max-width: 4rem;
@@ -44,39 +55,47 @@
     }
 
     .title {
-        margin-bottom: 1rem;
+        margin: 1rem 0;
 
         span {
-            color: black;
-            font-weight: 600;
-            font-size: 1.3rem;
+            color: $color-black;
+            font-weight: 500;
+            // font-variant-caps: petite-caps;
+            font-size: 1.5rem;
         }
     }
 
+    .category {
+        text-transform: capitalize;
+        color: rgb(58, 56, 56);
+    }
     .description {
         // Dirty hack below because css still doesnt support multiline text ellipsize
 
         margin: 1rem;
-        height: 12rem;
-        width: 250px;
+        // height: 12rem;
+        // width: 250px;
         position: relative;
-        height: 10.8rem;
-        overflow: hidden;
+        // height: 10.8rem;
+        // overflow: hidden;
         white-space: pre-line;
 
-        &:after {
-            content: "";
-            text-align: right;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 70%;
-            height: 1.6rem;
-            background: linear-gradient(to right, rgba(255, 255, 255, 0), #c2eaff 80%);
-        }
+        // &:after {
+        //     content: "";
+        //     text-align: right;
+        //     position: absolute;
+        //     bottom: 0;
+        //     right: 0;
+        //     width: 70%;
+        //     height: 1.6rem;
+        //     background: linear-gradient(to right, rgba(255, 255, 255, 0), #c2eaff 80%);
+        // }
     }
 }
 
+.competition-card:hover {
+    cursor: pointer;
+}
 @keyframes anvil {
     0% {
         transform: scale(1) translateY(0px);
@@ -97,4 +116,252 @@
 
 .popup-content {
     animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+}
+
+// Media queries
+
+@media screen and (max-width:1870px){
+	.competition-card {
+        width: 320px;
+        height: 320px;
+        .icon {
+            img {
+                max-width: 5rem;
+            }
+        }
+        .title {
+            margin: 1rem 0;
+            span {
+                font-size: 1.4rem;
+            }
+        }
+    
+        .category {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width:1700px){
+	.competition-card {
+        width: 360px;
+        height: 360px;
+        .icon {
+            img {
+                max-width: 6rem;
+            }
+        }
+        .title {
+            margin: 2rem 0;
+            margin-bottom: 1.25rem;
+            span {
+                font-size: 1.5rem;
+            }
+        }
+    
+        .category {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width:1400px){
+	.competition-card {
+        width: 320px;
+        height: 320px;
+        .icon {
+            img {
+                max-width: 5rem;
+            }
+        }
+        .title {
+            margin: 0.5rem 0;
+            // margin-bottom: 1rem;
+            span {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1350px){
+	.competition-card {
+        width: 310px;
+        height: 310px;
+        .icon {
+            img {
+                max-width: 4.5rem;
+            }
+        }
+        .title {
+            margin: 0.5rem 0;
+            span {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1250px){
+	.competition-card {
+        width: 360px;
+        height: 360px;
+        .icon {
+            img {
+                max-width: 6rem;
+            }
+        }
+        .title {
+            margin: 1rem 0;
+            span {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1048px){
+	.competition-card {
+        width: 300px;
+        height: 300px;
+        .icon {
+            img {
+                max-width: 4rem;
+            }
+        }
+        .title {
+            margin: 0.5rem 0;
+            span {
+                font-size: 1.4  rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:950px){
+	.competition-card {
+        width: 300px;
+        height: 300px;
+        .icon {
+            img {
+                max-width: 4rem;
+            }
+        }
+        .title {
+            margin: 0.5rem 0;
+            span {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:850px){
+	.competition-card {
+        width: 250px;
+        height: 250px;
+        .icon {
+            padding: 1rem;
+            img {
+                max-width: 4rem;
+            }
+        }
+        .title {
+            margin: 0;
+            margin-bottom: 0.5rem;
+            span {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+/*ipad potrait*/
+@media screen and (max-width:800px) and (max-height: 1300px ){
+	.competition-card {
+        width: 250px;
+        height: 250px;
+        .icon {
+            padding: 1rem;
+            img {
+                max-width: 4rem;
+            }
+        }
+        .title {
+            margin: 0;
+            margin-bottom: 0.5rem;
+            span {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:720px) and (max-height: 1300px ){
+	.competition-card {
+        width: 230px;
+        height: 230px;
+        .icon {
+            padding: 1rem;
+            margin: 1rem;
+            margin-bottom: 0;
+            img {
+                max-width: 4rem;
+            }
+        }
+        .title {
+            margin: 0.5rem 0;
+            // margin-bottom: 0.5rem;
+            span {
+                font-size: 1.2rem;
+            }
+        }
+        .category {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@media screen and (max-width:480px){
+	.competition-card {
+        width: 180px;
+        height: 180px;
+        .icon {
+            img {
+                max-width: 3rem;
+            }
+        }
+        .title {
+            margin: 0.1rem 0;
+            span {
+                font-size: 0.95rem;
+            }
+        }
+        .category {
+            font-size: 0.75rem;
+        }
+    }
+}
+
+@media screen and (max-width:400px){
+	.competition-card {
+        width: 160px;
+        height: 160px;
+        .icon {
+            margin-top: 15px;
+            img {
+                max-width: 3rem;
+            }
+        }
+        .title {
+            margin: 1rem 0 0.25rem 0;
+            display: flex;
+            span {
+                font-size: 0.95rem;
+            }
+        }
+        .category {
+            font-size: 0.75rem;
+        }
+    }
 }

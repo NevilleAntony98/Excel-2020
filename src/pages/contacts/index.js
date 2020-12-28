@@ -3,7 +3,7 @@ import ContactMain from './ContactMain';
 const Schedule = () => {
   return (
     <div>
-      <HeaderBar title="Excel 2020" subtitle="Contacts" />
+      <HeaderBar title="Contacts" subtitle="Excel2020" />
       <ContactMain />
     </div>
   );

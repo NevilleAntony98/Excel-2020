@@ -2,19 +2,23 @@
 @import '../../../sass/mixins';
 
 .competition-grid {
+  padding: 0 6vw;
+  padding-bottom: 70px;
+
   .sort-filter-box {
     display: grid;
     grid-template-columns: auto auto;
-    justify-content: right;
-    padding-right: 14vw;
+    justify-content: space-between;
+    padding: 1.5rem 5px;
     gap: 1rem;
 
     @include mobile-view {
-      padding: 0;
-      grid-template-columns: auto;
-      grid-template-rows: auto auto;
-      justify-content: center;
-      gap: 0.6rem;
+      // grid-template-columns: auto auto;
+      // grid-template-rows: auto;
+      // justify-content: space-between;
+      // gap: 0.6rem;
+
+      font-size: 0.75rem;
     }
 
     .Dropdown-placeholder {
@@ -33,18 +37,19 @@
       }
 
       @include mobile-view {
-        min-width: 12rem;
+        max-width: 8rem;
       }
     }
   }
 
   .competition-cards-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    // grid-template-columns: repeat(auto-fill,minmax(24rem,1fr));
     gap: 3rem;
 
     text-align: center;
-    padding: 2rem 14vw;
+    padding: 1.5rem 0;
 
     @include mobile-view {
       grid-template-columns: repeat(1, 1fr);
@@ -104,8 +109,14 @@
 .drop-down {
   .Dropdown-control {
     border-radius: 10px;
-    box-shadow: 5px 5px 11px #5fa6cc, -5px -5px 11px #e5f5fd;
+    box-shadow: 5px 5px 11px $shadow-dark, -5px -5px 11px $shadow-light;
     transition: none;
+    cursor: pointer;
+
+    @include mobile-view{
+      padding: 10px;
+      // width: 100px;
+    }
   }
 
   &.is-open {
@@ -118,5 +129,31 @@
       border-radius: 0 0 10px 10px;
       box-shadow: 0px 7px 10px 1px #00000063;
     }
+  }
+}
+
+@media screen and (max-width:1700px){
+	.competition-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media screen and (max-width:1250px){
+	.competition-cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+
+@media screen and (max-width:580px){
+  .competition-grid {
+    padding: 0;
+    padding-bottom: 70px;
+  }
+	.competition-cards-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.25rem 0rem !important;
   }
 }

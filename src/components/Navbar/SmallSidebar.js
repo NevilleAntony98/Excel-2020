@@ -1,40 +1,60 @@
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import './SmallSidebar.css';
 
-// import hamburgerMenu from '../../assets/svg/hamburgerMenu.svg';
-import home from '../../assets/svg/home1.svg';
-import schedule from '../../assets/svg/schedule.svg';
-import competitions from '../../assets/svg/competitions.svg';
-import contacts from '../../assets/svg/contacts.svg';
-import events from '../../assets/svg/events.svg';
 
-const SmallSidebar = ({setIsSidebarOpen}) => {
+import home from '../../assets/svg/icons8-home-72.png';
+import competitions from '../../assets/svg/icons8-trophy-64.png';
+import events from '../../assets/svg/icons8-presentation-64.png';
+import schedule from '../../assets/svg/calendar--v4.png';
+import contacts from '../../assets/svg/icons8-phone-64.png';
+// import logoutpic from '../../assets/svg/icons8-export-50.png';
+
+
+import NavProfileIcon from './../NavProfileIcon'
+
+
+
+const SmallSidebar = ({ setIsSidebarOpen }) => {
+
   return (
     <div className="smallSidebarContainer">
-      {/* <img
-        alt="expand menu"
-        src={hamburgerMenu}
-        onClick={() => setIsSidebarOpen(true)}
-        className="smallSidebarIcon"
-      /> */}
       <div className="smallSidebarInnerContainer">
-        <NavLink to="/">
-          <img alt="home" src={home} className="smallSidebarIcon" />
+
+
+        <NavProfileIcon isMobile={false}/>
+
+        <NavLink to="/" style={{ textDecoration: 'none' }}>
+          <div className="smallSidebarLink">
+            <img alt="home" src={home} className="smallSidebarIcon" />
+          </div>
         </NavLink>
-        <NavLink to="/competitions">
-          <img alt="competitions" src={competitions} className="smallSidebarIcon" />
+
+        <NavLink to="/competitions" style={{ textDecoration: 'none' }}>
+          <div className="smallSidebarLink"><img alt="competitions" src={competitions} className="smallSidebarIcon" />
+
+          </div>
         </NavLink>
-        <NavLink to="/events">
+
+        <NavLink to="/events" style={{ textDecoration: 'none' }}>
+          <div className="smallSidebarLink">
           <img alt="events" src={events} className="smallSidebarIcon" />
+        </div>
         </NavLink>
-        <NavLink to="/schedule">
+        <NavLink to="/schedule" style={{ textDecoration: 'none' }}>
+          <div className="smallSidebarLink">
           <img alt="schedule" src={schedule} className="smallSidebarIcon" />
+        </div>
         </NavLink>
-        <NavLink to="/contacts">
+        <NavLink to="/contacts" style={{ textDecoration: 'none' }}>
+          <div className="smallSidebarLink">
           <img alt="contacts" src={contacts} className="smallSidebarIcon" />
+        </div>
         </NavLink>
       </div>
+      {/* <div className="logout">
+          <img src={logoutpic} className="logoutIcon" alt="default"></img>
+        </div> */}
     </div>
   );
 };

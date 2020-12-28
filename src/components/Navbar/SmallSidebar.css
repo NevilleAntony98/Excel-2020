@@ -3,19 +3,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 71px;
-  height: 100vh;
+  width: 70px;
+  /* height: 100vh; */
   /* padding: 20px; */
-  background-color:#c2eaff;
+  background-color:white;
   box-shadow: 0 1px 10px rgba(0,0,0,.12),0 1px 5px rgba(0,0,0,.24);
+  left: 20px;
+  top: 20px;
+  bottom: 20px;
+  border-radius: 18px;
 }
-.smallSidebarIcon {
-  margin: 10px auto;
-  padding: 15px 0;
-  height: 20px;
-  width: 20px;
-  cursor: pointer;
-}
+
 .smallSidebarInnerContainer {
   color: rgb(98, 95, 95);
   display: flex;
@@ -23,4 +21,132 @@
   /* padding-top: 48px; */
   /* height: 50%; */
   justify-content: space-between;
+  width: 100%;
+}
+
+.navColors {
+  display: flex;
+  align-items: center;
+  
+  height: 45px;
+  padding-left: 10px;
+}
+
+.navColors div {
+  margin: 0 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 100px;
+}
+
+.red {
+  background-color: rgb(247, 59, 59);
+}
+
+.green {
+  background-color: rgb(63, 228, 63);
+}
+
+.yellow {
+  background-color: rgb(248, 248, 45);
+}
+.navbarProfile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100%; */
+  /* padding: 25px 0; */
+  padding:15px 0;
+  padding-bottom: 30px;
+}
+
+.navbarProfileIcon {
+  max-width: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.smallSidebarLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100%; */
+  padding: 25px 0;
+}
+
+.smallSidebarLink:hover {
+  /* background-color: #b2dff8; */
+  transition: 0.3s ease-in;
+}
+
+.smallSidebarIcon {
+	height: 25px;
+	width: 25px;
+  cursor: pointer;
+  /* padding-bottom: 13px; */
+}
+
+.logout {
+  position: absolute;
+  bottom: 40px;
+  
+  display: flex;
+  cursor: pointer;
+}
+
+.logoutIcon {
+  height: 25px;
+  width: 25px;
+}
+.linkText {
+  font-size: 13.5px;
+  color: black;
+}
+
+
+@media screen and (max-width:1700px){
+	.smallSidebarContainer {
+    width: 70px;
+  }
+  .linkText {
+    font-size: 12.5px;
+  }
+}
+
+@media screen and (max-width:1400px){
+  .smallSidebarContainer {
+    width: 70px;
+  }
+  .linkText {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width:1350px){
+	/* .smallSidebarContainer {
+    width: 95px;
+  }
+  .linkText {
+    font-size: 13px;
+  } */
+}
+
+@media screen and (max-width:1200px){
+	.smallSidebarContainer {
+    width: 70px;
+  }
+  .linkText {
+    font-size: 11.5px;
+  }
+}
+
+@media screen and (max-width:1048px){
+	.smallSidebarContainer {
+    width: 70px;
+  }
+  .linkText {
+    font-size: 11px;
+  }
 }

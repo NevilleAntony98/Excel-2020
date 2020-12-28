@@ -12,14 +12,14 @@
   margin: 24px 0;
   // background: linear-gradient(145deg, #5bc6ff, #4da7db);
   // box-shadow: 5px 5px 15px #224a61, -5px -5px 15px #88ffff;
-  box-shadow:  6px 6px 12px #99c9e2,-6px -6px 12px #e5f5fd !important; // much darker than original then lighter than original
+  box-shadow:  6px 6px 12px $shadow-dark,-6px -6px 12px $shadow-light !important; // much darker than original then lighter than original
   border: .0625rem solid rgba(243,247,250,.05);
-  border-color:  #afd9f0 !important;  // darker than original
+  border-color: $border-color !important;  // darker than original
   border-radius: 0.55rem;
-  background-color: #c2eaff !important; // original color
+  background-color: $bg-color !important; // original color
 
   // color: $color-title-dark;
-  color: black;
+  color: $color-black;
 
   @include desktop-view {
     transition: 0.3s;
@@ -36,7 +36,7 @@
 
 .scheduleCardTitle {
   // color: $color-title-dark;
-  color: black;
+  color: $color-black;
   font-variant-caps: petite-caps;
   font-size: 1.4rem;
 }
@@ -52,8 +52,8 @@
 }
 
 .flipIcon {
-  background-color: transparent;
-  box-shadow: none;
+  // background-color: transparent;
+  // box-shadow: none;
 }
 
 @media only screen and (max-width:980px) {
@@ -64,7 +64,7 @@
 
 .scheduleCardTitle {
   // color: $color-title-dark;
-  color: black;
+  color: $color-black;
   font-variant-caps: petite-caps;
   font-size: 0.75rem;
 }

@@ -7,7 +7,7 @@ export default class CompetitionsPage extends Component {
     render() {
         return (
             <div className="collections-page">
-                <HeaderBar title="Excel 2020" subtitle="Competitions" />
+                <HeaderBar title="Competitions" subtitle="Excel2020" />
                 <CompetitionsGrid />
             </div>
         )

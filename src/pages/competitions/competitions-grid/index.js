@@ -35,51 +35,49 @@ export default class CompetitionsGrid extends Component {
   }
 
   getCompetitions = async () => {
-    axios
-      .get('https://staging.events.excelmec.org/api/events/type/competition')
-      .then(data => {
-          let promises = []
+    let competitionsData = []
 
-          data.data.forEach((event) => {
-            promises.push(axios.get("https://staging.events.excelmec.org/api/events/" + event.id))
-          })
+    const data = await axios.get('https://staging.events.excelmec.org/api/events/type/competition')
+    let promises = []
 
-          Promise.all(promises).then((responses) => {
-            let competitionsData = []
-            responses.forEach((response) => {
-              competitionsData.push(response.data)
-            })
-
-            this.setState({competitions: competitionsData, loadingDone: true})
-          })
+    if (data.status === 200) {
+      data.data.forEach((event) => {
+        promises.push(axios.get("https://staging.events.excelmec.org/api/events/" + event.id))
       })
-      .catch(err => {
-        console.log(err);
-        return null;
-    });
-  };
 
-  getCategories = () => {
-    axios
-      .get('https://staging.events.excelmec.org/api/constants')
-      .then(data => {
-        this.setState({categories: [...data.data.category]});
+      let responses = await Promise.all(promises)
+      responses.forEach(response => competitionsData.push(response.data))
+    }
 
-        this.state.categories.forEach(category => {
-          let words = category.split('_');
-          let word = words.map(word => word[0].toUpperCase() + word.slice(1)).join(' ');
-          this.categoryOptions.push(word);
-        });
+    return competitionsData
+  }
+
+  getCategories = async () => {
+    let categories = []
+    let res = await axios.get('https://staging.events.excelmec.org/api/constants')
+
+    if (res.status === 200) {
+      categories = res.data.category
+
+      categories.forEach(category => {
+        let words = category.split('_');
+        let word = words.map(word => word[0].toUpperCase() + word.slice(1)).join(' ');
+        this.categoryOptions.push(word);
       })
-      .catch(err => {
-        console.log(err);
-        return null;
-      });
-  };
+    }
 
-  componentDidMount() {
-    this.getCompetitions();
-    this.getCategories();
+    return categories
+  }
+
+  async componentDidMount() {
+    const competitions = await this.getCompetitions()
+    const categories = await this.getCategories()
+
+    this.setState({
+      competitions: competitions,
+      categories: categories,
+      loadingDone: true
+    })
   }
 
   sortCompetitions = (a, b) => (a[this.state.sortType] > b[this.state.sortType] ? 1 : -1);
@@ -151,7 +149,7 @@ export default class CompetitionsGrid extends Component {
           <DropDown
             options={this.sortOptions}
             onChange={this.onSortOptionChanged}
-            placeholder="Name"
+            placeholder="Sort By"
             className="drop-down"
           />
           <DropDown
