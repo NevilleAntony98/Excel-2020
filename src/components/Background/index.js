@@ -1,25 +1,27 @@
 import './index.scss';
 import React from 'react';
-var loadjs = require('loadjs');
 
 export default class Background extends React.Component {
     componentDidMount() {
-        loadjs('./noise.min.js', function () {
-            // loadjs('./js/common_scripts.js')
-        });
-        loadjs('./swirl.js', function () {
-            // loadjs('./js/common_scripts.js')
-        });
-        loadjs('./util.js', function () {
-            // loadjs('./js/common_scripts.js')
-        });
+        window.setup();
+        // window.initParticles();
+        // window.drawParticles();
+        // window.updateParticle();
+        // window.drawParticle();
+        // window.createCanvas();
+        // window.resize();
+        // window.renderGlow();
+        // window.renderToScreen();
+        // window.draw();
     }
+
     render() {
         return (
             <div className="bg">
-                <div className="content content--canvas">
-                    EHLO
-                </div>
+                
+			<div class="content content--canvas">
+				<h2 class="content__title">Swirl</h2>
+			</div>
             </div>
         );
     };

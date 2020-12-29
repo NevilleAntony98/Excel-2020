@@ -1,6 +1,7 @@
 .bg{
-    height: 100vh;
+    // height: 100vh;
     // background-color: red;
-    z-index: 999;
+    position: fixed;
+    z-index: 0;
     border: white 10px solid;
 }
