@@ -23,8 +23,7 @@
   color: white;
   position: absolute;
   left:20%;
-  top: 25%;
-  transform: translateX(-20%);
+  transform: translateX(-20%) translateY(150%);
   font-weight: bold;
   font-size: 30px;
   .tagline-icon{
@@ -35,8 +34,7 @@
 .home-dates{
   position: absolute;
   right: 18%;
-  top: 30%;
-  transform: translateX(20%);
+  transform: translateX(20%) translateY(230%);
   font-weight: bold;
   font-size: 30px;
   color: white;

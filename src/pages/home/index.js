@@ -42,7 +42,7 @@ export default class Home extends Component {
                 </div>
               </div>
             </div>
-            <div className="home-legacy">
+            <div className="home-legacy backdrop-filter-blur">
               <h1>LEGACY</h1>
               <div className="legacy-container">
                 <img src={college} alt=""/>
