@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.20.0",
     "dayjs": "^1.9.6",
+    "loadjs": "^4.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-dropdown": "^1.9.0",
