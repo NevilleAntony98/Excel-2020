@@ -12,6 +12,7 @@
   top: 20px;
   bottom: 20px;
   border-radius: 18px;
+  z-index: 80;
 }
 
 .smallSidebarInnerContainer {
