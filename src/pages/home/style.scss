@@ -2,7 +2,7 @@
 @import '../../sass/mixins';
 
 .home-register{
-  display: flex;
+  display: none;
   gap: 2rem;
   padding: 2rem;
   width: fit-content;
@@ -25,8 +25,11 @@
   }
 
 }
-
+.home-body{
+    height: 217vh;
+}
 .home-sponsers{
+    display: none;
     padding: 40px;
     .sponsers-grid{
         display: grid;
@@ -63,7 +66,20 @@
     }
 }
 .home-legacy{
+    position: absolute;
+    left: 8%;
+    // transform: translateX(-50%);
+    top: 120%;
+    width: 85%;
     padding: 40px;
+    background: rgba( 13, 11, 41, 0.80 );
+    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    backdrop-filter: blur( 10.5px );
+    -webkit-backdrop-filter: blur( 10.5px );
+    border-radius: 20px;
+    color: white;
+    box-shadow: 10px -90px 90px #02011f;
     .legacy-container{
         display: flex;
         justify-content: space-between;
@@ -97,6 +113,9 @@
         img{
             width: 70px;
             margin: 10px;
+        }
+        .excel-2018{
+            width: 50px;
         }
     }
 }
