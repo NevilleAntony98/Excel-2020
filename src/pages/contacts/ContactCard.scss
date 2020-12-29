@@ -7,11 +7,11 @@
     margin: 0 10px;
 
     // color: #44476a !important;
-    color: $color-black;
+    color: $color-white;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // align-items: center;
+    align-items: center;
 
     // box-shadow:  6px 6px 12px #b8b9be,-6px -6px 12px #fff !important;
     // border: .0625rem solid rgba(243,247,250,.05);
@@ -19,12 +19,16 @@
     // border-radius: 0.55rem;
     // background-color: #e6e7ee !important;
 
-    box-shadow:  6px 6px 12px $shadow-dark,-6px -6px 12px $shadow-light !important; // much darker than original then lighter than original
-    border: .0625rem solid rgba(243,247,250,.05);
-    border-color: $border-color !important;  // darker than original
-    border-radius: 0.55rem;
-    background-color: $bg-color !important; // original color
+    // box-shadow:  6px 6px 12px $shadow-dark,-6px -6px 12px $shadow-light !important; // much darker than original then lighter than original
+    // border: .0625rem solid rgba(243,247,250,.05);
+    // border-color: $border-color !important;  // darker than original
+    // border-radius: 0.55rem;
+    // background-color: $bg-color !important; // original color
 
+    background: rgba(13, 11, 41, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    box-shadow: 10px -90px 90px #02011f;
 }
 
 .contact-card-img {
@@ -38,6 +42,11 @@
 }
 
 .contact-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     padding: 1.5rem !important;
     padding-top: 0.5rem !important;
 }
@@ -47,20 +56,26 @@
     margin-bottom: 6px;
 
     font-size: 1.25rem;
-    font-weight: 400;
+    font-weight: 600;
 }
 .contact-design {
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .contact-card-links{
+    width: 100%;
+    height: 35px;
     margin: 1rem 0;
     display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
     padding-left: 0;
 
+    background-color: white;
+    opacity: 0.5;
     li {
-        padding: 0 5px;
+        padding: 0 10px;
     }
 }
 // .card-img,
@@ -232,7 +247,6 @@
         margin-bottom: 6px;
     
         font-size: 1.25rem;
-        font-weight: 400;
     }
     .contact-design {
         font-size: 1rem;
@@ -260,7 +274,6 @@
         margin-bottom: 6px;
     
         font-size: 1.25rem;
-        font-weight: 400;
     }
     .contact-design {
         font-size: 1rem;
@@ -288,7 +301,6 @@
         margin-bottom: 6px;
     
         font-size: 1.25rem;
-        font-weight: 400;
     }
     .contact-design {
         font-size: 1rem;
@@ -314,7 +326,6 @@
         margin-bottom: 6px;
     
         font-size: 1.25rem;
-        font-weight: 400;
     }
     .contact-design {
         font-size: 1rem;

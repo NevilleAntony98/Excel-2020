@@ -7,7 +7,7 @@ import SchedulePopup from './SchedulePopup';
 import DeadEnd from '../../components/DeadEnd';
 import Loader from '../../components/Loader';
 
-import filterIcon from '../../assets/svg/filter.svg';
+// import filterIcon from '../../assets/svg/filter.svg';
 import './ScheduleMain.scss';
 
 const ScheduleMain = () => {
@@ -64,8 +64,8 @@ const ScheduleMain = () => {
           <div className="scheduleFilter">
             <span className="scheduleFilterInsensitive" />
             <div className="scheduleFilterSensitive">
-              <img src={filterIcon} alt="filter" height="20px" width="20px" />
-              Filter
+              {/* <img src={filterIcon} alt="filter" height="20px" width="20px" /> */}
+              {/* Filter */}
             </div>
           </div>
         }>
@@ -88,11 +88,13 @@ const ScheduleMain = () => {
           </div>
         ))}
       </div>
+      <div>
       {filteredData.events.length === 0 ? (
         <DeadEnd title={'Nothing to see here'} subtitle={'Chose a different category to view more events!'} />
       ) : (
         filteredData.events.map((item, id) => <ScheduleCard key={item.id} event={item} />)
       )}
+      </div>
     </div>
     </div>
   );
