@@ -97,7 +97,7 @@ const CompetitionPopup = ({ competition, closeFunc}) => {
                         </span>}
                         {competition.datetime && <span className="date">
                             <img src={clock_icon} alt="time"></img>
-                            <span>{dayjs(competition.datetime).format('D/M/YYYY mm:ss a')}</span>
+                            <span>{dayjs(competition.datetime).format('D MMM mm:ss a')}</span>
                         </span>}
                         <RegisterButton
                          competition={competition}

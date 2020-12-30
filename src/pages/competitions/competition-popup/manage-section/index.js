@@ -42,6 +42,9 @@ const ManageTeamSection = ({competition}) => {
                         }
                     </div>
                 </div>
+                <div className="team-id-help">
+                    Share the team ID with your teammates.
+                </div>
             </div>
         )
     }
@@ -51,7 +54,7 @@ const ManageTeamSection = ({competition}) => {
 
         event.preventDefault()
         const data = new FormData(event.target)
-        const teamId = data.get("teamID")
+        const teamId = data.get("teamID").trim()
 
         let res = await RegHelper.asyncCheckTeamValid(teamId)
         if (!res) {
