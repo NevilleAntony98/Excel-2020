@@ -74,6 +74,18 @@
                 margin: auto;
                 margin-top: 0.5rem;
             }
+
+            .fake-create-button {
+                background-color: #52c3ff;
+                padding: 0.5rem;
+                border-radius: 4px;
+                border: none;
+                color: white;
+                box-shadow: 2px 2px 10px #0eabff55;
+                width: 12ch;
+                margin: auto;
+                margin-top: 0.5rem;
+            }
         }
     }
 
@@ -109,6 +121,18 @@
                 color: white;
                 box-shadow: 2px 2px 10px #0eabff55;
                 width: fit-content;
+                margin: auto;
+                margin-top: 0.5rem;
+            }
+
+            .fake-join-button {
+                background-color: #52c3ff;
+                padding: 0.5rem;
+                border-radius: 4px;
+                border: none;
+                color: white;
+                box-shadow: 2px 2px 10px #0eabff55;
+                width: 10ch;
                 margin: auto;
                 margin-top: 0.5rem;
             }

@@ -17,7 +17,7 @@ const UpdateMobilePopup = ({open, closeFunc}) => {
                 <div className="content">
                     Please update your phone number and refresh page to register
                     <div className="buttons-container">
-                        <button onClick={() => window.open("https://staging.accounts.excelmec.org", "_blank")}>
+                        <button onClick={() => window.open("https://staging.accounts.excelmec.org/profile", "_blank")}>
                             Update
                         </button>
                         <button onClick={() => window.location.reload()}>
@@ -32,13 +32,17 @@ const UpdateMobilePopup = ({open, closeFunc}) => {
 
 const RegisterButton = ({competition, hasRegistered, setHasRegistered, setActiveSection}) => {
     const [open, setOpen] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
 
     if (!competition.needRegistration)
         return (null)
 
     const onRegisterClicked = async () => {
+        setIsLoading(true)
+
         let profile = await AccountHelper.asyncGetUserProfile()
         if (profile.mobileNumber == null) {
+            setIsLoading(false)
             setOpen(true)
             return
         }
@@ -51,18 +55,24 @@ const RegisterButton = ({competition, hasRegistered, setHasRegistered, setActive
                 RegHelper.asyncRegisterEvent(competition.id, null).then(res => {
                     if (res != null && res.status === 200)
                         setHasRegistered(true)
+
+                    setIsLoading(false)
                 })
-            else
+            else {
+                setIsLoading(false)
                 setActiveSection("Register")
+            }
         } else
-            if (competition.isTeam)
+            if (competition.isTeam) {
+                setIsLoading(false)
                 setActiveSection("Manage")
+            }
     }
 
     // We don't know if the user has or hasn't registered
-    if (hasRegistered == null)
+    if (hasRegistered == null || isLoading)
         return (
-            <button className="register-button" onClick={onRegisterClicked}>
+            <button className="register-button">
                 <DotLoader color={"#ffffff"} />
             </button>
         )
@@ -75,7 +85,7 @@ const RegisterButton = ({competition, hasRegistered, setHasRegistered, setActive
             </button>
         )
 
-    // Use isn't logged in
+    // User isn't logged in
     if (!AccountHelper.isUserLoggedIn()) {
         return (
             <button className="register-button" onClick={AccountHelper.logUserIn}>
