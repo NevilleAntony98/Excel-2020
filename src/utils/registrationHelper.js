@@ -36,7 +36,14 @@ export default class RegHelper {
             body["teamId"] = teamId
 
         const ROUTE = "https://staging.events.excelmec.org/api/registration"
-        const res = await axios.post(ROUTE, body, {headers: header})
+
+        let res = null
+        try {
+            res = await axios.post(ROUTE, body, {headers: header})
+        }
+        catch(err) {
+            res = err.response
+        }
 
         return res
     }
@@ -56,7 +63,13 @@ export default class RegHelper {
             "eventId": eventId
         }
 
-        const res = await axios.post(ROUTE, body, {headers: header})
+        let res = null
+        try {
+            res = await axios.post(ROUTE, body, {headers: header})
+        }
+        catch(err) {
+            res = err.response
+        }
 
         // Don't forget to check if we actually created a new team
         return res
@@ -96,7 +109,13 @@ export default class RegHelper {
             "teamId": teamId
         }
 
-        let res = await axios.put(ROUTE, body, {headers: header})
+        let res = null
+        try {
+            res = await axios.put(ROUTE, body, {headers: header})
+        }
+        catch(err) {
+            res = err.response
+        }
 
         return res
     }
