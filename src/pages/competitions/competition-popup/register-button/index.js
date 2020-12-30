@@ -62,11 +62,12 @@ const RegisterButton = ({competition, hasRegistered, setHasRegistered, setActive
                 setIsLoading(false)
                 setActiveSection("Register")
             }
-        } else
-            if (competition.isTeam) {
-                setIsLoading(false)
+        } else {
+            if (competition.isTeam)
                 setActiveSection("Manage")
-            }
+
+            setIsLoading(false)
+        }
     }
 
     // We don't know if the user has or hasn't registered

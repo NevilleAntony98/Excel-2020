@@ -86,6 +86,7 @@
       .reg-prize-box {
         display: flex;
         flex-direction: column;
+        gap: 0.3rem;
 
         @include mobile-view {
           padding-left: 2rem;
@@ -103,7 +104,6 @@
         img {
           max-width: 1rem;
           max-height: 1rem;
-          margin-top: 3px;
           margin-right: 3px;
         }
       }
