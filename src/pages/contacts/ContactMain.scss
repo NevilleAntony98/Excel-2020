@@ -3,6 +3,8 @@
 @import "../../sass/mixins";
 
 .contacts{
+	position: relative;
+	z-index: 101;
 	overflow-x: hidden;
 	// background-color: #e6e7ee;
 	// background-color: $bg-color;
