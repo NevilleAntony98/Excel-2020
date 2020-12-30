@@ -2,6 +2,8 @@
 @import "../../sass/mixins.scss";
 
 .competitions-header {
+    position: relative;
+    z-index: 101;
     display: flex;
     // background-color: $header-bar-background;
     color: white;

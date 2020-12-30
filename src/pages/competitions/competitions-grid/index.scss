@@ -2,6 +2,8 @@
 @import '../../../sass/mixins';
 
 .competition-grid {
+  position: relative;
+  z-index: 101;
   padding: 0 6vw;
   padding-bottom: 70px;
 
@@ -109,7 +111,7 @@
 .drop-down {
   .Dropdown-control {
     border-radius: 10px;
-    box-shadow: 5px 5px 11px $shadow-dark, -5px -5px 11px $shadow-light;
+    // box-shadow: 5px 5px 11px $shadow-dark, -5px -5px 11px $shadow-light;
     transition: none;
     cursor: pointer;
 

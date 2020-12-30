@@ -8,6 +8,7 @@ import './index.scss'
 const ManageTeamSection = ({competition}) => {
     const [activeButton, setActiveButton] = useState("view")
     const [teamInfo, setTeamInfo] = useState(null)
+    const [isLoading, setIsLoading] = useState(false)
 
     const getInfo = async () => {
         RegHelper.asyncGetTeamInfoForEvent(competition.id).then((info) => {
@@ -46,22 +47,30 @@ const ManageTeamSection = ({competition}) => {
     }
 
     const onChangeSubmit = async (event) => {
+        setIsLoading(true)
+
         event.preventDefault()
         const data = new FormData(event.target)
         const teamId = data.get("teamID")
 
         let res = await RegHelper.asyncCheckTeamValid(teamId)
-        if (!res)
+        if (!res) {
             alert("Invalid team ID: No such team exists.")
+            setIsLoading(false)
+        }
         else
             RegHelper.asyncChangeTeamForEvent(competition.id, teamId).then(res => {
-                if (res == null || res.status !== 200)
-                    alert("Failed to change team")
+                if (res == null)
+                    alert("Failed to change team.")
+                else if (res.status !== 200)
+                    alert("Failed to change team: " + res.data.error)
                 else {
                     // to trigger rerender
                     setTeamInfo(null)
                     setActiveButton("view")
                 }
+
+                setIsLoading(false)
             })
     }
 
@@ -71,7 +80,11 @@ const ManageTeamSection = ({competition}) => {
                 <b>Move to a different team</b>
                 <form className="form" onSubmit={onChangeSubmit}>
                     <input type="number" name="teamID" placeholder="New team ID" required/>
-                    <input type="submit" value="Change team" />
+                    {!isLoading ?
+                    <input type="submit" value="Change team" /> :
+                    <button className="fake-change-button">
+                        <DotLoader color={"#ffffff"} />
+                    </button>}
                 </form>
             </div>
         )

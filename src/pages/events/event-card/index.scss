@@ -6,18 +6,24 @@
   gap: 2rem;
   padding: 3rem;
   border-radius: 0.55rem;
-  color: black;
-  background: $bg-color;
-  box-shadow:  6px 6px 12px $shadow-dark,
-  -6px -6px 12px $shadow-light;
-  border: .0625rem solid rgba(243,247,250,.05);
-  border-color:  $border-color;
+  // color: black;
+  // background: $bg-color;
+  // box-shadow:  6px 6px 12px $shadow-dark,
+  // -6px -6px 12px $shadow-light;
+  // border: .0625rem solid rgba(243,247,250,.05);
+  // border-color:  $border-color;
+
+  background: rgba(13, 11, 41, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  // box-shadow: 10px -90px 90px #02011f;
+  color: white;
   
   cursor: pointer;
   @include desktop-view {
     transition: 0.3s;
     &:hover {
-      box-shadow: 9px 9px 18px #5fa6cc, -9px -9px 18px #ffffff;
+      // box-shadow: 9px 9px 18px #5fa6cc, -9px -9px 18px #ffffff;
       transform: scale(1.01);
     }
   }
@@ -39,6 +45,7 @@
       letter-spacing: 2px;
       font-size: 1rem;
       text-transform: capitalize;
+      margin-top: 15px;
     }
 
     .eventCardDate {
@@ -64,7 +71,7 @@
     justify-content: flex-start;
     flex-direction: column;
     margin: 20px 0;
-    margin-left: 15px;
+    margin-left: 30px;
     line-height: 26px;
 
     @include desktop-view {
