@@ -18,9 +18,9 @@ export default class Background extends React.Component {
     render() {
         return (
             <div className="bg">
-                
-			<div class="content content--canvas">
-				<h2 class="content__title">Swirl</h2>
+
+			<div className="content content--canvas">
+				<h2 className="content__title">Swirl</h2>
 			</div>
             </div>
         );
