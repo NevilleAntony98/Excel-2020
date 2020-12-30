@@ -2,7 +2,7 @@ import { Component } from 'react';
 
 import CompetitionsGrid from './competitions-grid';
 import HeaderBar from '../../shared-components/header-bar';
-import Background from '../../components/Background';
+// import Background from '../../components/Background';
 
 export default class CompetitionsPage extends Component {
     render() {
@@ -10,7 +10,7 @@ export default class CompetitionsPage extends Component {
             <div className="collections-page">
                 <HeaderBar title="Competitions" subtitle="Excel2020" />
                 <CompetitionsGrid />
-                <Background />
+                {/* <Background /> */}
             </div>
         )
     }
