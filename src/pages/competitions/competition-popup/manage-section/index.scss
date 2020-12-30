@@ -16,6 +16,7 @@
         margin-bottom: 1rem;
 
         button {
+            font-size: 1rem;
             background-color: transparent;
             box-shadow: none;
             padding: 0.5rem;
@@ -68,6 +69,10 @@
                     opacity: 0.5;
                 }
             }
+        }
+
+        .team-id-help {
+            margin-top: 1rem;
         }
     }
 

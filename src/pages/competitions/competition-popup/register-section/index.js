@@ -6,7 +6,7 @@ import DotLoader from './../../../../components/DotLoader'
 import './index.scss'
 
 const RegisterSection = ({competition, setHasRegistered, setActiveSection}) => {
-    const [activeButton, setActiveButton] = useState("create")
+    const [activeButton, setActiveButton] = useState("join")
     const [isLoading, setIsLoading] = useState(false)
 
     const onCreateSubmit = (event) => {
@@ -88,7 +88,7 @@ const RegisterSection = ({competition, setHasRegistered, setActiveSection}) => {
     const JoinTeam = () => {
         return (
             <div className="join-team-subpage">
-                <b>Join with team ID</b>
+                <b>Join with team ID. Ask your teammates to share the team ID.</b>
                 <form className="form" onSubmit={onJoinSubmit}>
                     <input type="number" name="teamID" placeholder="Team ID" required/>
                     {!isLoading ?
@@ -105,15 +105,15 @@ const RegisterSection = ({competition, setHasRegistered, setActiveSection}) => {
         <div className="register-section">
             <div className="button-group">
                 <button
-                className={activeButton === "create" ? "active" : ''}
-                onClick={() => setActiveButton("create")}>
-                Create Team
-                </button>
-
-                <button
                 className={activeButton === "join" ? "active" : ''}
                 onClick={() => setActiveButton("join")}>
                 Join Team
+                </button>
+
+                <button
+                className={activeButton === "create" ? "active" : ''}
+                onClick={() => setActiveButton("create")}>
+                Create Team
                 </button>
             </div>
             <div className="register-subpage">

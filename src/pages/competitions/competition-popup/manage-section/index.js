@@ -42,6 +42,9 @@ const ManageTeamSection = ({competition}) => {
                         }
                     </div>
                 </div>
+                <div className="team-id-help">
+                    Share the team ID with your teammates.
+                </div>
             </div>
         )
     }
