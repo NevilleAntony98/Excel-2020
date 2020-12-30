@@ -16,7 +16,7 @@ import excel2020withtext from '../../assets/png/excel2020withtext.png';
 export default class Home extends Component {
     render() {
         return (
-          <div class="home-body">
+          <div className="home-body">
             <HomeAnimation />
             <div className="home-register">
               Register
@@ -58,7 +58,7 @@ export default class Home extends Component {
               </div>
               <div className="previous-sites">
                 <img src={excel2019} alt=""/>
-                <img src={excel2018} class="excel-2018"alt=""/>
+                <img src={excel2018} className="excel-2018"alt=""/>
                 <img src={excel2017} alt=""/>
                 <img src={excel2016} alt=""/>
               </div>
