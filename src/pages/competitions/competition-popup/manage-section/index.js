@@ -51,7 +51,7 @@ const ManageTeamSection = ({competition}) => {
 
         event.preventDefault()
         const data = new FormData(event.target)
-        const teamId = data.get("teamID")
+        const teamId = data.get("teamID").trim()
 
         let res = await RegHelper.asyncCheckTeamValid(teamId)
         if (!res) {

@@ -14,7 +14,7 @@ const RegisterSection = ({competition, setHasRegistered, setActiveSection}) => {
 
         event.preventDefault()
         const data = new FormData(event.target)
-        const name = data.get("name")
+        const name = data.get("name").trim()
 
         RegHelper.asyncCreateTeamForEvent(name, competition.id).then((res) => {
             if (res == null)
@@ -46,7 +46,7 @@ const RegisterSection = ({competition, setHasRegistered, setActiveSection}) => {
 
         event.preventDefault()
         const data = new FormData(event.target)
-        const teamId = data.get("teamID")
+        const teamId = data.get("teamID").trim()
 
         let res = await RegHelper.asyncCheckTeamValid(teamId)
         if (!res) {
