@@ -2,6 +2,8 @@
 @import '../../../sass/mixins';
 
 .eventsContainer {
+  position: relative;
+  z-index: 101;
   display: grid;
   gap: 2rem;
   max-width: 85%;
