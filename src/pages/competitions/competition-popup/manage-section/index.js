@@ -28,8 +28,8 @@ const ManageTeamSection = ({competition}) => {
         return (
             <div className="view-subpage">
                 <div>
-                    <div><b>Team ID: </b>{teamInfo.teamId}</div>
-                    <div><b>Team Name: </b>{teamInfo.teamName}</div>
+                    <div><b>Team ID : </b> {teamInfo.teamId}</div>
+                    <div><b>Team Name : </b> {teamInfo.teamName}</div>
                 </div>
                 <div className="team-members-box">
                     <b>Team Members</b>
@@ -80,7 +80,7 @@ const ManageTeamSection = ({competition}) => {
     const ChangeTeam = () => {
         return (
             <div className="change-team-subpage">
-                <b>Move to a different team</b>
+                Move to a different team
                 <form className="form" onSubmit={onChangeSubmit}>
                     <input type="number" name="teamID" placeholder="New team ID" required/>
                     {!isLoading ?

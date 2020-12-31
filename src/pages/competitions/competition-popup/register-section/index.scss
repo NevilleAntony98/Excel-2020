@@ -22,6 +22,11 @@
             border: 1px solid #7cd1ff;
             width: 14ch;
             transition: 0.2s;
+            color: white;
+            &:hover {
+                cursor: pointer;
+                background: rgba(49, 48, 82, 0.9);
+            }
 
             &:first-child {
                 border-radius: 6px 0 0 6px;
@@ -36,6 +41,7 @@
                 background-color: #0eabff;
                 color: white;
                 box-shadow: 2px 2px 10px #0eabff55;
+                cursor: default;
             }
         }
     }
@@ -74,6 +80,11 @@
                 width: fit-content;
                 margin: auto;
                 margin-top: 0.5rem;
+                cursor: pointer;
+                &:hover {
+                    transform: scale(1.05);
+                    transition: 0.5s;
+                }
             }
 
             .fake-create-button {
@@ -124,6 +135,11 @@
                 width: fit-content;
                 margin: auto;
                 margin-top: 0.5rem;
+                cursor: pointer;
+                &:hover {
+                    transform: scale(1.05);
+                    transition: 0.5s;
+                }
             }
 
             .fake-join-button {

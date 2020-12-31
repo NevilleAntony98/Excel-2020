@@ -68,7 +68,7 @@
         img {
           padding: 1rem;
           background-color: white;
-          border-radius: 9999px;
+          // border-radius: 9999px;
           margin: 2rem auto 1rem;
           max-width: 6rem;
           border: 1px solid #80d2ff;
@@ -102,7 +102,7 @@
         margin-top: 1rem;
         padding: 0.5rem 2.5rem;
         font-size: 1.1rem;
-        border-radius: 9999px;
+        border-radius: 10px;
         // box-shadow: 6px 6px 12px #99c9e2, -6px -6px 12px #e5f5fd;
         // border: 0.0625rem solid #0086ce;
         // border-color: #afd9f0;
@@ -110,9 +110,10 @@
       }
 
       .event-register-button:hover {
-        // background-color: #0fabff;
-        transform: scale(1.05);
-        color: #fff;
+
+      background-color: white;
+      transform: scale(1.05);
+      color: black;
       }
 
       .reg-prize-box {
@@ -246,7 +247,6 @@
 
     .section {
       margin: 2rem;
-      text-align: center;
       @include mobile-view {
         margin: 0;
         padding: 1.5rem;

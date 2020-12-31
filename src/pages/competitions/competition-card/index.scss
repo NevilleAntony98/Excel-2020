@@ -45,13 +45,13 @@
         margin: 1rem;
         margin-top: 2rem;
         padding: 2em;
-
+        padding-bottom: 0.5rem;
         // box-shadow:  5px 5px 7px $shadow-dark,
         //             -5px -5px 7px $shadow-light;
 
         img {
-            max-width: 6.5rem;
-            max-height: 6.5rem;
+            max-width: 8.5rem;
+            max-height: 8.5rem;
 
             @include mobile-view {
                 max-width: 4rem;
@@ -131,8 +131,9 @@
         width: 320px;
         height: 320px;
         .icon {
+            padding-bottom: 0.5rem;
             img {
-                max-width: 5rem;
+                max-width: 7.5rem;
             }
         }
         .title {
@@ -153,12 +154,14 @@
         width: 360px;
         height: 360px;
         .icon {
+            padding-bottom: 0rem;
             img {
-                max-width: 6rem;
+                max-width: 9rem;
+                max-height: 9rem;
             }
         }
         .title {
-            margin: 2rem 0;
+            margin: 1rem 0;
             margin-bottom: 1.25rem;
             span {
                 font-size: 1.5rem;
@@ -176,12 +179,14 @@
         width: 320px;
         height: 320px;
         .icon {
+            padding-bottom: 0rem;
             img {
-                max-width: 5rem;
+                max-width: 8rem;
+                max-height: 8rem;
             }
         }
         .title {
-            margin: 0.5rem 0;
+            margin: 0.4rem 0;
             // margin-bottom: 1rem;
             span {
                 font-size: 1.4rem;
@@ -194,11 +199,11 @@
 	.competition-card {
         width: 310px;
         height: 310px;
-        .icon {
-            img {
-                max-width: 4.5rem;
-            }
-        }
+        // .icon {
+        //     img {
+        //         max-width: 4.5rem;
+        //     }
+        // }
         .title {
             margin: 0.5rem 0;
             span {
@@ -213,12 +218,14 @@
         width: 360px;
         height: 360px;
         .icon {
+            padding-bottom: 0rem;
             img {
-                max-width: 6rem;
+                max-width: 9rem;
+                max-height: 9rem;
             }
         }
         .title {
-            margin: 1rem 0;
+            margin: 0.5rem 0;
             span {
                 font-size: 1.5rem;
             }
@@ -250,7 +257,7 @@
         height: 300px;
         .icon {
             img {
-                max-width: 4rem;
+                max-width: 5rem;
             }
         }
         .title {
@@ -269,7 +276,7 @@
         .icon {
             padding: 1rem;
             img {
-                max-width: 4rem;
+                max-width: 5rem;
             }
         }
         .title {
@@ -290,12 +297,13 @@
         .icon {
             padding: 1rem;
             img {
-                max-width: 4rem;
+                max-width: 6rem;
             }
         }
         .title {
             margin: 0;
             margin-bottom: 0.5rem;
+            margin-top: -35px;
             span {
                 font-size: 1.2rem;
             }
@@ -311,12 +319,13 @@
             padding: 1rem;
             margin: 1rem;
             margin-bottom: 0;
+            padding-bottom: 0rem;
             img {
-                max-width: 4rem;
+                max-width: 6rem;
             }
         }
         .title {
-            margin: 0.5rem 0;
+            margin: 0.3rem 0;
             // margin-bottom: 0.5rem;
             span {
                 font-size: 1.2rem;
@@ -333,12 +342,18 @@
         width: 180px;
         height: 180px;
         .icon {
+            padding: 0rem;
+            padding-bottom: 0rem;
+            margin-bottom: 0rem;
             img {
-                max-width: 3rem;
+                max-width: 5.5rem;
             }
         }
         .title {
             margin: 0.1rem 0;
+            margin-top: -10px;
+            position: relative;
+            top: 0;
             span {
                 font-size: 0.95rem;
             }
@@ -354,9 +369,9 @@
         width: 160px;
         height: 160px;
         .icon {
-            margin-top: 15px;
+            margin-top: 20px;
             img {
-                max-width: 3rem;
+                max-width: 4.5rem;
             }
         }
         .title {

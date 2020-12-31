@@ -81,7 +81,7 @@ const RegisterButton = ({competition, hasRegistered, setHasRegistered, setActive
     // registration closed or not open
     if (!hasRegistered && (competition.registrationOpen === false || competition.registrationOpen == null))
         return (
-            <button className="register-button" >
+            <button className="register-button reg-closed" >
                 Registration Closed
             </button>
         )
@@ -97,7 +97,7 @@ const RegisterButton = ({competition, hasRegistered, setHasRegistered, setActive
 
     return (
         <Fragment>
-            <button className="register-button"
+            <button className= {hasRegistered ? competition.isTeam ? "register-button" : "register-button registered" : "register-button"}
             onClick={onRegisterClicked}>
                 {hasRegistered ?
                     competition.isTeam ? "Manage Team" : "Registered":
