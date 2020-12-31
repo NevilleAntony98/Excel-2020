@@ -6,8 +6,9 @@
   margin: 0 2rem;
   margin-top: 1rem;
   padding: 0.5rem;
-  font-size: 1.1rem;
-  border-radius: 9999px;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  font-family: "Montserrat";
   // box-shadow:  6px 6px 12px #99c9e2,
   //             -6px -6px 12px #e5f5fd;
   border: .0625rem solid #0086ce;
@@ -22,13 +23,37 @@
 
   @include desktop-view {
     &:hover {
-      background-color: rgb(211, 207, 207);
+      background-color: white;
       transform: scale(1.05);
       color: black;
     }
   }
 }
 
+.registered {
+  // background: lightgreen;
+  cursor: default;
+  border: none;
+  font-style: italic;
+  font-size: 1.3rem;
+  &:hover {
+    transform: none;
+    background: transparent;
+    color: white;
+  }
+}
+
+.reg-closed {
+  border: none;
+  font-style: italic;
+
+  &:hover {
+    background: transparent;
+    transform: none;
+    cursor: default;
+    color: white;
+  }
+}
 .update-mobile-popup {
   display: flex;
   flex-direction: column;;
