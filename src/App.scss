@@ -52,7 +52,11 @@
   background: $color-blue; 
 }
 
-
+#root{
+  overflow-x: hidden;
+  width: 100vw;
+  position: relative;
+}
 
 /* support backdrop-filter */
 @supports ( (-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px)) ) {

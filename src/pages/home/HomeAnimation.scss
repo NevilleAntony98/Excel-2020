@@ -11,33 +11,47 @@
   height: 200vh;
   width: 100vw;
   margin-left: -120px;
+  overflow-x: hidden;
+
 }
 .svg-container{
   transform-style: preserve-3d;
   position: absolute;
   left: 50%;
   transform: translateX(-50%) translateY(35%) scale(1.75);
-
+}
+.rings{
+  width: 600px;
+  /* position: absolute;
+  left: 50%;
+  top: 200px;*/
+  transform:perspective(400px) translateX(0%) translateY(5%) rotateX(70deg);
 }
 .tagline{
   color: white;
   position: absolute;
   left:20%;
-  transform: translateX(-20%) translateY(150%);
+  transform: translateX(-20%) translateY(120%);
   font-weight: bold;
   font-size: 30px;
+  div{
+    margin: 7px 0;
+  }
   .tagline-icon{
     width: 25px;
-    margin:5px 5px 0 0; 
+    margin:5px 10px 0 0; 
   }
 }
 .home-dates{
   position: absolute;
   right: 18%;
-  transform: translateX(20%) translateY(230%);
+  transform: translateX(20%) translateY(180%);
   font-weight: bold;
   font-size: 30px;
   color: white;
+  div{
+    margin: 7px 0;
+  }
   .tagline-icon{
     width: 30px;
     margin:5px 15px 0 0; 
@@ -50,13 +64,7 @@
   left: 8%;
   top: 41.5%;
 }
-.rings{
-  width: 600px;
-  /* position: absolute;
-  left: 50%;
-  top: 200px;*/
-  transform:perspective(400px) translateX(0%) translateY(5%) rotateX(70deg);
-}
+
 .circuits{
   width: 100%;
   left: 0;
@@ -71,6 +79,9 @@
   left: 50%;
   transform: translateX(-50%) translateY(30%);
   filter:drop-shadow(0px 0px 30px rgb(1, 105, 88))
+}
+.mobile-logo{
+  opacity: 0;
 }
 #Ring-1{
   animation: spin 9s infinite linear reverse;
@@ -112,5 +123,221 @@
   }
   to{
       transform:rotateZ(360deg);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .tagline{
+    left:20%;
+    transform: translateX(-20%) translateY(120%);
+    font-size: 28px;
+    div{
+      margin: 7px 0;
+    }
+    .tagline-icon{
+      width: 23px;
+      margin:5px 10px 0 0; 
+    }
+  }
+  .home-dates{
+    right: 18%;
+    transform: translateX(20%) translateY(180%);
+    font-size: 28px;
+    div{
+      margin: 7px 0;
+    }
+    .tagline-icon{
+      width: 27px;
+      margin:5px 15px 0 0; 
+    }
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .tagline{
+    left:20%;
+    transform: translateX(-20%) translateY(120%);
+    font-size: 28px;
+    div{
+      margin: 7px 0;
+    }
+    .tagline-icon{
+      width: 23px;
+      margin:5px 10px 0 0; 
+    }
+  }
+  .home-dates{
+    right: 15%;
+    transform: translateX(20%) translateY(180%);
+    font-size: 28px;
+    div{
+      margin: 7px 0;
+    }
+    .tagline-icon{
+      width: 27px;
+      margin:5px 15px 0 0; 
+    }
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .tagline{
+    left:20%;
+    transform: translateX(-20%) translateY(130%);
+    font-size: 25px;
+    div{
+      margin: 7px 0;
+    }
+    .tagline-icon{
+      width: 21px;
+      margin:5px 10px 0 0; 
+    }
+  }
+  .home-dates{
+    right: 15%;
+    transform: translateX(20%) translateY(200%);
+    font-size: 25px;
+    div{
+      margin: 7px 0;
+    }
+    .tagline-icon{
+      width: 25px;
+      margin:5px 15px 0 0; 
+    }
+  }
+}
+@media only screen and (max-width: 900px) {
+  .excel-logo{
+    width: 180px;
+    left: 50%;
+    transform: translateX(-50%) translateY(40%);
+    filter:drop-shadow(0px 0px 30px rgb(1, 105, 88))
+  }
+  .tagline{
+    left:18%;
+    transform: translateX(-18%) translateY(130%);
+    font-size: 25px;
+    div{
+      margin: 7px 0;
+    }
+    .tagline-icon{
+      width: 21px;
+      margin:5px 10px 0 0; 
+    }
+  }
+  .home-dates{
+    right: 10%;
+    transform: translateX(18%) translateY(200%);
+    font-size: 25px;
+    div{
+      margin: 7px 0;
+    }
+    .tagline-icon{
+      width: 25px;
+      margin:5px 15px 0 0; 
+    }
+  }
+}
+@media only screen and (max-width: 800px) {
+  .excel-logo{
+    width: 150px;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    filter:drop-shadow(0px 0px 30px rgb(1, 105, 88))
+  }
+  .tagline{
+    left:18%;
+    transform: translateX(-18%) translateY(150%);
+    font-size: 22px;
+    div{
+      margin: 5px 0;
+    }
+    .tagline-icon{
+      width: 21px;
+      margin:5px 10px 0 0; 
+    }
+  }
+  .home-dates{
+    right: 10%;
+    transform: translateX(25%) translateY(230%);
+    font-size: 22px;
+    div{
+      margin: 5px 0;
+    }
+    .tagline-icon{
+      width: 25px;
+      margin:5px 15px 0 0; 
+    }
+  }
+}
+@media only screen and (max-width: 700px) {
+  .excel-logo{
+    width: 120px;
+    left: 50%;
+    transform: translateX(-50%) translateY(75%);
+    filter:drop-shadow(0px 0px 30px rgb(1, 105, 88))
+  }
+  .rings{
+    width: 600px;
+    /* position: absolute;
+    left: 50%;
+    top: 200px;*/
+    transform:perspective(400px) translateX(0%) translateY(5%) rotateX(70deg);
+  }
+  .tagline{
+    left:18%;
+    transform: translateX(-18%) translateY(180%);
+    font-size: 18px;
+    div{
+      margin: 2px 0;
+    }
+    .tagline-icon{
+      width: 20px;
+      margin:5px 10px 0 0; 
+    }
+  }
+  .home-dates{
+    right: 10%;
+    transform: translateX(25%) translateY(300%);
+    font-size: 18px;
+    div{
+      margin: 2px 0;
+    }
+    .tagline-icon{
+      width: 20px;
+      margin:5px 15px 0 0; 
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .excel-logo{
+    width: 180px;
+    left: 50%;
+    transform: translateX(-50%) translateY(30%);
+    filter:drop-shadow(0px 0px 30px rgb(1, 105, 88))
+  }
+  .mobile-logo{
+    opacity: 1;
+  }
+  .desktop-logo{
+    opacity: 0;
+  }
+  .tagline{
+    display: none;
+  }
+  .home-dates{
+    display: none;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .excel-logo{
+    width: 150px;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    filter:drop-shadow(0px 0px 30px rgb(1, 105, 88))
+  }
+  .tagline{
+    display: none;
+  }
+  .home-dates{
+    display: none;
   }
 }

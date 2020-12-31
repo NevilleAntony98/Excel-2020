@@ -26,7 +26,7 @@
 
 }
 .home-body{
-    height: 217vh;
+    height: 240vh;
 }
 .home-sponsers{
     display: none;
@@ -47,8 +47,8 @@
             align-items: center;
             height: min-content;
             background: #c2eaff;
-  box-shadow:  6px 6px 12px #87c6e7,
-              -6px -6px 12px #f0faff;
+            box-shadow:  6px 6px 12px #87c6e7,
+                      -6px -6px 12px #f0faff;
             img{
                 width: 250px;
             }
@@ -67,8 +67,7 @@
 }
 .home-legacy{
     position: absolute;
-    left: 8%;
-    // transform: translateX(-50%);
+    transform: translateX(1%);
     top: 120%;
     width: 85%;
     padding: 40px;
@@ -80,6 +79,11 @@
     border-radius: 20px;
     color: white;
     box-shadow: 10px -90px 90px #02011f;
+    h1{
+        font-size: 35px;
+        letter-spacing: 1px;
+        font-weight: bolder;
+    }
     .legacy-container{
         display: flex;
         justify-content: space-between;
@@ -89,6 +93,8 @@
         }
         p{
             width: 67%;
+            font-size: 18px;
+            line-height: 27px;
         }
     }
     .college-excel-logo{
@@ -117,5 +123,105 @@
         .excel-2018{
             width: 50px;
         }
+        .excel-2016{
+            margin-left: -10px;
+        }
+        svg{
+            width: 30px;
+            margin: 0 20px;
+        }
+        .social-media{
+            fill: #FFF;
+            transition: fill 0.2s;
+            margin-top: 40px;
+        }
+        .facebook{
+            width: 15px !important;
+        }
+        .facebook:hover {
+            fill:#4267B2;
+        }
+        .instagram:hover{
+            fill:#8a3ab9;
+        }
+        .youtube:hover{
+            fill:#FF0000;
+        }
+        .twitter:hover{
+            fill:#1DA1F2;
+        }
+        .linkedin:hover{
+            fill:#0e76a8;
+        }
     }
+}
+
+@media only screen and (max-width: 1200px) {
+    .home-legacy{
+        transform: translateX(-1%);
+        top: 120%;
+        width: 85%;
+        padding: 40px;
+    }
+}
+@media only screen and (max-width: 1100px) {
+
+}
+@media only screen and (max-width: 1000px) {
+    .home-legacy{
+        transform: translateX(-1%);
+        top: 120%;
+        width: 85%;
+        padding: 30px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .legacy-container{
+        flex-direction: column;
+        margin-top: 40px;
+        img{
+            transform: scale(2);
+        }
+        p{
+            margin-top: 50px;
+            width: 80% !important;
+            font-size: 18px;
+            line-height: 27px;
+            text-align: justify;
+        }
+    }
+}
+@media only screen and (max-width: 800px) {
+    .college-excel-logo{
+        margin: 0  auto;
+        width: 40%;
+        img{
+            width: 200px !important;
+            margin: 40px;
+        }
+    }
+}
+@media only screen and (max-width: 700px) {
+    .college-excel-logo{
+        margin: 0  auto;
+        width: 40%;
+        img{
+            width: 180px !important;
+            margin: 40px;
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .home-legacy{
+        transform: translateX(2.5%);
+        top: 120%;
+        width: 95%;
+        padding: 40px 0px 100px 0px;
+        h1{
+            margin-left: 40px;
+        }
+    }
+}
+@media only screen and (max-width: 350px) {
+
 }
