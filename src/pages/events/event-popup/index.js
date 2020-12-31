@@ -1,7 +1,8 @@
 import { createRef } from 'react'
 // import { useState} from 'react'
 
-import './index.scss'
+import './index.scss';
+import phone from '../../../assets/png/icons8-phone-24(2).png';
 
 const EventPopup = ({ event, closeFunc }) => {
     // const [activeSection] = useState("About")
@@ -19,17 +20,19 @@ const EventPopup = ({ event, closeFunc }) => {
                 <div className="about-section section">
                     {getSanitizedString(event.about)}
                 </div>
-                <div className="contact-section section">
+                <div className="contact-section section event-contacts">
                     {event.eventHead1 !== null &&
                         <div>
-                            <span className="name">{event.eventHead1.name}</span>
-                            <a className="email" href={"mailto:" + event.eventHead1.email}>{event.eventHead1.email}</a>
+                            <span className="name"><img  src={phone} alt="phone" />{event.eventHead1.name}</span>
+                            {/* <a className="email" href={"mailto:" + event.eventHead1.email}>{event.eventHead1.email}</a> */}
+                            <span className="role"> Event Head</span>
                             <span className="phone">{event.eventHead1.phoneNumber}</span>
                         </div>}
                     {event.eventHead2 !== null &&
                         <div>
-                            <span className="name">{event.eventHead2.name}</span>
-                            <a className="email" href={"mailto:" + event.eventHead2.email}>{event.eventHead2.email}</a>
+                            <span className="name"><img  src={phone} alt="phone" />{event.eventHead2.name}</span>
+                            {/* <a className="email" href={"mailto:" + event.eventHead2.email}>{event.eventHead2.email}</a> */}
+                            <span className="role"> Event Head</span>
                             <span className="phone">{event.eventHead2.phoneNumber}</span>
                         </div>}
                 </div>
@@ -57,6 +60,7 @@ const EventPopup = ({ event, closeFunc }) => {
     // }
 
     return (
+        <div className="popup-bg">
         <div className="popup-content-container">
             <div className="popup-sidebar">
                 <div className="close-container-mobile" onClick={closeFunc}>
@@ -80,6 +84,7 @@ const EventPopup = ({ event, closeFunc }) => {
                 </div>
                 <AboutSection />
             </div>
+        </div>
         </div>
     )
 }

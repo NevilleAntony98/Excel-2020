@@ -1,16 +1,30 @@
 @import '../../../sass/variables';
 @import '../../../sass/mixins';
 
+.popup-bg{
+  width: 100vw;
+  height: 100vh;
+  background: rgba(13, 11, 41,.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .popup-content-container {
-  background: white;
-  color: black;
+  // background: white;
+  // color: black;
 
-  box-shadow: 5px 5px 15px $shadow-dark, -5px -5px 15px $shadow-light;
+  // box-shadow: 5px 5px 15px $shadow-dark, -5px -5px 15px $shadow-light;
 
   display: flex;
   flex-direction: row;
   border-radius: 12px;
   height: 38rem;
+
+  background: rgba(13, 11, 41, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  box-shadow: none;
+  color: white;
 
   @include mobile-view {
     flex-direction: column;
@@ -21,14 +35,15 @@
   }
 
   .popup-sidebar {
-    background-color: #c2eaff;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     min-width: 15rem;
     border-radius: 12px 0px 0 12px;
-    box-shadow: 0.5px 0px 6px #4fc1ff;
+    box-shadow: none;
     z-index: 10;
-
+    border-right: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 0 1rem;
     @include mobile-view {
       border-radius: 0;
       flex-direction: column;
@@ -47,6 +62,10 @@
         position: fixed;
         width: 2rem;
         height: auto;
+        fill: white;
+        @include mobile-view {
+          right: 10px;
+        }
       }
     }
 
@@ -55,8 +74,9 @@
       flex-direction: column;
 
       @include mobile-view {
-        flex-direction: row;
+        // flex-direction: row;
         justify-content: center;
+        align-items: center;
       }
 
       .image-title-box {
@@ -65,13 +85,12 @@
 
         img {
           padding: 1rem;
-          background-color: white;
-          border-radius: 9999px;
+          background-color: transparent;
+          border-radius: 0px;
           margin: 2rem auto 1rem;
-          max-width: 6rem;
-          border: 1px solid #80d2ff;
-          box-shadow:  5px 5px 7px #99c9e2,
-          -5px -5px 7px #e5f5fd;
+          max-width: 8rem;
+          border: none;
+          box-shadow:  none;
         }
 
         .name {
@@ -80,6 +99,10 @@
           font-weight: 600;
           margin: 0 2rem 0.5rem 2rem;
           overflow-wrap: break-word;
+
+          @include mobile-view {
+            font-size: 2rem !important;
+          }
         }
       }
 
@@ -89,8 +112,8 @@
         gap: 0.3rem;
 
         @include mobile-view {
-          padding-left: 2rem;
-          padding-bottom: 1rem;
+          padding-left: 0rem;
+          padding-bottom: 0rem;
           justify-content: flex-end;
         }
 
@@ -120,10 +143,13 @@
 
         @include mobile-view {
           display: flex;
-          padding: 0.5rem auto;
+          padding: 0rem 1rem;
           margin: auto;
           font-size: 1.2rem;
           justify-content: center;
+          // border: 1px solid rgba(255, 255, 255, 0.18);
+          // border-radius: 20px;
+          // box-shadow: 10px -90px 90px #02011f;
         }
 
         li {
@@ -131,31 +157,39 @@
           margin: 0.6rem 0.3rem;
           border-radius: 6px;
           border: 1px solid #00000000;
-
+          color: white;
           @include desktop-view {
             cursor: pointer;
             transition: 125ms ease-in-out;
 
             &:hover:not(.active) {
-              border: 1px solid darken($color: #8bd6ff, $amount: 0.01);
-              box-shadow: inset 3px 3px 10px #8bd6ff,
-                          inset -3px -3px 10px #efffff;
+              // border: 1px solid darken($color: #8bd6ff, $amount: 0.01);
+              // box-shadow: inset 3px 3px 10px #8bd6ff,
+              //             inset -3px -3px 10px #efffff;
+              opacity: 1;
+              transition-duration: 0.7s;
+              background-color: rgb(196, 194, 194);
+              color: black;
+              border: none;
+              box-shadow: none;
             }
           }
 
           @include mobile-view {
             font-size: 1rem;
-            padding: 0.7rem 0;
-            margin: 0.6rem 0.1rem;
+            // padding: 0.7rem 0;
+            // margin: 0.6rem 0.1rem;
+            padding: 1rem 0;
+            margin: 0;
             min-width: 8ch;
+            border-radius: 6px;
           }
 
           &.active {
             border: 1px solid #ffffff4b;
-            background-color: #7cd1ff;
+            background-color: white;
             color: black;
-            box-shadow:  2px 2px 4px #a0deff,
-                        -2px -2px 4px #e0fcff;
+            box-shadow: none;
           }
         }
       }
@@ -164,12 +198,13 @@
 
   .popup-stack {
     padding: 1rem;
+    margin: 1rem 0 !important;
     font-size: 1.2rem;
     line-height: 2rem;
     overflow: hidden;
     overflow-y: auto;
     white-space: pre-line;
-    background-color: #fbfbfb;
+    background-color: transparent;
     border-radius: 0px 12px 12px 0px;
 
     @include mobile-view {
@@ -182,7 +217,8 @@
 
     @include desktop-view {
       min-width: 30rem;
-      width: calc(100vw - 50rem);
+      // width: calc(100vw - 50rem);
+      width: 60vw;
     }
 
     @include tablet-view {
@@ -193,12 +229,15 @@
     .close-container {
       display: flex;
       flex-direction: row-reverse;
+      padding-top: -20px;
+      padding-right: 15px;
 
       @include mobile-view {
         display: none;
       }
 
       .close-button {
+        fill: white;
         position: fixed;
         width: 1.3rem;
         height: auto;
@@ -208,15 +247,78 @@
 
         &:hover {
           transform: scale(1.1);
-          fill: red;
+          fill: lightgreen;
         }
+      }
+    }
+
+    .about-section {
+      display: flex;
+      justify-content: center;
+    }
+    .about-extra {
+      // width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      bottom: 0;
+      margin: 2rem;
+
+      @include mobile-view {
+        margin: 0rem;
+      }
+    }
+
+    
+    .about-extra-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 2rem 5rem;
+      font-size: 25px;
+      white-space: nowrap;
+
+      @include mobile-view {
+        margin: 0 1rem;
+        font-size: 20px;
+        padding-bottom: 100px;
+      }
+
+      .prize-money {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        
+      }
+      .date {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      }
+    }
+
+    .about-extra-header {
+      font-size: 30px;
+      font-weight: 700;
+      color: lightgreen;
+      padding-bottom: 20px;
+
+      @include mobile-view {  
+        font-size: 20px;
       }
     }
 
     .section {
       margin: 2rem;
+      font-size: 22px;
 
       @include mobile-view {
+        font-size: 17px;
         margin: 0;
         padding: 1.5rem;
         width: 100vw;
@@ -225,14 +327,40 @@
     }
 
     .contact-section {
+      margin-top: 4rem;
+      display: flex;
+      justify-content: center;
+
+      @include mobile-view {
+        margin-top: 0rem;
+        flex-direction: column;
+      }
+      
       div {
         display: flex;
         flex-direction: column;
-        margin: 1.5rem 0;
+        justify-content: center;
+        align-items: center;
+        margin: 1.5rem 7rem;
 
+        @include mobile-view{
+          margin: 20px 0;
+        }
+
+        img {
+          max-width: 20px;
+          padding-right: 10px;
+        }
         .name {
-          font-size: 1.3rem;
+          font-size: 1.5rem;
           font-weight: 600;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          @include mobile-view {
+            font-size: 18px;
+          }
         }
 
         .email {
@@ -240,6 +368,9 @@
           font-style: italic;
         }
 
+        .role {
+          color: lightgreen;
+        }
         .phone {
           font-style: italic;
         }
@@ -247,3 +378,5 @@
     }
   }
 }
+
+// @media
