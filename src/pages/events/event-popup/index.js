@@ -61,7 +61,7 @@ const EventPopup = ({ event, closeFunc }) => {
 
     return (
         <div className="popup-bg">
-        <div className="popup-content-container">
+        <div className="events popup-content-container">
             <div className="popup-sidebar">
                 <div className="close-container-mobile" onClick={closeFunc}>
                     <svg className="close-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 252 252"><path d="M164.612 87.388a9 9 0 00-12.728 0L126 113.272l-25.885-25.885a9 9 0 00-12.728 0 9 9 0 000 12.728L113.272 126l-25.885 25.885a9 9 0 006.364 15.364 8.975 8.975 0 006.364-2.636L126 138.728l25.885 25.885c1.757 1.757 4.061 2.636 6.364 2.636s4.606-.879 6.364-2.636a9 9 0 000-12.728L138.728 126l25.885-25.885a9 9 0 00-.001-12.727z" /></svg>
@@ -71,11 +71,10 @@ const EventPopup = ({ event, closeFunc }) => {
                         <img className="event-image" src={event.icon} alt={event.name} />
                         <span className="name">{event.name}</span>
                     </div>
-                    <div className={event.needRegistration? "event-register" : "hidden"}>
-                        <a href={event.registrationLink} target="_blank" rel="noreferrer">
-                            <button className="event-register-button">{event.button}</button>
-                        </a>
-                    </div>
+                    {event.needRegistration &&
+                    <a href={event.registrationLink} target="_blank" rel="noreferrer">
+                        <button className="event-register-button">{event.button}</button>
+                    </a>}
                 </div>
             </div>
             <div className="popup-stack" ref={divRef}>

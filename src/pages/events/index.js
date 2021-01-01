@@ -1,6 +1,6 @@
 import HeaderBar from '../../shared-components/header-bar';
 import EventsContainer from './events-container';
-import Background from '../../components/Background';
+// import Background from '../../components/Background';
 
 const Events = () => {
   return (

@@ -6,26 +6,53 @@
   margin: 0 2rem;
   margin-top: 1rem;
   padding: 0.5rem;
-  font-size: 1.1rem;
-  border-radius: 9999px;
-  // box-shadow:  6px 6px 12px #99c9e2,
-  //             -6px -6px 12px #e5f5fd;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  font-family: "Montserrat";
   border: .0625rem solid #0086ce;
   border-color:  #afd9f0;
   cursor: pointer;
   transition: 200ms ease-in-out;
 
   @include mobile-view {
-    width: 10rem;
+    margin: 1rem auto;
+  }
+
+  @include tablet-view {
     margin: 1rem auto;
   }
 
   @include desktop-view {
     &:hover {
-      background-color: rgb(211, 207, 207);
+      background-color: white;
       transform: scale(1.05);
       color: black;
     }
+  }
+}
+
+.registered {
+  // background: lightgreen;
+  cursor: default;
+  border: none;
+  font-style: italic;
+  font-size: 1.3rem;
+  &:hover {
+    transform: none;
+    background: transparent;
+    color: white;
+  }
+}
+
+.reg-closed {
+  border: none;
+  font-style: italic;
+
+  &:hover {
+    background: transparent;
+    transform: none;
+    cursor: default;
+    color: white;
   }
 }
 
