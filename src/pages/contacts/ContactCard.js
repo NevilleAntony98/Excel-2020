@@ -26,7 +26,7 @@ export default class ContactCard extends Component{
             <div className={styles["name"]}>{this.props.details.name}</div>
             <div className={styles["desig"]}>{this.props.details.desig}</div>
             </div> */}
-            <div className="contact-card">
+            <div className="contact-card backdrop-filter-blur">
                     <div className="contact-card-img">
                         <img src={this.props.details.img} alt="" />
                     </div>

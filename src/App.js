@@ -13,7 +13,7 @@ import Contacts from './pages/contacts';
 
 import './App.scss';
 import NavProfileIcon from './components/NavProfileIcon';
-
+import ParticlesBg from 'particles-bg';
 const App = () => {
   const setIsLoggedIn = useState(false)[1];
 
@@ -49,6 +49,7 @@ const App = () => {
         <Redirect to="/" />
       </Switch>
       </div>
+      <ParticlesBg type="circle" bg={true} /> 
     </div>
   );
 };
