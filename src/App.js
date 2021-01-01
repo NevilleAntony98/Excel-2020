@@ -49,7 +49,7 @@ const App = () => {
         <Redirect to="/" />
       </Switch>
       </div>
-      <ParticlesBg type="circle" num={30} bg={true} /> 
+      <ParticlesBg type="circle" bg={true} /> 
     </div>
   );
 };
