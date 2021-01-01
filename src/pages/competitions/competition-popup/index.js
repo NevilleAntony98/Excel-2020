@@ -30,7 +30,9 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
     });
 
     const getSanitizedString = (string) => {
+        if(string){
         return string.replaceAll('\\\\n', '\n')
+        }
     }
 
     const AboutSection = () => {

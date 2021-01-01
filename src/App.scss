@@ -2,7 +2,7 @@
 @import './sass/variables.scss';
 
 .app-container {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   font-family: 'Montserrat';
 
@@ -25,6 +25,8 @@
 
 .nav-shift {
   margin-left: 110px;
+  height: auto;
+  min-height: min(100vh);
 
   @include mobile-view {
     margin-left: 0px;
@@ -59,6 +61,11 @@
   position: relative;
 }
 
+.backdrop-filter-blur{
+  background: rgba( 255, 255, 255, 0.45 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  border-radius: 10px;
+}
 /* support backdrop-filter */
 @supports ( (-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px)) ) {
   .backdrop-filter-blur {
