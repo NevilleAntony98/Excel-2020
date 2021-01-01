@@ -21,7 +21,7 @@
   border-radius: 20px;
   box-shadow: none;
   color: white;
-
+  font-family: "Montserrat";
   @include tablet-view {
     flex-direction: column;
     width: 100vw;
@@ -50,15 +50,18 @@
     z-index: 10;
     border-right: 1px solid rgba(255, 255, 255, 0.18);
     padding: 0 1rem;
+    font-family: "Montserrat";
 
     @include tablet-view {
       border-radius: 0;
       flex-direction: column;
+      min-height: fit-content;
     }
 
     @include mobile-view {
       border-radius: 0;
       flex-direction: column;
+      min-height: fit-content;
     }
 
     .close-container-mobile {
