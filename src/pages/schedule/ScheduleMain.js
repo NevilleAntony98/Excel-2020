@@ -25,8 +25,8 @@ const ScheduleMain = () => {
   useEffect(() => {
     axios
       .all([
-        axios.get('https://staging.events.excelmec.org/api/schedule'),
-        axios.get('https://staging.events.excelmec.org/api/constants')
+        axios.get('https://events.excelmec.org/schedule'),
+        axios.get('https://events.excelmec.org/constants')
       ])
       .then(
         axios.spread((response1, response2) => {

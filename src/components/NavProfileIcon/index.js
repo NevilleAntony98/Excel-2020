@@ -18,7 +18,7 @@ const NavProfileIcon = ({isMobile = false}) => {
 
     let onEditProfileClicked = () => {
         AuthHelper.aysncGetAccessToken()
-        .then (() => window.open("https://staging.accounts.excelmec.org", "_blank"))
+        .then (() => window.open("https://accounts.excelmec.org", "_blank"))
     }
 
     if (profile == null)

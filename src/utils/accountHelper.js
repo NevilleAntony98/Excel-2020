@@ -6,13 +6,13 @@ export default class AccountHelper {
 
     static logUserIn = () => {
         if (!this.isUserLoggedIn())
-            window.location.href = "https://staging.accounts.excelmec.org/auth/login?redirect_to=" + window.location;
+            window.location.href = "https://accounts.excelmec.org/auth/login?redirect_to=" + window.location;
     }
 
     static logUserOut = () => {
         if (this.isUserLoggedIn()) {
             AuthHelper.clearAllTokens()
-            window.location.href = "https://staging.accounts.excelmec.org/auth/logout?redirect_to=" + window.location;
+            window.location.href = "https://accounts.excelmec.org/auth/logout?redirect_to=" + window.location;
         }
     }
 
@@ -27,7 +27,7 @@ export default class AccountHelper {
             let access_token = await AuthHelper.aysncGetAccessToken()
             if (access_token != null) {
                 try {
-                    let res = await axios.get("https://staging.accounts.excelmec.org/api/Profile/view", {
+                    let res = await axios.get("https://accounts.excelmec.org/api/Profile/view", {
                         headers: {"Authorization" : `Bearer ${access_token}`}
                     })
 

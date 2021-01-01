@@ -37,12 +37,12 @@ export default class CompetitionsGrid extends Component {
   getCompetitions = async () => {
     let competitionsData = []
 
-    const data = await axios.get('https://staging.events.excelmec.org/api/events/type/competition')
+    const data = await axios.get('https://events.excelmec.org/events/type/competition')
     let promises = []
 
     if (data.status === 200) {
       data.data.forEach((event) => {
-        promises.push(axios.get("https://staging.events.excelmec.org/api/events/" + event.id))
+        promises.push(axios.get("https://events.excelmec.org/events/" + event.id))
       })
 
       let responses = await Promise.all(promises)
@@ -54,7 +54,7 @@ export default class CompetitionsGrid extends Component {
 
   getCategories = async () => {
     let categories = []
-    let res = await axios.get('https://staging.events.excelmec.org/api/constants')
+    let res = await axios.get('https://events.excelmec.org/constants')
 
     if (res.status === 200) {
       categories = res.data.category
