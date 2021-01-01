@@ -10,9 +10,10 @@
   .sort-filter-box {
     display: grid;
     grid-template-columns: auto auto;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 1.5rem 5px;
-    gap: 1rem;
+    gap: 5rem;
+    margin-left: 40px;
 
     @include mobile-view {
       // grid-template-columns: auto auto;
@@ -30,19 +31,23 @@
     }
 
     .drop-down {
-      width: 10rem;
+      width: 15rem;
       .Dropdown-option {
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
         color: white;
+        .is-selected{
+          background-color: rgba(238, 221, 247, 0.767) !important;
+          color: black;
+        }
       }
       .Dropdown-option:hover{
         background: rgba(238, 221, 247, 0.233) !important;
         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
         -webkit-backdrop-filter: blur(10.5px);
         backdrop-filter: blur(10.5px);
-      }
+      } 
 
       @include mobile-view {
         max-width: 8rem;
