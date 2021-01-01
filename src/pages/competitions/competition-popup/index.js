@@ -29,17 +29,17 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
         })
     });
 
-    const getSanitizedString = (string) => {
-        if(string){
-        return string.replaceAll('\\\\n', '\n')
-        }
-    }
+    // const getSanitizedString = (string) => {
+    //     if(string){
+    //     return string.replaceAll('\\\\n', '\n')
+    //     }
+    // }
 
     const AboutSection = () => {
         return (
             <div>
                 <div className="about-section section">
-                    {getSanitizedString(competition.about)}
+                    {competition.about}
                 </div>
                 <div className="about-extra ">
                     <div className="about-extra-content ">
@@ -78,7 +78,7 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
     const FormatSection = () => {
         return (
             <div className="format-section section">
-                {getSanitizedString(competition.format)}
+                {competition.format}
             </div>
         )
     }
@@ -86,7 +86,7 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
     const RulesSection = () => {
         return (
             <div className="rules-section section">
-                {getSanitizedString(competition.rules)}
+                {competition.rules}
             </div>
         )
     }

@@ -10,15 +10,15 @@ const EventPopup = ({ event, closeFunc }) => {
     let divRef = createRef();
 
 
-    const getSanitizedString = (string) => {
-        return string.replaceAll('\\\\n', '\n')
-    }
+    // const getSanitizedString = (string) => {
+    //     return string.replaceAll('\\\\n', '\n')
+    // }
 
     const AboutSection = () => {
         return (
             <div>
                 <div className="about-section section">
-                    {getSanitizedString(event.about)}
+                    {event.about}
                 </div>
                 <div className="contact-section section event-contacts">
                     {event.eventHead1 !== null &&
