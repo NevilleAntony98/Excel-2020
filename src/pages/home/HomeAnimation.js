@@ -21,14 +21,15 @@ export default class HomeAnimation extends Component {
             <img src={MobileLogo} className="excel-logo mobile-logo" alt="Logo"></img>
             <img src={Circuits} className="circuits" alt="circuits"></img>
             </div>
-            <div className="tagline">
-              <div><span><img className="tagline-icon" alt="innovate-fire" src={fire}></img></span>Inspire</div>
-              <div><span><img className="tagline-icon" alt="inspire-bulb" src={lightbulb}></img></span>Innovate</div>
-              <div><span><img className="tagline-icon" alt="engineer-rocket" src={rocket}></img></span>Engineer</div>
+            <div className="tagline floating">
+              <div className="floating"><span><img className="tagline-icon" alt="innovate-fire" src={fire}></img></span>Inspire</div>
+              <div className="floating"><span><img className="tagline-icon" alt="inspire-bulb" src={lightbulb}></img></span>Innovate</div>
+              <div className="floating"><span><img className="tagline-icon" alt="engineer-rocket" src={rocket}></img></span>Engineer</div>
             </div>
-            <div className="home-dates">
-            <div><span><img className="tagline-icon" alt="calender" src={calendar}></img></span>Jan 29, 30, 31</div>
-            <div><span><img className="tagline-icon" alt="pin" src={location}></img></span>Virtual</div>
+            <div className="home-dates floating">
+            <div className="floating"><span><img className="tagline-icon" alt="calender" src={calendar}></img></span>Jan 29, 30, 31
+            </div>
+            <div className="floating"><span><img className="tagline-icon" alt="pin" src={location}></img></span>Virtual</div>
             </div>
           </div>
         )

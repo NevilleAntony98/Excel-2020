@@ -24,6 +24,8 @@
 
 .nav-shift {
   margin-left: 110px;
+  height: auto;
+  min-height: min(100vh);
 
   @include mobile-view {
     margin-left: 0px;
