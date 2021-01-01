@@ -8,10 +8,11 @@
 
   .mobile-profile-icon {
     display: none;
+    z-index: 1000;
 
     @include mobile-view {
       display: block;
-      position: fixed;
+      position: absolute;
       top: 1rem;
       right: 1rem;
 
@@ -40,16 +41,16 @@
 //   box-shadow:none;
 //   border-radius: 10px;
 // }
- 
+
 // /* Handle */
 // ::-webkit-scrollbar-thumb {
-//   background: $color-excel; 
+//   background: $color-excel;
 //   border-radius: 10px;
 // }
 
 // /* Handle on hover */
 // ::-webkit-scrollbar-thumb:hover {
-//   background: $color-blue; 
+//   background: $color-blue;
 // }
 
 #root{
