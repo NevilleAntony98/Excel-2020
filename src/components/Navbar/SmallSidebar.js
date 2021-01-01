@@ -3,11 +3,16 @@ import { NavLink } from 'react-router-dom';
 import './SmallSidebar.css';
 
 
-import home from '../../assets/svg/icons8-home-72.png';
-import competitions from '../../assets/svg/icons8-trophy-64.png';
-import events from '../../assets/svg/icons8-presentation-64.png';
-import schedule from '../../assets/svg/calendar--v4.png';
-import contacts from '../../assets/svg/icons8-phone-64.png';
+// import home from '../../assets/svg/icons8-home-72.png';
+// import competitions from '../../assets/svg/icons8-trophy-64.png';
+// import events from '../../assets/svg/icons8-presentation-64.png';
+// import schedule from '../../assets/svg/calendar--v4.png';
+// import contacts from '../../assets/svg/icons8-phone-64.png';
+import home from '../../assets/svg/home.svg';
+import competitions from '../../assets/svg/competitions.svg';
+import events from '../../assets/svg/events.svg';
+import schedule from '../../assets/svg/calendar.svg';
+import contacts from '../../assets/svg/contacts.svg';
 // import logoutpic from '../../assets/svg/icons8-export-50.png';
 
 
