@@ -89,7 +89,7 @@ const ScheduleMain = () => {
         ))}
       </div>
       <div>
-      {filteredData.events.length === 0 ? (
+      {filteredData.length === 0 || filteredData.events.length === 0 ? (
         <DeadEnd title={'Nothing to see here'} subtitle={'Chose a different category to view more events!'} />
       ) : (
         filteredData.events.map((item, id) => <ScheduleCard key={item.id} event={item} />)
