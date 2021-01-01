@@ -123,18 +123,6 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
                         <span className="name">{competition.name}</span>
                     </div>
                     <div className="reg-prize-box">
-                        {/* {competition.teamSize && <span className="team-size">
-                            <img src={team_icon} alt="team size" />
-                            <span>{competition.teamSize}</span>
-                        </span>} */}
-                        {/* {competition.prizeMoney && <span className="prize-money">
-                            <img src={reward_icon} alt="reward" />
-                            <span>{competition.prizeMoney}</span>
-                        </span>}
-                        {competition.datetime && <span className="date">
-                            <img src={clock_icon} alt="time"></img>
-                            <span>{dayjs(competition.datetime).format('D MMM mm:ss a')}</span>
-                        </span>} */}
                         <RegisterButton
                             competition={competition}
                             hasRegistered={hasRegistered}

@@ -9,15 +9,16 @@
   font-size: 1.3rem;
   border-radius: 10px;
   font-family: "Montserrat";
-  // box-shadow:  6px 6px 12px #99c9e2,
-  //             -6px -6px 12px #e5f5fd;
   border: .0625rem solid #0086ce;
   border-color:  #afd9f0;
   cursor: pointer;
   transition: 200ms ease-in-out;
 
   @include mobile-view {
-    width: 10rem;
+    margin: 1rem auto;
+  }
+
+  @include tablet-view {
     margin: 1rem auto;
   }
 
@@ -54,6 +55,7 @@
     color: white;
   }
 }
+
 .update-mobile-popup {
   display: flex;
   flex-direction: column;;

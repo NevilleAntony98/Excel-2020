@@ -97,7 +97,8 @@ const RegisterButton = ({competition, hasRegistered, setHasRegistered, setActive
 
     return (
         <Fragment>
-            <button className= {hasRegistered ? competition.isTeam ? "register-button" : "register-button registered" : "register-button"}
+            <button
+            className={`register-button ${hasRegistered && !competition.isTeam ? "registered" : ""}`}
             onClick={onRegisterClicked}>
                 {hasRegistered ?
                     competition.isTeam ? "Manage Team" : "Registered":
