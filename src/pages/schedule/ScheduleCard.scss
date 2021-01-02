@@ -63,9 +63,36 @@
   font-size: 20px;
 }
 
-.flipIcon {
-  // background-color: transparent;
-  // box-shadow: none;
+.scheduleflipIconbg {
+  background-color: white;
+  border-radius: 12px;
+  // box-shadow: 5px 5px 7px $shadow-dark, -5px -5px 7px $shadow-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // min-height: 7rem;
+  // min-width: 7rem;
+  // margin: auto;
+  padding: 1.25rem;
+
+  @include mobile-view {
+    padding: 10px;
+  }
+}
+
+.scheduleflipIcon {
+  // background-color: white;
+  // border-radius: 50%;
+  
+  // padding: 20px;
+
+  max-width: 7.2rem;
+  max-height: 7.2rem;
+
+  @include mobile-view {
+    max-width: 4rem;
+    max-height: 4rem;
+  }
 }
 
 @media only screen and (max-width:980px) {

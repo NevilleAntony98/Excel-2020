@@ -78,10 +78,6 @@
     backdrop-filter: blur(10.5px);
     z-index:-1;
     border-radius: 20px;
-    @include mobile-view {
-      -webkit-backdrop-filter: blur(0px);
-      backdrop-filter: blur(0px);
-    }
   }
 }
 

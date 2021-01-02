@@ -29,7 +29,7 @@ const FlipIcon = ({url, alt}) => {
   return isLoading ? (
     <PlaceholderIcon alt={alt} />
   ) : (
-    <div  className="flipIconbg">
+    <div className="flipIconbg">
       <img className="flipIcon" src={url} alt={alt} />
     </div>
   );

@@ -274,7 +274,10 @@
 }
 
 @media screen and (max-width:850px){
-	.competition-card {
+    .competition-card-container{
+        width: 250px;
+    }
+    .competition-card {
         width: 250px;
         height: 250px;
         .icon {
@@ -295,7 +298,10 @@
 
 /*ipad potrait*/
 @media screen and (max-width:800px) and (max-height: 1300px ){
-	.competition-card {
+    .competition-card-container{
+        width: 250px;
+    }
+    .competition-card {
         width: 250px;
         height: 250px;
         .icon {
@@ -316,7 +322,10 @@
 }
 
 @media screen and (max-width:720px) and (max-height: 1300px ){
-	.competition-card {
+    .competition-card-container{
+        width: 230px;
+    }
+    .competition-card {
         width: 230px;
         height: 230px;
         .icon {
@@ -342,6 +351,9 @@
 }
 
 @media screen and (max-width:480px){
+    .competition-card-container{
+        width: 180px;
+    }
 	.competition-card {
         width: 180px;
         height: 180px;
@@ -369,8 +381,11 @@
 }
 
 @media screen and (max-width:400px){
+    .competition-card-container{
+        width: 158px;
+    }
 	.competition-card {
-        width: 160px;
+        width: 158px;
         height: 160px;
         .icon {
             margin-top: 20px;
