@@ -36,22 +36,22 @@ export default class ContactCard extends Component{
                         {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
                         <ul className="contact-card-links">
                             <li>
-                                <a href="http://localhost:3000/#/" target="_blank" rel="noopener noreferrer" aria-label="facebook social link" className="icon icon-xs icon-facebook mr-3">
+                                <a href={"tel:"+this.props.details.phno} target="_blank" rel="noopener noreferrer" aria-label="facebook social link" className="icon icon-xs icon-facebook mr-3">
                                 <img src={phone} alt="phone"/>
                                 </a>
                             </li>
                             <li>
-                                <a href="http://localhost:3000/#/" target="_blank" rel="noopener noreferrer" aria-label="twitter social link" className="icon icon-xs icon-twitter mr-3">
+                                <a href={"mailto:" + this.props.details.email} target="_blank" rel="noopener noreferrer" aria-label="twitter social link" className="icon icon-xs icon-twitter mr-3">
                                 <img src={email} alt="email"/>
                                 </a>
                             </li>
                             <li>
-                                <a href="http://localhost:3000/#/" target="_blank" rel="noopener noreferrer" aria-label="slack social link" className="icon icon-xs icon-slack mr-3">
+                                <a href={this.props.details.insta} target="_blank" rel="noopener noreferrer" aria-label="slack social link" className="icon icon-xs icon-slack mr-3">
                                 <img src={insta} alt="insta"/>
                                 </a>
                             </li>
                             <li>
-                                <a href="http://localhost:3000/#/" target="_blank" rel="noopener noreferrer" aria-label="dribbble social link" className="icon icon-xs icon-dribbble mr-3">
+                                <a href={this.props.details.linkln} target="_blank" rel="noopener noreferrer" aria-label="dribbble social link" className="icon icon-xs icon-dribbble mr-3">
                                 <img src={linkedin} alt="linkedin"/>
                                 </a>
                             </li>
