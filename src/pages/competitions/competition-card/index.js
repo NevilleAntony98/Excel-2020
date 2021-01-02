@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import Popup from 'reactjs-popup';
-import { Spring } from 'react-spring/renderprops';
+// import { Spring } from 'react-spring/renderprops';
 
 import './index.scss';
 
@@ -21,16 +21,17 @@ const FlipImage = ({competition}) => {
     return <img src={excelIcon} alt={competition.name} />
 
   return (
-      <Spring
-      from={{transform: 'rotateY(360deg)'}}
-      to={{transform: 'rotateY(0deg)'}}
-      config={{tension: 200, friction: 40}}>
-      {props => (
-        <div style={props}>
+      // <Spring
+      // from={{transform: 'rotateY(360deg)'}}
+      // to={{transform: 'rotateY(0deg)'}}
+      // config={{tension: 200, friction: 40}}>
+      // {props => (
+        // <div style={props}>
+        <div>
           <img src={competition.icon} alt={competition.name} />
         </div>
-      )}
-      </Spring>
+      // )}
+      // </Spring>
   )
 }
 

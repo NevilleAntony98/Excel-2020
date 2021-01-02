@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {useSpring, animated} from 'react-spring';
+// import {animated} from 'react-spring';
 
 import excelIcon from '../../assets/png/excel2020.png';
 
@@ -20,18 +20,18 @@ const FlipIcon = ({url, alt}) => {
     };
   }, [url]);
 
-  const props = useSpring({
-    from: {transform: 'rotateY(360deg)'},
-    to: {transform: 'rotateY(0deg)'},
-    config: {tension: 200, friction: 40}
-  });
+  // const props = useSpring({
+  //   from: {transform: 'rotateY(360deg)'},
+  //   to: {transform: 'rotateY(0deg)'},
+  //   config: {tension: 200, friction: 40}
+  // });
 
   return isLoading ? (
     <PlaceholderIcon alt={alt} />
   ) : (
-    <animated.div style={props} className="flipIconbg">
+    <div  className="flipIconbg">
       <img className="flipIcon" src={url} alt={alt} />
-    </animated.div>
+    </div>
   );
 };
 
