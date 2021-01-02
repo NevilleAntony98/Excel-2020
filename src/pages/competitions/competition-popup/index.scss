@@ -4,7 +4,9 @@
 .popup-bg{
   width: 100vw;
   height: 100vh;
-  background: rgba(13, 11, 41,.9);
+  background: rgba(97, 92, 160, 0.678);
+  -webkit-backdrop-filter: blur(10.5px);
+  backdrop-filter: blur(10.5px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +18,7 @@
   border-radius: 12px;
   height: 38rem;
 
-  background: rgba(13, 11, 41, 0.96);
+  background: rgba(40, 38, 80, 0.801);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 20px;
   box-shadow: none;

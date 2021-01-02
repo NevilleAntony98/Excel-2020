@@ -14,7 +14,7 @@ import excelLogo from '../../assets/png/excel2020.png';
 
 const Bottombar = () => {
   return (
-    <div className="bottombarContainer">
+    <div className="bottombarContainer backdrop-filter-blur">
       <NavLink to="/competitions">
         <div className="bottomBarLink">
           <img alt="Competitions" src={competitions} height="20px" width="20px" />

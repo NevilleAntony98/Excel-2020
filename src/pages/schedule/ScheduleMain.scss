@@ -64,18 +64,18 @@
   // border: 0.0625rem solid rgba(243, 247, 250, 0.05);
   border-radius: 6px;
   transition: all .2s ease;
-  background: rgba(195, 138, 221, 0.233) !important;
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  border-radius: 20px;
-  -webkit-backdrop-filter: blur(10.5px);
-  backdrop-filter: blur(10.5px);
+  // background: rgba(195, 138, 221, 0.233) !important;
+  // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  // border-radius: 20px;
+  // -webkit-backdrop-filter: blur(10.5px);
+  // backdrop-filter: blur(10.5px);
   color: white;
   z-index: 1;
 }
 .scheduleDay:hover {
   opacity: 1;
   transition-duration: 0.7s;
-  background-color: rgb(196, 194, 194);
+  // background-color: rgb(196, 194, 194);
   color: white;
   border-radius: 6px;
 }
