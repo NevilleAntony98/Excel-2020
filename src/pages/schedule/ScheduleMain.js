@@ -40,17 +40,28 @@ const ScheduleMain = () => {
 
   useEffect(() => {
     if (scheduleData.length !== 0) {
-      let x = scheduleData.find(e => e.day === selectedDay).events;
-      if (selectedFilters.category !== 'All') {
-        x = x.filter(e => e.category === selectedFilters.category);
+      let x = scheduleData.find(e => e.day === selectedDay);
+      if (x) {
+	x = x.events;
+        if (selectedFilters.category !== 'All') {
+          x = x.filter(e => e.category === selectedFilters.category);
+        }
+        if (selectedFilters.eventType !== 'All') {
+          x = x.filter(e => e.eventType === selectedFilters.eventType);
+        }
+        if (selectedFilters.eventStatus !== 'All') {
+          x = x.filter(e => e.eventStatus === selectedFilters.eventStatus);
+        }
       }
-      if (selectedFilters.eventType !== 'All') {
-        x = x.filter(e => e.eventType === selectedFilters.eventType);
-      }
-      if (selectedFilters.eventStatus !== 'All') {
-        x = x.filter(e => e.eventStatus === selectedFilters.eventStatus);
+      else {
+	// **** backend guys for not sending data for day 1
+	setSelectedDay(scheduleData[0].day);
       }
       setFilteredData({day: selectedDay, events: x});
+    }
+    else {
+      // **** backend guys for sending empty datas
+      setFilteredData({day: selectedDay, events: []});
     }
   }, [scheduleData, selectedDay, selectedFilters]);
 
