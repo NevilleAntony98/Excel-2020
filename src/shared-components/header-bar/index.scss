@@ -7,9 +7,9 @@
     display: flex;
     // background-color: $header-bar-background;
     color: white;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 0.5rem 4rem;
+    padding: 2rem 0 0 6rem;
     // margin-bottom: 1rem;
     // box-shadow: 0 2px 8px -2px black;
 
@@ -23,11 +23,15 @@
     .title {
         display: flex;
         justify-content: center;
+        font-weight: bolder;
         // margin-right: auto;
-        font-size: 40px;
+        font-size: 50px;
         text-decoration: none;
         color: white;
-        padding: 1rem;
+        padding: 1rem 0;
+        border-bottom: 5px solid $color-excel;
+        letter-spacing: 2px;
+        font-weight: bolder;
         text-transform: uppercase;
         @include mobile-view {
             margin: 0rem;

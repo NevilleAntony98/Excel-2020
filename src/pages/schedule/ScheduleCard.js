@@ -10,7 +10,7 @@ const ScheduleCard = ({event}) => {
 
   return (
     <animated.div style={props}>
-      <div className="scheduleCardContainer">
+      <div className="scheduleCardContainer backdrop-filter-blur">
         <div className="scheduleCardTime">{dayjs(event.datetime).format('h:mm a')}</div>
         <div>
           <div className="scheduleCardTitle">{event.name}</div>

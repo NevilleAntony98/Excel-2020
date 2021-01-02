@@ -16,7 +16,7 @@ const EventCard = ({ event }) => {
 
   return (
     <animated.div style={props} onClick={() => setOpen(true)}>
-      <div className="eventCardContainer">
+      <div className="eventCardContainer backdrop-filter-blur">
         <div className="eventCardHeaderBox">
           <FlipIcon url={event.icon} alt={event.name} />
           <span className="eventCardType">{event.eventType}</span>

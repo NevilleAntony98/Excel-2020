@@ -1,17 +1,22 @@
 .smallSidebarContainer {
-  position: fixed;
+  position: fixed !important;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 70px;
   /* height: 100vh; */
   /* padding: 20px; */
-  background-color:white;
-  box-shadow: 0 1px 10px rgba(0,0,0,.12),0 1px 5px rgba(0,0,0,.24);
+  /* background-color:white;
+  box-shadow: 0 1px 10px rgba(0,0,0,.12),0 1px 5px rgba(0,0,0,.24); */
+  /* background: rgba(195, 138, 221, 0.233);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(10.5px);
+  backdrop-filter: blur(10.5px); */
   left: 20px;
   top: 20px;
   bottom: 20px;
-  border-radius: 18px;
+  border-radius: 20px;
   z-index: 102;
 }
 
@@ -75,6 +80,7 @@
   align-items: center;
   /* height: 100%; */
   padding: 25px 0;
+  position: relative;
 }
 
 .smallSidebarLink:hover {
@@ -88,7 +94,50 @@
   cursor: pointer;
   /* padding-bottom: 13px; */
 }
+.smallSidebarActive{
+  background: rgba(255, 255, 255, 0.281) !important;
+}
 
+.smallSidebarLink .toolTip {
+  opacity: 0;
+  visibility: hidden;
+  width: 140px;
+  height: 80%;
+  color: #fff;
+  text-align: center;
+  border-radius: 0 5px 5px 0;
+  /* background: rgba(195, 138, 221, 0.233);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  -webkit-backdrop-filter: blur(10.5px) !important;
+  backdrop-filter: blur(10.5px) !important;
+   */
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 100%;
+  /* transition: all 0.2s ease; */
+  z-index: 100;
+}
+.toolTipText{
+  margin-top: 14%;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.smallSidebarLink:hover .toolTip {
+  opacity: 1;
+  visibility: visible;
+}
+.smallSidebarLink:hover .toolTip::before{
+  opacity: 1;
+}
+.toolTip::before{
+  left: 0;
+  opacity: 0;
+  border-radius: 0 5px 5px 0 !important;
+  /* transition: opacity 0.2s ease; */
+}
 .logout {
   position: absolute;
   bottom: 40px;
