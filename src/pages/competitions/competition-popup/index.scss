@@ -133,6 +133,23 @@
           width: fit-content;
         }
       }
+
+      .alt-register {
+        margin-top: 25px;
+        text-align: center;
+        @include mobile-view {
+          margin-top: 10px;
+          margin-bottom: 15px;
+        }
+        a{
+          color: white;
+          text-decoration: underline;
+          &:hover{
+            color: lightgreen;
+            cursor: pointer;
+          }
+        }
+      }
     }
 
     .popup-stack-switcher {

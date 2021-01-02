@@ -131,6 +131,9 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
                             setHasRegistered={setHasRegistered}
                             setActiveSection={setActiveSection} />
                     </div>
+                    {competition.needRegistration && competition.registrationOpen && <div className="alt-register">
+                        <a href={competition.registrationLink} target="_blank" rel="noreferrer">Unable to register? Click here</a>
+                    </div>}
                 </div>
                 <div className="popup-stack-switcher">
                     <ul className="popup-nav">
