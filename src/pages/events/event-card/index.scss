@@ -2,6 +2,7 @@
 @import '../../../sass/mixins';
 
 .eventCardContainer {
+  position: relative;
   display: flex;
   gap: 2rem;
   padding: 3rem;
@@ -13,10 +14,15 @@
   // border: .0625rem solid rgba(243,247,250,.05);
   // border-color:  $border-color;
 
-  background: rgba(13, 11, 41, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 20px;
+  // background: rgba(13, 11, 41, 0.8);
+  // border: 1px solid rgba(255, 255, 255, 0.18);
+  // border-radius: 20px;
   // box-shadow: 10px -90px 90px #02011f;
+  // background: rgba(195, 138, 221, 0.233) !important;
+  // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  // border-radius: 20px;
+  // -webkit-backdrop-filter: blur(10.5px);
+  // backdrop-filter: blur(10.5px);
   color: white;
   
   cursor: pointer;
@@ -24,9 +30,14 @@
     transition: 0.3s;
     &:hover {
       // box-shadow: 9px 9px 18px #5fa6cc, -9px -9px 18px #ffffff;
-      transform: scale(1.01);
-    }
+      // transform: scale(1.01);
   }
+}
+  &::before{
+  position: absolute;
+  top:0;
+  left: 0;
+}
 
   @include mobile-view  {
     flex-direction: column;

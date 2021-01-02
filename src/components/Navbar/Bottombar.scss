@@ -15,7 +15,12 @@
   left: 0;
   right: 0;
   z-index: 102;
-  box-shadow: 0 1px 10px rgba(0,0,0,.12),0 1px 5px rgba(0,0,0,.24);
+  // box-shadow: 0 1px 10px rgba(0,0,0,.12),0 1px 5px rgba(0,0,0,.24);
+  background: rgba(255, 255, 255, 0.438) !important;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(10.5px);
+  backdrop-filter: blur(10.5px);
 }
 .bottombarHomeIcon {
   width: 40px;

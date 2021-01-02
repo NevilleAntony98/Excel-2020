@@ -39,7 +39,7 @@ const CompetitionCard = ({competition}) => {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="competition-card-container">
+    <div className="competition-card-container backdrop-filter-blur">
         <div className="competition-card" onClick={() => setOpen(true)}>
           <div className="icon">
             <FlipImage competition={competition} />

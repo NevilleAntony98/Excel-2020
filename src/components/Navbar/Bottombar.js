@@ -2,14 +2,14 @@ import { NavLink } from 'react-router-dom';
 
 import './Bottombar.scss';
 
-// import schedule from '../../assets/svg/schedule.svg';
-// import competitions from '../../assets/svg/competitions.svg';
-// import contacts from '../../assets/svg/contacts.svg';
-// import events from '../../assets/svg/events.svg';
-import competitions from '../../assets/svg/icons8-trophy-64.png';
-import events from '../../assets/svg/icons8-presentation-64.png';
-import schedule from '../../assets/svg/calendar--v4.png';
-import contacts from '../../assets/svg/icons8-phone-64.png';
+import schedule from '../../assets/svg/calendar.svg';
+import competitions from '../../assets/svg/competitions.svg';
+import contacts from '../../assets/svg/contacts.svg';
+import events from '../../assets/svg/events.svg';
+// import competitions from '../../assets/svg/icons8-trophy-64.png';
+// import events from '../../assets/svg/icons8-presentation-64.png';
+// import schedule from '../../assets/svg/calendar--v4.png';
+// import contacts from '../../assets/svg/icons8-phone-64.png';
 import excelLogo from '../../assets/png/excel2020.png';
 
 const Bottombar = () => {
