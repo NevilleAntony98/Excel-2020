@@ -1,5 +1,5 @@
 .smallSidebarContainer {
-  position: fixed;
+  position: fixed !important;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +16,7 @@
   left: 20px;
   top: 20px;
   bottom: 20px;
-  border-radius: 18px;
+  border-radius: 20px;
   z-index: 102;
 }
 
@@ -116,8 +116,8 @@
   z-index: 1;
   top: 50%;
   transform: translateY(-50%);
-  left: 50%;
-  transition: all 0.2s ease;
+  left: 100%;
+  /* transition: all 0.2s ease; */
   z-index: 100;
 }
 .toolTipText{
@@ -125,18 +125,18 @@
   font-size: 18px;
   font-weight: bolder;
 }
-.blur-background{
-  background: rgba(195, 138, 221, 0.233);
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur(10.5px) !important;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
 .smallSidebarLink:hover .toolTip {
-  left: 100%;
   opacity: 1;
   visibility: visible;
+}
+.smallSidebarLink:hover .toolTip::before{
+  opacity: 1;
+}
+.toolTip::before{
+  left: 0;
+  opacity: 0;
+  border-radius: 0 5px 5px 0 !important;
+  /* transition: opacity 0.2s ease; */
 }
 .logout {
   position: absolute;

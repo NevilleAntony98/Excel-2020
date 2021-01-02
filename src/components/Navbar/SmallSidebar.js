@@ -33,7 +33,6 @@ const SmallSidebar = ({ setIsSidebarOpen }) => {
           <div className="smallSidebarLink">
             <img alt="home" src={home} className="smallSidebarIcon" />
             <span className="toolTip backdrop-filter-blur">
-            {/*<div className="blur-background"></div>*/}
             <p className="toolTipText">Home</p></span>
           </div>
         </NavLink>

@@ -2,6 +2,7 @@
 @import '../../../sass/mixins';
 
 .eventCardContainer {
+  position: relative;
   display: flex;
   gap: 2rem;
   padding: 3rem;
@@ -29,9 +30,14 @@
     transition: 0.3s;
     &:hover {
       // box-shadow: 9px 9px 18px #5fa6cc, -9px -9px 18px #ffffff;
-      transform: scale(1.01);
-    }
+      // transform: scale(1.01);
   }
+}
+  &::before{
+  position: absolute;
+  top:0;
+  left: 0;
+}
 
   @include mobile-view  {
     flex-direction: column;
