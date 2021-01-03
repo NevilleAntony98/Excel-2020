@@ -34,13 +34,17 @@
 
     .drop-down {
       width: 15rem;
+      .is-selected{
+        background-color: transparent !important;
+        color: white !important
+      }
       .Dropdown-option {
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
         color: white;
         .is-selected{
-          background-color: rgba(238, 221, 247, 0.567) !important;
+          background-color: rgba(224, 173, 247, 0.637) !important;
           color: #333 !important
         }
       }
