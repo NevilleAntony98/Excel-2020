@@ -2,6 +2,8 @@ import {useState} from 'react';
 
 import RadioButton from '../../components/RadioButton';
 
+import closeButton from '../../assets/svg/closeButton.json';
+
 import './SchedulePopup.scss';
 
 const SchedulePopup = ({filters, selectedFilters, setSelectedFilters, close}) => {
@@ -11,6 +13,11 @@ const SchedulePopup = ({filters, selectedFilters, setSelectedFilters, close}) =>
 
   return (
     <div className="schedulePopupContainer">
+      <div className="close-container-mobile" onClick={() => close()}>
+        <svg className="close-button" viewBox={closeButton.viewBox}>
+          <path d={closeButton.path} />
+        </svg>
+      </div>
       <div className="schedulePopupTitle">Category</div>
       <div className="schedulePopupOptionsContainer">
         <RadioButton

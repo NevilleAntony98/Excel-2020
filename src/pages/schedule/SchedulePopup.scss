@@ -32,3 +32,32 @@
   justify-self: end;
   margin: 12px 0 0 auto;
 }
+.close-container-mobile {
+  display: none;
+
+  @include desktop-view {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: -20px;
+    padding-right: 15px;
+  }
+
+  .close-button {
+    fill: white;
+    position: fixed;
+    width: 1.7rem;
+    height: auto;
+    cursor: pointer;
+
+    transition: 100ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+      fill: lightgreen;
+    }
+  }
+}
+/*.schedulePopupCloseButton {
+
+}
+*/
