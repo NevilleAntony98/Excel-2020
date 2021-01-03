@@ -20,8 +20,10 @@
       // grid-template-rows: auto;
       // justify-content: space-between;
       // gap: 0.6rem;
-
+      margin-left: 0px;
       font-size: 0.75rem;
+      display: flex;
+      justify-content: center;
     }
 
     .Dropdown-placeholder {
@@ -50,7 +52,7 @@
       } 
 
       @include mobile-view {
-        max-width: 8rem;
+        max-width: 7rem;
       }
     }
   }
@@ -66,6 +68,8 @@
 
     @include mobile-view {
       grid-template-columns: repeat(1, 1fr);
+      padding: 20px 0px;
+      margin-left: 15px;
     }
 
     @include tablet-view {

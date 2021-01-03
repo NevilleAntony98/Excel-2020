@@ -10,15 +10,15 @@ const EventPopup = ({ event, closeFunc }) => {
     let divRef = createRef();
 
 
-    const getSanitizedString = (string) => {
-        return string.replaceAll('\\\\n', '\n')
-    }
+    // const getSanitizedString = (string) => {
+    //     return string.replaceAll('\\\\n', '\n')
+    // }
 
     const AboutSection = () => {
         return (
             <div>
                 <div className="about-section section">
-                    {getSanitizedString(event.about)}
+                    {event.about}
                 </div>
                 <div className="contact-section section event-contacts">
                     {event.eventHead1 !== null &&
@@ -68,10 +68,12 @@ const EventPopup = ({ event, closeFunc }) => {
                 </div>
                 <div className="header-container">
                     <div className="image-title-box">
-                        <img className="event-image" src={event.icon} alt={event.name} />
+                        <div className="event-popup-img-bg">
+                            <img className="event-image" src={event.icon} alt={event.name} />
+                        </div>
                         <span className="name">{event.name}</span>
                     </div>
-                    {event.needRegistration &&
+                    {event.button !== null &&
                     <a href={event.registrationLink} target="_blank" rel="noreferrer">
                         <button className="event-register-button">{event.button}</button>
                     </a>}

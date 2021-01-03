@@ -45,7 +45,7 @@ export default class AuthHelper {
 
         if (refresh_token != null) {
             try {
-                let res = await axios.post("https://staging.accounts.excelmec.org/api/Auth/refresh", {
+                let res = await axios.post("https://accounts.excelmec.org/api/Auth/refresh", {
                     refreshToken: refresh_token
                 })
 

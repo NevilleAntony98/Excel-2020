@@ -13,13 +13,13 @@ const EventsContainer = () => {
 
   useEffect(() => {
     axios
-      .get('https://staging.events.excelmec.org/api/events')
+      .get('https://events.excelmec.org/events')
       .then(res => {
         let events = res.data.filter(event => event.eventType !== "competition")
 
         let promises = []
         events.forEach((event) => {
-          promises.push(axios.get("https://staging.events.excelmec.org/api/events/" + event.id))
+          promises.push(axios.get("https://events.excelmec.org/events/" + event.id))
         })
 
         Promise.all(promises).then((responses) => {

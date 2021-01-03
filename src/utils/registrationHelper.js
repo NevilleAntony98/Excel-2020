@@ -7,7 +7,7 @@ export default class RegHelper {
         if (!AccountHelper.isUserLoggedIn())
             return false
 
-        const ROUTE = `https://staging.events.excelmec.org/api/registration/${eventId}`
+        const ROUTE = `https://events.excelmec.org/registration/${eventId}`
         let accessToken = await AuthHelper.aysncGetAccessToken()
 
         const res = await axios.get(ROUTE, {headers: {"Authorization" : `Bearer ${accessToken}`}})
@@ -35,7 +35,7 @@ export default class RegHelper {
         if (teamId != null)
             body["teamId"] = teamId
 
-        const ROUTE = "https://staging.events.excelmec.org/api/registration"
+        const ROUTE = "https://events.excelmec.org/registration"
 
         let res = null
         try {
@@ -51,7 +51,7 @@ export default class RegHelper {
     // TEAM SECTION
 
     static asyncCreateTeamForEvent = async (teamName, eventId) => {
-        const ROUTE = "https://staging.events.excelmec.org/api/Team"
+        const ROUTE = "https://events.excelmec.org/Team"
 
         const accessToken = await AuthHelper.aysncGetAccessToken()
         let header = {
@@ -76,7 +76,7 @@ export default class RegHelper {
     }
 
     static asyncCheckTeamValid = async (teamId) => {
-        const ROUTE = `https://staging.events.excelmec.org/api/Team/${teamId}`
+        const ROUTE = `https://events.excelmec.org/Team/${teamId}`
 
         const accessToken = await AuthHelper.aysncGetAccessToken()
         let header = {
@@ -97,7 +97,7 @@ export default class RegHelper {
     }
 
     static asyncChangeTeamForEvent = async (eventId, teamId) => {
-        const ROUTE = "https://staging.events.excelmec.org/api/registration/team"
+        const ROUTE = "https://events.excelmec.org/registration/team"
 
         const accessToken = await AuthHelper.aysncGetAccessToken()
         let header = {
@@ -137,7 +137,7 @@ export default class RegHelper {
     }
 
     static asyncGetTeamId = async (eventId) => {
-        const ROUTE = `https://staging.events.excelmec.org/api/events/${eventId}`
+        const ROUTE = `https://events.excelmec.org/events/${eventId}`
 
         const accessToken = await AuthHelper.aysncGetAccessToken()
         let header = {
@@ -153,7 +153,7 @@ export default class RegHelper {
     }
 
     static getMembersInTeam = async (teamId) => {
-        const ROUTE = `https://staging.events.excelmec.org/api/Team/${teamId}`
+        const ROUTE = `https://events.excelmec.org/Team/${teamId}`
 
         const accessToken = await AuthHelper.aysncGetAccessToken()
         let header = {
