@@ -12,54 +12,53 @@ const SchedulePopup = ({filters, selectedFilters, setSelectedFilters, close}) =>
   //const [selectedEventStatus, setSelectedEventStatus] = useState(selectedFilters.eventStatus);
 
   return (
-    <div className="schedulePopupOuterContainer">
-      <div className="schedulePopupContainer">
-        <div className="close-container-mobile" onClick={() => close()}>
-          <svg className="close-button" viewBox={closeButton.viewBox}>
-            <path d={closeButton.path} />
-          </svg>
-        </div>
-        <div className="schedulePopupTitle">Category</div>
-        <div className="schedulePopupOptionsContainer">
+    <div className="schedulePopupContainer">
+      <div className="close-container-mobile" onClick={() => close()}>
+        <svg className="close-button" viewBox={closeButton.viewBox}>
+          <path d={closeButton.path} />
+        </svg>
+      </div>
+      <div className="schedulePopupTitle">Category</div>
+      <div className="schedulePopupOptionsContainer">
+        <RadioButton
+          value="All"
+          selected={selectedCategory}
+          text="All"
+          color="#fff"
+          onChange={setSelectedCategory}
+        />
+        {filters.category.map((item, id) => (
           <RadioButton
-            value="All"
+            key={id}
+            value={item}
             selected={selectedCategory}
-            text="All"
+            text={item.split('_').join(' ')}
             color="#fff"
             onChange={setSelectedCategory}
           />
-          {filters.category.map((item, id) => (
-            <RadioButton
-              key={id}
-              value={item}
-              selected={selectedCategory}
-              text={item.split('_').join(' ')}
-              color="#fff"
-              onChange={setSelectedCategory}
-            />
-          ))}
-        </div>
-        <div className="schedulePopupTitle">Event type</div>
-        <div className="schedulePopupOptionsContainer">
+        ))}
+      </div>
+      <div className="schedulePopupTitle">Event type</div>
+      <div className="schedulePopupOptionsContainer">
+        <RadioButton
+          value="All"
+          selected={selectedEventType}
+          text="All"
+          color="#fff"
+          onChange={setSelectedEventType}
+        />
+        {filters.eventType.map((item, id) => (
           <RadioButton
-            value="All"
+            key={id}
+            value={item}
             selected={selectedEventType}
-            text="All"
+            text={item.split('_').join(' ')}
             color="#fff"
             onChange={setSelectedEventType}
           />
-          {filters.eventType.map((item, id) => (
-            <RadioButton
-              key={id}
-              value={item}
-              selected={selectedEventType}
-              text={item.split('_').join(' ')}
-              color="#fff"
-              onChange={setSelectedEventType}
-            />
-          ))}
-        </div>
-        {/*      <div className="schedulePopupTitle">Event status</div>
+        ))}
+      </div>
+      {/*      <div className="schedulePopupTitle">Event status</div>
       <div className="schedulePopupOptionsContainer">
         <RadioButton
           value="All"
@@ -80,19 +79,18 @@ const SchedulePopup = ({filters, selectedFilters, setSelectedFilters, close}) =>
         ))}
       </div>
       */}
-        <button
-          onClick={() => {
-            setSelectedFilters({
-              category: selectedCategory,
-              eventType: selectedEventType,
-              eventStatus: /*selectedEventStatus*/ 'All'
-            });
-            close();
-          }}
-          className="schedulePopupButton">
-          Go
-        </button>
-      </div>
+      <button
+        onClick={() => {
+          setSelectedFilters({
+            category: selectedCategory,
+            eventType: selectedEventType,
+            eventStatus: /*selectedEventStatus*/ 'All'
+          });
+          close();
+        }}
+        className="schedulePopupButton">
+        Go
+      </button>
     </div>
   );
 };
