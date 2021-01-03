@@ -68,8 +68,11 @@
   .event-contacts{
    @include mobile-view
    { 
-     align-items: flex-start;
+     align-items: flex-start !important;
       line-height: 1.5rem;
       margin-left: 20px;}
+  }
+  .role{
+    color: lightgreen;
   }
 }

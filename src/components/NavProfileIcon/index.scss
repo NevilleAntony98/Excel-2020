@@ -1,11 +1,10 @@
 @import '../../sass/mixins.scss';
-
 .popup-content {
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  // position: fixed !important;
+  position: fixed !important;
 }
 .popup-arrow {
   // background: rgba(217, 177, 250, 0.233);
@@ -16,7 +15,7 @@
     fill: rgba(217, 177, 250, 0.233);
   }
 }
-.profile-popup {
+[role='tooltip'].popup-content {
   width: 225px;
   height: 145px;
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -27,8 +26,8 @@
 }
 /* no support backdrop-filter */
 @supports  not ( (-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px)) )  {
-  .profile-popup {
-    background: rgba(208, 206, 238, 0.281);
+  [role='tooltip'].popup-content {
+    background: rgba(189, 185, 243, 0.281);
     box-shadow: 0 5px 20px 0 rgba(4, 6, 44, 0.568);
   }
 }

@@ -8,14 +8,19 @@
   border-radius: 12px;
   padding: 40px;
   font-family: "Montserrat";
-  width: fit-content;
+  // width: fit-content;
+  margin-left: -25rem;
+  width: 58rem;
   @include mobile-view {
     max-height: 80vh;
     // overflow: scroll;
     margin-top: -60px;
     padding: 0px;
     padding-bottom: 20px;
-    padding-right: 5px
+    padding-right: 5px;
+    width: 20rem;
+    margin-left: -3rem;
+
   }
 }
 .schedule-popup-content {

@@ -358,16 +358,18 @@
       display: flex;
       justify-content: center;
 
+
       @include mobile-view {
         margin-top: 0rem;
         flex-direction: column;
+        align-items: center;
       }
 
       div {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        // align-items: center;
+        align-items: flex-start;
         margin: 1.5rem 5rem;
 
         @include mobile-view{
@@ -398,6 +400,11 @@
 
         .role {
           color: lightgreen;
+          @include mobile-view {
+          //   display: flex;
+          // justify-content: center;
+          // align-items: center;
+          }
         }
         .phone {
           font-weight: 400;
@@ -407,6 +414,11 @@
           &:hover{
             text-decoration: underline;
             cursor: pointer;
+          }
+          @include mobile-view {
+          //   display: flex;
+          // justify-content: center;
+          // align-items: center;
           }
         }
       }
