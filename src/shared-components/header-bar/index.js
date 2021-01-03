@@ -1,13 +1,15 @@
 // import {Link} from 'react-router-dom';
 import './index.scss';
 
-export default function HeaderBar(props) {
-  if (!props.title) return null;
-
+const HeaderBar = ({title, subtitle}) => {
   return (
-    <div className="competitions-header">
-        <div className="title">{props.title}</div>
-      {/* {props.subtitle && <span className="subtitle">{props.subtitle}</span>} */}
-    </div>
+    title && (
+      <div className="competitions-header">
+        <div className="title">{title}</div>
+        {/* {props.subtitle && <span className="subtitle">{props.subtitle}</span>} */}
+      </div>
+    )
   );
-}
+};
+
+export default HeaderBar;
