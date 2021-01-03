@@ -1,25 +1,54 @@
 import dayjs from 'dayjs';
-import {useSpring, animated} from 'react-spring';
+// import {useSpring, animated} from 'react-spring';
 
-import FlipIcon from '../../components/FlipIcon';
-
+// import FlipIcon from '../../components/FlipIcon';
+import {useEffect, useState} from 'react';
 import './ScheduleCard.scss';
 
-const ScheduleCard = ({event}) => {
-  const props = useSpring({from: {opacity: 0, marginTop: -50}, to: {opacity: 1, marginTop: 0}});
+import excelIcon from '../../assets/png/excel2020.png';
+
+const FlipScheduleImage = ({event}) => {
+  const [isLoading, setIsLoading] = useState(true)
+  const img = new Image()
+
+  useEffect(() => {
+    img.src = event.icon
+    img.onload = () => setIsLoading(false)
+  })
+
+  if (isLoading)
+    return <img src={excelIcon} alt={event.name} />
 
   return (
-    <animated.div style={props}>
-      <div className="scheduleCardContainer">
+      // <Spring
+      // from={{transform: 'rotateY(360deg)'}}
+      // to={{transform: 'rotateY(0deg)'}}
+      // config={{tension: 200, friction: 40}}>
+      // {props => (
+        // <div style={props}>
+        <div className="scheduleflipIconbg">
+          <img src={event.icon} alt={event.name} className="scheduleflipIcon"/>
+        </div>
+      // )}
+      // </Spring>
+  )
+}
+
+const ScheduleCard = ({event}) => {
+  // const props = useSpring({from: {opacity: 0, marginTop: -50}, to: {opacity: 1, marginTop: 0}});
+
+  return (
+    <div>
+      <div className="scheduleCardContainer backdrop-filter-blur">
         <div className="scheduleCardTime">{dayjs(event.datetime).format('h:mm a')}</div>
         <div>
           <div className="scheduleCardTitle">{event.name}</div>
           <div className="scheduleCardEventType">{event.category.split('_').join(' ')}</div>
           {/* <div className="scheduleCardDay">{dayjs(event.datetime).format('D/M/YYYY')}</div> */}
         </div>
-        <FlipIcon url={event.icon} alt={event.name} />
+          <FlipScheduleImage event={event} />
       </div>
-    </animated.div>
+    </div>
   );
 };
 

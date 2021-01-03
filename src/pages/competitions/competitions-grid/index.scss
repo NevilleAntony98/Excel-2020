@@ -10,17 +10,20 @@
   .sort-filter-box {
     display: grid;
     grid-template-columns: auto auto;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 1.5rem 5px;
-    gap: 1rem;
+    gap: 5rem;
+    margin-left: 40px;
 
     @include mobile-view {
       // grid-template-columns: auto auto;
       // grid-template-rows: auto;
       // justify-content: space-between;
       // gap: 0.6rem;
-
+      margin-left: 0px;
       font-size: 0.75rem;
+      display: flex;
+      justify-content: center;
     }
 
     .Dropdown-placeholder {
@@ -30,16 +33,30 @@
     }
 
     .drop-down {
-      width: 10rem;
-
+      width: 15rem;
+      .is-selected{
+        background-color: transparent !important;
+        color: white !important
+      }
       .Dropdown-option {
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
+        color: white;
+        .is-selected{
+          background-color: rgba(224, 173, 247, 0.637) !important;
+          color: #333 !important
+        }
       }
+      .Dropdown-option:hover{
+        background: rgba(238, 221, 247, 0.233) !important;
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        -webkit-backdrop-filter: blur(10.5px);
+        backdrop-filter: blur(10.5px);
+      } 
 
       @include mobile-view {
-        max-width: 8rem;
+        max-width: 7rem;
       }
     }
   }
@@ -55,6 +72,8 @@
 
     @include mobile-view {
       grid-template-columns: repeat(1, 1fr);
+      padding: 20px 0px;
+      margin-left: 15px;
     }
 
     @include tablet-view {
@@ -110,7 +129,15 @@
 
 .drop-down {
   .Dropdown-control {
+    background: rgba(195, 138, 221, 0.233) !important;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    -webkit-backdrop-filter: blur(10.5px);
+    backdrop-filter: blur(10.5px);
     border-radius: 10px;
+    color: white;
+    border: none;
+    transform: scale(1.3);
+    z-index: 2;
     // box-shadow: 5px 5px 11px $shadow-dark, -5px -5px 11px $shadow-light;
     transition: none;
     cursor: pointer;
@@ -124,12 +151,25 @@
   &.is-open {
     .Dropdown-control {
       border-radius: 10px 10px 0 0;
-      box-shadow: 0 0 10px 1px #00000063;
+      // box-shadow: 0 0 10px 1px #00000063;
+      background: rgba(224, 173, 247, 0.637) !important;
+      box-shadow: 0 0px 32px 0 rgba( 31, 38, 135, 0.37 );
+      -webkit-backdrop-filter: blur(10.5px);
+      backdrop-filter: blur(10.5px);
     }
 
     .Dropdown-menu {
       border-radius: 0 0 10px 10px;
-      box-shadow: 0px 7px 10px 1px #00000063;
+      // box-shadow: 0px 7px 10px 1px #00000063;
+      background: rgba(195, 138, 221, 0.233) !important;
+      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+      -webkit-backdrop-filter: blur(10.5px);
+      backdrop-filter: blur(10.5px);
+      // border-radius: 10px;
+      color: white !important;
+      border: none;
+      transform: scale(1.3) translateY(13px);
+      z-index: 1;
     }
   }
 }

@@ -26,7 +26,7 @@
 
 }
 .home-body{
-    height: 245vh;
+    height: 240vh;
     background-color:#02011f;
 }
 .home-sidebar-background-hide{
@@ -80,11 +80,11 @@
     top: 45%;
     width: 85%;
     padding: 40px;
-    // background: rgba( 13, 11, 41, 0.80 );
+    background: rgba( 13, 11, 41, 0.80 );
     /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    // backdrop-filter: blur( 10.5px );
-    // -webkit-backdrop-filter: blur( 10.5px );
+    backdrop-filter: blur( 10.5px );
+    -webkit-backdrop-filter: blur( 10.5px );
     border-radius: 20px;
     color: white;
     box-shadow: 10px -90px 90px #02011f !important;
@@ -104,6 +104,11 @@
             width: 67%;
             font-size: 18px;
             line-height: 27px;
+            .hide-mobile{
+                @include mobile-view{
+                    display: none;
+                }
+            }
         }
     }
     .college-excel-logo{
@@ -138,6 +143,7 @@
         svg{
             width: 30px;
             margin: 0 20px;
+            max-height: 34px;
         }
         .social-media{
             fill: #FFF;
@@ -281,7 +287,7 @@
         }
         .social{
             background-color: rgba(255, 255, 255, 0.178) !important;
-            padding: 20px !important;
+            padding: 20px 0 !important;
             width: 100% !important;
             margin-left: 0px !important;
             margin-top: 40px;

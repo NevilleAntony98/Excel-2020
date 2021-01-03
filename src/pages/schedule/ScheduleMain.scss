@@ -37,10 +37,10 @@
   justify-content: space-evenly;
   // background-color: $background-color-light;
   // background-color: transparent;  
-  background: rgba(13, 11, 41, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 20px;
-  box-shadow: 10px -90px 90px #02011f;
+  // background: rgba(13, 11, 41, 0.8);
+  // border: 1px solid rgba(255, 255, 255, 0.18);
+  // border-radius: 20px;
+  // box-shadow: 10px -90px 90px #02011f;
 
   div {
     // font-variant-caps: petite-caps;
@@ -51,7 +51,7 @@
 }
 .scheduleDay {
   display: flex;
-  color: white;
+  // color: white;
   flex-grow: 1;
   // opacity: 0.75;
   align-items: center;
@@ -64,13 +64,19 @@
   // border: 0.0625rem solid rgba(243, 247, 250, 0.05);
   border-radius: 6px;
   transition: all .2s ease;
-
+  // background: rgba(195, 138, 221, 0.233) !important;
+  // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  // border-radius: 20px;
+  // -webkit-backdrop-filter: blur(10.5px);
+  // backdrop-filter: blur(10.5px);
+  color: white;
+  z-index: 1;
 }
 .scheduleDay:hover {
   opacity: 1;
   transition-duration: 0.7s;
-  background-color: rgb(196, 194, 194);
-  color: black;
+  // background-color: rgb(196, 194, 194);
+  color: white;
   border-radius: 6px;
 }
 .scheduleSelectedDay {
@@ -81,15 +87,23 @@
   // background: linear-gradient(145deg, #5bc6ff, #4da7db);
   // background-color: $bg-color;
   // border-color: $border-color;
-  background-color: white;
+  // background-color: white;
+  background: rgba(236, 207, 250, 0.623) !important;
+  box-shadow: 0 10px 35px 0 rgba( 31, 38, 135, 0.37 );
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(10.5px);
+  backdrop-filter: blur(10.5px);
+  color: white;
   // border: .0625rem solid rgba(243,247,250,.05);
   // box-shadow: inset 2px 2px 5px $shadow-dark, inset -3px -3px 7px $shadow-light;
-  -webkit-box-shadow: 0px 0px 14px 4px rgba(255,255,255,0.69);
-  -moz-box-shadow: 0px 0px 14px 4px rgba(255,255,255,0.69);
-  box-shadow: 0px 0px 14px 4px rgba(255,255,255,0.69);
+  // -webkit-box-shadow: 0px 0px 14px 4px rgba(255,255,255,0.69);
+  // -moz-box-shadow: 0px 0px 14px 4px rgba(255,255,255,0.69);
+  // box-shadow: 0px 0px 14px 4px rgba(255,255,255,0.69);
   // font-weight: bold;
   font-size: 1.1rem;
-  border-radius: 6px;
+  // border-radius: 6px;
+  transform: scale(1.1);
+  z-index: 2;
   cursor: default;
 }
 

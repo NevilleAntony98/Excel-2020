@@ -1,7 +1,7 @@
 // import dayjs from 'dayjs';
 import { useState } from 'react';
 import Popup from 'reactjs-popup';
-import { useSpring, animated } from 'react-spring';
+// import { useSpring, animated } from 'react-spring';
 
 import EventPopup from '../event-popup';
 
@@ -12,11 +12,11 @@ import './index.scss';
 
 const EventCard = ({ event }) => {
   const [open, setOpen] = useState(false)
-  const props = useSpring({ from: { opacity: 0, marginTop: -50 }, to: { opacity: 1, marginTop: 0 } });
+  // const props = useSpring({ from: { opacity: 0, marginTop: -50 }, to: { opacity: 1, marginTop: 0 } });
 
   return (
-    <animated.div style={props} onClick={() => setOpen(true)}>
-      <div className="eventCardContainer">
+    <div onClick={() => setOpen(true)}>
+      <div className="eventCardContainer backdrop-filter-blur">
         <div className="eventCardHeaderBox">
           <FlipIcon url={event.icon} alt={event.name} />
           <span className="eventCardType">{event.eventType}</span>
@@ -25,7 +25,7 @@ const EventCard = ({ event }) => {
         <div className="eventInfoBox">
           <span className="eventCardTitle">{event.name}</span>
           <span className="eventCardInfo">
-            {event.about.split('.')[0]}.{ event.about.split('.')[1]}.</span>
+            {event.about.split('.')[0]}.{ event.about.split('.')[1]}</span>
         </div>
       </div>
       <Popup open={open} onClose={() => setOpen(false)} closeOnDocumentClick closeOnEscape nested>
@@ -34,7 +34,7 @@ const EventCard = ({ event }) => {
           event={event}
           closeFunc={() => setOpen(false)} />
       </Popup>
-    </animated.div>
+    </div>
   );
 };
 

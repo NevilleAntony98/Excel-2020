@@ -22,10 +22,14 @@
 
     // border: .0625rem solid rgba(243,247,250,.05);
     // border-color:  $border-color;
-
-    background: rgba(13, 11, 41, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 20px;
+    // background: rgba(195, 138, 221, 0.233) !important;
+    // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    // border-radius: 20px;
+    // -webkit-backdrop-filter: blur(10.5px);
+    // backdrop-filter: blur(10.5px);
+    // background: rgba(13, 11, 41, 0.8);
+    // border: 1px solid rgba(255, 255, 255, 0.18);
+    // border-radius: 20px;
     // box-shadow: 10px -90px 90px #02011f;
     color: white;
 
@@ -65,7 +69,7 @@
 
         span {
             // color: $color-black;
-            font-weight: 500;
+            font-weight: bold;
             // font-variant-caps: petite-caps;
             font-size: 1.5rem;
         }
@@ -270,7 +274,10 @@
 }
 
 @media screen and (max-width:850px){
-	.competition-card {
+    .competition-card-container{
+        width: 250px;
+    }
+    .competition-card {
         width: 250px;
         height: 250px;
         .icon {
@@ -291,7 +298,10 @@
 
 /*ipad potrait*/
 @media screen and (max-width:800px) and (max-height: 1300px ){
-	.competition-card {
+    .competition-card-container{
+        width: 250px;
+    }
+    .competition-card {
         width: 250px;
         height: 250px;
         .icon {
@@ -312,7 +322,10 @@
 }
 
 @media screen and (max-width:720px) and (max-height: 1300px ){
-	.competition-card {
+    .competition-card-container{
+        width: 230px;
+    }
+    .competition-card {
         width: 230px;
         height: 230px;
         .icon {
@@ -338,6 +351,9 @@
 }
 
 @media screen and (max-width:480px){
+    .competition-card-container{
+        width: 180px;
+    }
 	.competition-card {
         width: 180px;
         height: 180px;
@@ -365,8 +381,11 @@
 }
 
 @media screen and (max-width:400px){
+    .competition-card-container{
+        width: 158px;
+    }
 	.competition-card {
-        width: 160px;
+        width: 158px;
         height: 160px;
         .icon {
             margin-top: 20px;

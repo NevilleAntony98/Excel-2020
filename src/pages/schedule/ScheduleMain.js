@@ -92,7 +92,7 @@ const ScheduleMain = () => {
       <div className="scheduleDayContainer">
         {scheduleData.map((item, id) => (
           <div
-            className={item.day === selectedDay ? 'scheduleSelectedDay' : 'scheduleDay'}
+            className={item.day === selectedDay ? 'scheduleSelectedDay backdrop-filter-blur' : 'scheduleDay backdrop-filter-blur'}
             key={id}
             onClick={() => setSelectedDay(item.day)}>
             Day {item.day}

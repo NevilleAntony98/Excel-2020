@@ -46,25 +46,23 @@ export default class Home extends Component {
             <div className="home-sections">
             
             </div>
-            <div className="home-legacy backdrop-filter-blur">
+            <div className="home-legacy">
               <h1>LEGACY</h1>
               <div className="legacy-container">
                 <img src={college} alt=""/>
                 <p>
-                Excel, the nation’s second and South India’s first ever fest of its kind started in 2001 by the students of Govt. Model Engineering College with a motto, Inspire, Innovate, Engineer. Over the years, Excel has grown exponentially, consistently playing host to some of the most talented students, the most illustrious speakers and the most reputed companies. Now gearing towards its 19th edition, Excel continues to excite the participants with its wide array of technical and non-technical events and with a promise to live upto its motto. What sets Excel apart is the drive towards delivering excellence. The fest is renowned for its quality, dynamism and active participation.
-                Excel 2018 incorporates a wide variety of technical, managerial and general events which includes both online and onsite competitions, workshops, summits, hackathons, exhibitions and so on.
-                With the firm theme of ‘Bridging Realms’, Excel 2018 is all set to unite man and machine enabling college students to bring together ideation and creation prepping them for the industry.
+                Excel, the nation’s second and South India’s first ever fest of its kind, was started in 2001 by the students of Govt. Model Engineering College. The aim was simple: to inspire, innovate, engineer. Over the years, Excel has grown exponentially, consistently playing host to some of the most talented students, the most illustrious speakers and the most reputed companies. Now gearing towards the landmark 20th edition, Excel continues to excite the participants with its wide array of technical and non-technical events and with a promise to live up to its motto.<span className="hide-mobile">What sets Excel apart is the drive towards delivering excellence in all aspects. Excel is renowned for the dynamic nature of events and active participation amongst the student community. Excel 2019 incorporates a wide variety of technical, managerial and general events which includes both online and onsite competitions, workshops, summits, hackathons, exhibitions and so on.</span> 
                 </p>
               </div>
               <div className="college-excel-logo">
-                <a href="http://mec.ac.in/"><img src={meclogo} alt=""/></a>
+                <a href="http://mec.ac.in/" target="_blank" rel="noreferrer"><img src={meclogo} alt=""/></a>
                 <a href="http://excelmec.org"><img src={excel2020withtext} alt=""/></a>
               </div>
               <div className="previous-sites">
-                <a href="https://2019.excelmec.org/#/"><img src={excel2019} alt=""/></a>
-                <a href="https://2018.excelmec.org/#/"><img src={excel2018} className="excel-2018" alt=""/></a>
-                <a href="https://2017.excelmec.org/#/"><img src={excel2017} alt=""/></a>
-                <a href="https://2016.excelmec.org/#/home/"><img src={excel2016} className="excel-2016" alt=""/></a>
+                <a href="https://2019.excelmec.org/#/" target="_blank" rel="noreferrer"><img src={excel2019} alt=""/></a>
+                <a href="https://2018.excelmec.org/#/" target="_blank" rel="noreferrer"><img src={excel2018} className="excel-2018" alt=""/></a>
+                <a href="https://2017.excelmec.org/#/" target="_blank" rel="noreferrer"><img src={excel2017} alt=""/></a>
+                <a href="https://2016.excelmec.org/#/home/" target="_blank" rel="noreferrer"><img src={excel2016} className="excel-2016" alt=""/></a>
               </div>
               <div className="previous-sites social">
                 <a href="https://www.facebook.com/excelmec/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path className="social-media facebook" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
