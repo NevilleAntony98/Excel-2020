@@ -63,8 +63,6 @@ const ScheduleMain = () => {
     }
   }, [scheduleData, selectedDay, selectedFilters]);
 
-  console.log(filteredData);
-
   return isLoading ? (
     <Loader />
   ) : (
