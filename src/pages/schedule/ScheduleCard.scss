@@ -8,8 +8,8 @@
   align-items: center;
   text-align: center;
   border-radius: 6px;
-  padding: 24px 0;
-  margin: 24px 0;
+  padding: 0.5rem 0;
+  margin: 20px 0;
   // background: linear-gradient(145deg, #5bc6ff, #4da7db);
   // box-shadow: 5px 5px 15px #224a61, -5px -5px 15px #88ffff;
   // box-shadow:  6px 6px 12px $shadow-dark,-6px -6px 12px $shadow-light !important; // much darker than original then lighter than original
@@ -64,7 +64,7 @@
 }
 
 .scheduleflipIconbg {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 1);
   border-radius: 12px;
   // box-shadow: 5px 5px 7px $shadow-dark, -5px -5px 7px $shadow-light;
   display: flex;
@@ -73,17 +73,12 @@
   // min-height: 7rem;
   // min-width: 7rem;
   // margin: auto;
-  padding: 1.25rem;
-
-  @include mobile-view {
-    padding: 10px;
-  }
 }
 
 .scheduleflipIcon {
   // background-color: white;
   // border-radius: 50%;
-  
+
   // padding: 20px;
 
   max-width: 7.2rem;
@@ -95,30 +90,28 @@
   }
 }
 
-@media only screen and (max-width:980px) {
+@media only screen and (max-width: 980px) {
+  .scheduleCardContainer {
+    margin: 12px 0;
+  }
+  .scheduleCardTime {
+    font-size: 0.8rem;
+  }
 
-.scheduleCardContainer {
-  margin: 12px 0;
-}
-.scheduleCardTime {
-  font-size: 0.8rem;
-}
+  .scheduleCardTitle {
+    // color: $color-title-dark;
+    // color: $color-black;
+    font-variant-caps: petite-caps;
+    font-size: 1rem;
+  }
 
-.scheduleCardTitle {
-  // color: $color-title-dark;
-  // color: $color-black;
-  font-variant-caps: petite-caps;
-  font-size: 1rem;
-}
+  .scheduleCardEventType {
+    text-transform: capitalize;
+    font-variant-caps: petite-caps;
+    font-size: 0.8rem;
+  }
 
-.scheduleCardEventType {
-  text-transform: capitalize;
-  font-variant-caps: petite-caps;
-  font-size: 0.8rem;
-}
-
-.scheduleCardDay {
-  font-size: 20px;
-}
-
+  .scheduleCardDay {
+    font-size: 20px;
+  }
 }
