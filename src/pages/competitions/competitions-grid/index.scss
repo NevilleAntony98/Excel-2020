@@ -177,14 +177,22 @@
 @media screen and (max-width:1700px){
 	.competition-cards-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(4, 1fr) !important;
   }
 }
 
-@media screen and (max-width:1250px){
+@media screen and (max-width:1400px){
 	.competition-cards-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1rem !important;
+  }
+}
+
+@media screen and (max-width:1150px){
+	.competition-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
   }
 }
 
