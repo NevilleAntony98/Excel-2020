@@ -17,8 +17,11 @@
   /* top: 20px; */
   /* bottom: 20px; */
   border-radius: 20px;
-  margin-top: 24vh;
+  /* margin-top: 24vh; */
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 102;
+  padding-bottom: 20px;
 }
 
 .smallSidebarInnerContainer {
@@ -86,7 +89,7 @@
 
 .smallSidebarLink:hover {
   /* background-color: #b2dff8; */
-  transition: 0.3s ease-in;
+  background: rgba(255, 255, 255, 0.13);
 }
 
 .smallSidebarIcon {
