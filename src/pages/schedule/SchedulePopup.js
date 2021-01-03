@@ -9,7 +9,7 @@ import './SchedulePopup.scss';
 const SchedulePopup = ({filters, selectedFilters, setSelectedFilters, close}) => {
   const [selectedCategory, setSelectedCategory] = useState(selectedFilters.category);
   const [selectedEventType, setSelectedEventType] = useState(selectedFilters.eventType);
-  const [selectedEventStatus, setSelectedEventStatus] = useState(selectedFilters.eventStatus);
+  //const [selectedEventStatus, setSelectedEventStatus] = useState(selectedFilters.eventStatus);
 
   return (
     <div className="schedulePopupOuterContainer">
@@ -85,7 +85,7 @@ const SchedulePopup = ({filters, selectedFilters, setSelectedFilters, close}) =>
             setSelectedFilters({
               category: selectedCategory,
               eventType: selectedEventType,
-              eventStatus: selectedEventStatus
+              eventStatus: /*selectedEventStatus*/ 'All'
             });
             close();
           }}
