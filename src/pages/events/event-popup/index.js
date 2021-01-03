@@ -17,7 +17,7 @@ const EventPopup = ({ event, closeFunc }) => {
     const AboutSection = () => {
         return (
             <div>
-                <div className="about-section section">
+                <div className="about-section section event-about-section">
                     {event.about}
                 </div>
                 <div className="contact-section section event-contacts">
