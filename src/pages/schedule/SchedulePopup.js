@@ -13,26 +13,40 @@ const SchedulePopup = ({filters, selectedFilters, setSelectedFilters, close}) =>
     <div className="schedulePopupContainer">
       <div className="schedulePopupTitle">Category</div>
       <div className="schedulePopupOptionsContainer">
-        <RadioButton value="All" selected={selectedCategory} text="All" onChange={setSelectedCategory} />
+        <RadioButton
+          value="All"
+          selected={selectedCategory}
+          text="All"
+          color="#fff"
+          onChange={setSelectedCategory}
+        />
         {filters.category.map((item, id) => (
           <RadioButton
             key={id}
             value={item}
             selected={selectedCategory}
             text={item.split('_').join(' ')}
+            color="#fff"
             onChange={setSelectedCategory}
           />
         ))}
       </div>
       <div className="schedulePopupTitle">Event type</div>
       <div className="schedulePopupOptionsContainer">
-        <RadioButton value="All" selected={selectedEventType} text="All" onChange={setSelectedEventType} />
+        <RadioButton
+          value="All"
+          selected={selectedEventType}
+          text="All"
+          color="#fff"
+          onChange={setSelectedEventType}
+        />
         {filters.eventType.map((item, id) => (
           <RadioButton
             key={id}
             value={item}
             selected={selectedEventType}
             text={item.split('_').join(' ')}
+            color="#fff"
             onChange={setSelectedEventType}
           />
         ))}
@@ -44,6 +58,7 @@ const SchedulePopup = ({filters, selectedFilters, setSelectedFilters, close}) =>
           selected={selectedEventStatus}
           text="All"
           onChange={setSelectedEventStatus}
+          color="#fff"
         />
         {filters.eventStatus.map((item, id) => (
           <RadioButton
@@ -51,6 +66,7 @@ const SchedulePopup = ({filters, selectedFilters, setSelectedFilters, close}) =>
             value={item}
             selected={selectedEventStatus}
             text={item.split('_').join(' ')}
+            color="#fff"
             onChange={setSelectedEventStatus}
           />
         ))}

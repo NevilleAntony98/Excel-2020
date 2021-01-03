@@ -25,14 +25,13 @@
   transition: all 0.1s linear;
 }
 .unselected {
-  border: 2px solid #666;
+  border: 2px solid;
 }
 .unselected-circle {
   width: 0;
   height: 0;
 }
 .helper-text {
-  color: #666;
   padding-right: 8px;
   text-transform: capitalize;
 }

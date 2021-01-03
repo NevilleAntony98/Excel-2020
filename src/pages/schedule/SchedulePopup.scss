@@ -3,12 +3,13 @@
 
 .schedulePopupContainer {
   margin: auto;
-  background: white;
+  background: rgba(40, 38, 80, 0.938);
   box-shadow: 5px 5px 15px #004e7a, -5px -5px 15px #002442;
   border-radius: 12px;
   padding: 24px;
 }
 .schedulePopupTitle {
+  color: white;
   font-weight: bold;
   font-size: 1.1rem;
   padding: 4px;
