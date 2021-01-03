@@ -7,7 +7,7 @@ import SchedulePopup from './SchedulePopup';
 import DeadEnd from '../../components/DeadEnd';
 import Loader from '../../components/Loader';
 
-// import filterIcon from '../../assets/svg/filter.svg';
+import filterIcon from '../../assets/svg/filter.svg';
 import './ScheduleMain.scss';
 
 const ScheduleMain = () => {
@@ -42,7 +42,7 @@ const ScheduleMain = () => {
     if (scheduleData.length !== 0) {
       let x = scheduleData.find(e => e.day === selectedDay);
       if (x) {
-	x = x.events;
+        x = x.events;
         if (selectedFilters.category !== 'All') {
           x = x.filter(e => e.category === selectedFilters.category);
         }
@@ -52,14 +52,12 @@ const ScheduleMain = () => {
         if (selectedFilters.eventStatus !== 'All') {
           x = x.filter(e => e.eventStatus === selectedFilters.eventStatus);
         }
-      }
-      else {
-	// **** backend guys for not sending data for day 1
-	setSelectedDay(scheduleData[0].day);
+      } else {
+        // **** backend guys for not sending data for day 1
+        setSelectedDay(scheduleData[0].day);
       }
       setFilteredData({day: selectedDay, events: x});
-    }
-    else {
+    } else {
       // **** backend guys for sending empty datas
       setFilteredData({day: selectedDay, events: []});
     }
@@ -69,44 +67,51 @@ const ScheduleMain = () => {
     <Loader />
   ) : (
     <div className="schedule">
-    <div className="scheduleContainer">
-      <Popup
-        trigger={
-          <div className="scheduleFilter">
-            <span className="scheduleFilterInsensitive" />
-            <div className="scheduleFilterSensitive">
-              {/* <img src={filterIcon} alt="filter" height="20px" width="20px" /> */}
-              {/* Filter */}
+      <div className="scheduleContainer">
+        <Popup
+          trigger={
+            <div className="scheduleFilter">
+              <span className="scheduleFilterInsensitive" />
+              <div className="scheduleFilterSensitive">
+                <img src={filterIcon} alt="filter" height="20px" width="20px" />
+                Filter
+              </div>
             </div>
-          </div>
-        }>
-        {close => (
-          <SchedulePopup
-            filters={filters}
-            selectedFilters={selectedFilters}
-            setSelectedFilters={setSelectedFilters}
-            close={close}
-          />
-        )}
-      </Popup>
-      <div className="scheduleDayContainer">
-        {scheduleData.map((item, id) => (
-          <div
-            className={item.day === selectedDay ? 'scheduleSelectedDay backdrop-filter-blur' : 'scheduleDay backdrop-filter-blur'}
-            key={id}
-            onClick={() => setSelectedDay(item.day)}>
-            Day {item.day}
-          </div>
-        ))}
+          }>
+          {close => (
+            <SchedulePopup
+              filters={filters}
+              selectedFilters={selectedFilters}
+              setSelectedFilters={setSelectedFilters}
+              close={close}
+            />
+          )}
+        </Popup>
+        <div className="scheduleDayContainer">
+          {scheduleData.map((item, id) => (
+            <div
+              className={
+                item.day === selectedDay
+                  ? 'scheduleSelectedDay backdrop-filter-blur'
+                  : 'scheduleDay backdrop-filter-blur'
+              }
+              key={id}
+              onClick={() => setSelectedDay(item.day)}>
+              Day {item.day}
+            </div>
+          ))}
+        </div>
+        <div>
+          {filteredData.length === 0 || filteredData.events.length === 0 ? (
+            <DeadEnd
+              title={'Nothing to see here'}
+              subtitle={'Chose a different category to view more events!'}
+            />
+          ) : (
+            filteredData.events.map((item, id) => <ScheduleCard key={item.id} event={item} />)
+          )}
+        </div>
       </div>
-      <div>
-      {filteredData.length === 0 || filteredData.events.length === 0 ? (
-        <DeadEnd title={'Nothing to see here'} subtitle={'Chose a different category to view more events!'} />
-      ) : (
-        filteredData.events.map((item, id) => <ScheduleCard key={item.id} event={item} />)
-      )}
-      </div>
-    </div>
     </div>
   );
 };
