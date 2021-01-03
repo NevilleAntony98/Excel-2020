@@ -44,12 +44,24 @@
   text-transform: uppercase;
 }
 
+.scheduleContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 12rem;
+  @include mobile-view{
+    min-width: 7.5rem;
+  }
+}
 .scheduleCardTitle {
   // color: $color-title-dark;
   color: white;
   font-variant-caps: petite-caps;
   font-size: 1.4rem;
   font-weight: 700;
+  // max-width: 9rem;
+  white-space: nowrap;
 }
 
 .scheduleCardEventType {
@@ -70,9 +82,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // min-height: 7rem;
-  // min-width: 7rem;
+  height: 7rem;
+  width: 7rem;
   // margin: auto;
+  @include mobile-view {
+    height: 3rem;
+    width: 3rem;
+  }
 }
 
 .scheduleflipIcon {
@@ -85,8 +101,8 @@
   max-height: 6rem;
 
   @include mobile-view {
-    max-width: 4rem;
-    max-height: 4rem;
+    max-width: 3rem;
+    max-height: 3rem;
   }
 }
 

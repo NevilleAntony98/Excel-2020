@@ -1,4 +1,4 @@
-import './index.css';
+import './index.scss';
 
 const RadioButton = ({selected, onChange, text, value, color}) => {
   return (

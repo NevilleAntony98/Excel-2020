@@ -13,12 +13,13 @@ const SchedulePopup = ({filters, selectedFilters, setSelectedFilters, close}) =>
 
   return (
     <div className="schedulePopupContainer">
+      <div className="schedule-popup-content">
       <div className="close-container-mobile" onClick={() => close()}>
         <svg className="close-button" viewBox={closeButton.viewBox}>
           <path d={closeButton.path} />
         </svg>
       </div>
-      <div className="schedulePopupTitle">Category</div>
+      <div className="schedulePopupTitle">Categories</div>
       <div className="schedulePopupOptionsContainer">
         <RadioButton
           value="All"
@@ -79,6 +80,7 @@ const SchedulePopup = ({filters, selectedFilters, setSelectedFilters, close}) =>
         ))}
       </div>
       */}
+      </div>
       <button
         onClick={() => {
           setSelectedFilters({
@@ -89,7 +91,7 @@ const SchedulePopup = ({filters, selectedFilters, setSelectedFilters, close}) =>
           close();
         }}
         className="schedulePopupButton">
-        Go
+        FILTER
       </button>
     </div>
   );

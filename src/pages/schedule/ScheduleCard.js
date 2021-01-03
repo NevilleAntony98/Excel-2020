@@ -40,7 +40,7 @@ const ScheduleCard = ({event}) => {
     <div>
       <div className="scheduleCardContainer backdrop-filter-blur">
         <FlipScheduleImage event={event} />
-        <div>
+        <div className="scheduleContent">
           <div className="scheduleCardTitle">{event.name}</div>
           <div className="scheduleCardEventType">{event.category.split('_').join(' ')}</div>
           {/* <div className="scheduleCardDay">{dayjs(event.datetime).format('D/M/YYYY')}</div> */}
