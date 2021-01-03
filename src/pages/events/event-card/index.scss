@@ -1,11 +1,11 @@
 @import '../../../sass/variables';
 @import '../../../sass/mixins';
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 .eventCardContainer {
   position: relative;
   display: flex;
   gap: 2rem;
-  padding: 3rem;
+  padding: 2rem 3rem;
   border-radius: 0.55rem;
   // color: black;
   // background: $bg-color;
@@ -94,10 +94,12 @@
     }
 
     .eventCardTitle {
-      font-size: 28px;
-      font-weight: 800;
+      font-size: 35px;
+      font-weight: 900;
       // font-family: 'Lemon Milk';
       text-transform: uppercase;
+      line-height: 40px;
+      font-family: 'Montserrat', sans-serif;
       @include desktop-view {
         // min-width: 8rem;
         
@@ -105,11 +107,13 @@
     }
 
     .eventCardInfo {
-      margin: 1rem 0;
+      margin: 2rem 0;
       position: relative;
       // max-height: 4.6rem;
       overflow: hidden;
       white-space: pre-line;
+      font-size: 23px;
+      
 
     //   &:after {
     //     content: "";
@@ -130,7 +134,7 @@
 	
 .eventCardContainer {
   gap: 2rem;
-  padding: 3rem;
+  padding: 2rem 3rem;
 
   }
 
@@ -162,11 +166,11 @@
 
   .eventInfoBox {
     .eventCardTitle {
-      font-size: 25px !important;
+      font-size: 35px !important;
     }
 
     .eventCardInfo {
-      font-size: 16px;
+      font-size: 23px;
       margin: 1rem 0;
   }
 }
@@ -191,6 +195,8 @@
       margin-left: 0;
     
       .eventCardInfo {
+        margin-top: 1rem;
+        font-size: 18px;
         // max-height: 6.6rem;
 
       //   &:after {

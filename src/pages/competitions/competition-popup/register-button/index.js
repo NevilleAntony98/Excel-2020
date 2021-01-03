@@ -17,7 +17,7 @@ const UpdateMobilePopup = ({open, closeFunc}) => {
                 <div className="content">
                     Please update your phone number and refresh page to register
                     <div className="buttons-container">
-                        <button onClick={() => window.open("https://staging.accounts.excelmec.org/profile", "_blank")}>
+                        <button onClick={() => window.open("https://accounts.excelmec.org/profile", "_blank")}>
                             Update
                         </button>
                         <button onClick={() => window.location.reload()}>

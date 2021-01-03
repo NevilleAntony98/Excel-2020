@@ -1,8 +1,39 @@
+@import '../../../sass/variables';
+@import '../../../sass/mixins';
+
 .events {
 
   .header-container {
     display: flex;
     align-items: center;
+
+    .image-title-box {
+      margin-top: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .name {
+        margin-top: 30px !important;
+      }
+    }
+    .event-popup-img-bg{
+      background-color: white;
+      border-radius: 12px;
+      min-height: 7rem;
+      min-width: 7rem;
+      padding:.25rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      .event-image{
+        margin: 0 !important;
+        min-height: 7rem;
+        min-width: 7rem;
+      }
+      
+    }
 
     .event-register-button {
       cursor: pointer;
@@ -23,5 +54,17 @@
       transform: scale(1.05);
       color: black;
     }
+  }
+  .event-about-section{
+    justify-content: left;
+    text-align: left !important;
+    margin-left: 20px;
+  }
+  .event-contacts{
+   @include mobile-view
+   { 
+     align-items: flex-start;
+      line-height: 1.5rem;
+      margin-left: 20px;}
   }
 }

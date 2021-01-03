@@ -36,6 +36,9 @@
         @include mobile-view {
             margin: 0rem;
             font-size: 30px;
+            letter-spacing: 0px;
+            border: none;
+            font-weight: normal;
         }
     }
 

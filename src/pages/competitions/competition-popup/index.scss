@@ -32,7 +32,7 @@
   border-radius: 20px;
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   color: white;
-
+  font-family: "Montserrat";
   @include tablet-view {
     flex-direction: column;
     width: 100vw;
@@ -61,15 +61,18 @@
     z-index: 10;
     border-right: 1px solid rgba(255, 255, 255, 0.18);
     padding: 0 1rem;
+    font-family: "Montserrat";
 
     @include tablet-view {
       border-radius: 0;
       flex-direction: column;
+      min-height: fit-content;
     }
 
     @include mobile-view {
       border-radius: 0;
       flex-direction: column;
+      min-height: fit-content;
     }
 
     .close-container-mobile {
@@ -138,6 +141,23 @@
         @include tablet-view {
           margin: auto;
           width: fit-content;
+        }
+      }
+
+      .alt-register {
+        margin-top: 25px;
+        text-align: center;
+        @include mobile-view {
+          margin-top: 10px;
+          margin-bottom: 15px;
+        }
+        a{
+          color: white;
+          text-decoration: underline;
+          &:hover{
+            color: lightgreen;
+            cursor: pointer;
+          }
         }
       }
     }
@@ -327,6 +347,7 @@
         font-size: 17px;
         margin: 0;
         padding: 1.5rem;
+        padding-top: 0.5rem;
         width: 100vw;
         box-sizing: border-box;
       }
@@ -346,8 +367,8 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        margin: 1.5rem 7rem;
+        // align-items: center;
+        margin: 1.5rem 5rem;
 
         @include mobile-view{
           margin: 20px 0;
@@ -359,10 +380,11 @@
         }
         .name {
           font-size: 1.5rem;
-          font-weight: 600;
+          font-weight: 400;
           display: flex;
           justify-content: center;
           align-items: center;
+          white-space: nowrap;
 
           @include mobile-view {
             font-size: 18px;
@@ -378,7 +400,14 @@
           color: lightgreen;
         }
         .phone {
-          font-style: italic;
+          font-weight: 400;
+          color: white;
+          text-decoration: underline;
+          text-decoration-color: rgba(40, 38, 80, 0.938);
+          &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
       }
     }

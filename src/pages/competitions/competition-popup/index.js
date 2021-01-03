@@ -11,8 +11,8 @@ import ManageTeamSection from './manage-section'
 // import reward_icon from './reward.svg'
 // import clock_icon from './clock.svg'
 // import team_icon from './team.svg'
-import phone from '../../../assets/png/icons8-phone-24(2).png';
-
+// import phone from '../../../assets/png/phone-receiver.png';
+import contact from '../../../assets/png/user.png';
 import './index.scss'
 
 const CompetitionPopup = ({ competition, closeFunc }) => {
@@ -29,17 +29,17 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
         })
     });
 
-    const getSanitizedString = (string) => {
-        if(string){
-        return string.replaceAll('\\\\n', '\n')
-        }
-    }
+    // const getSanitizedString = (string) => {
+    //     if(string){
+    //     return string.replaceAll('\\\\n', '\n')
+    //     }
+    // }
 
     const AboutSection = () => {
         return (
             <div>
                 <div className="about-section section">
-                    {getSanitizedString(competition.about)}
+                    {competition.about}
                 </div>
                 <div className="about-extra ">
                     <div className="about-extra-content ">
@@ -78,7 +78,7 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
     const FormatSection = () => {
         return (
             <div className="format-section section">
-                {getSanitizedString(competition.format)}
+                {competition.format}
             </div>
         )
     }
@@ -86,7 +86,7 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
     const RulesSection = () => {
         return (
             <div className="rules-section section">
-                {getSanitizedString(competition.rules)}
+                {competition.rules}
             </div>
         )
     }
@@ -96,17 +96,17 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
             <div className="contact-section section">
                 {competition.eventHead1 !== null &&
                     <div>
-                        <span className="name"><img  src={phone} alt="phone" />{competition.eventHead1.name}</span>
+                        <span className="name"><img  src={contact} alt="contact" />{competition.eventHead1.name}</span>
                         {/* <a className="email" href={"mailto:" + competition.eventHead1.email}>{competition.eventHead1.email}</a> */}
                         <span className="role"> Event Head</span>
-                        <span className="phone">+ {competition.eventHead1.phoneNumber}</span>
+                        <a href={"tel:"+competition.eventHead1.phoneNumber}><span className="phone">{competition.eventHead1.phoneNumber}</span></a>
                     </div>}
                 {competition.eventHead2 !== null &&
                     <div>
-                        <span className="name"><img  src={phone} alt="phone" />{competition.eventHead2.name}</span>
+                        <span className="name"><img  src={contact} alt="phone" />{competition.eventHead2.name}</span>
                         {/* <a className="email" href={"mailto:" + competition.eventHead2.email}>{competition.eventHead2.email}</a> */}
                         <span className="role"> Event Head</span>
-                        <span className="phone">+ {competition.eventHead2.phoneNumber}</span>
+                        <a href={"tel:"+competition.eventHead2.phoneNumber}><span className="phone">{competition.eventHead2.phoneNumber}</span></a>
                     </div>}
             </div>
         )
@@ -131,6 +131,9 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
                             setHasRegistered={setHasRegistered}
                             setActiveSection={setActiveSection} />
                     </div>
+                    {/* {competition.needRegistration && competition.registrationOpen && <div className="alt-register">
+                        <a href={competition.registrationLink} target="_blank" rel="noreferrer">Unable to register? Click here</a>
+                    </div>} */}
                 </div>
                 <div className="popup-stack-switcher">
                     <ul className="popup-nav">

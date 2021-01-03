@@ -2,35 +2,35 @@ import { createRef } from 'react'
 // import { useState} from 'react'
 
 import './index.scss';
-import phone from '../../../assets/png/icons8-phone-24(2).png';
-
+// import phone from '../../../assets/png/icons8-phone-24(2).png';
+import contact from '../../../assets/png/user.png';
 const EventPopup = ({ event, closeFunc }) => {
     // const [activeSection] = useState("About")
     // const [hasRegistered, setHasRegistered] = useState(null)
     let divRef = createRef();
 
 
-    const getSanitizedString = (string) => {
-        return string.replaceAll('\\\\n', '\n')
-    }
+    // const getSanitizedString = (string) => {
+    //     return string.replaceAll('\\\\n', '\n')
+    // }
 
     const AboutSection = () => {
         return (
             <div>
-                <div className="about-section section">
-                    {getSanitizedString(event.about)}
+                <div className="about-section section event-about-section">
+                    {event.about}
                 </div>
                 <div className="contact-section section event-contacts">
                     {event.eventHead1 !== null &&
                         <div>
-                            <span className="name"><img  src={phone} alt="phone" />{event.eventHead1.name}</span>
+                            <span className="name"><img  src={contact} alt="phone" />{event.eventHead1.name}</span>
                             {/* <a className="email" href={"mailto:" + event.eventHead1.email}>{event.eventHead1.email}</a> */}
                             <span className="role"> Event Head</span>
                             <span className="phone">{event.eventHead1.phoneNumber}</span>
                         </div>}
                     {event.eventHead2 !== null &&
                         <div>
-                            <span className="name"><img  src={phone} alt="phone" />{event.eventHead2.name}</span>
+                            <span className="name"><img  src={contact} alt="phone" />{event.eventHead2.name}</span>
                             {/* <a className="email" href={"mailto:" + event.eventHead2.email}>{event.eventHead2.email}</a> */}
                             <span className="role"> Event Head</span>
                             <span className="phone">{event.eventHead2.phoneNumber}</span>
@@ -68,10 +68,12 @@ const EventPopup = ({ event, closeFunc }) => {
                 </div>
                 <div className="header-container">
                     <div className="image-title-box">
-                        <img className="event-image" src={event.icon} alt={event.name} />
+                        <div className="event-popup-img-bg">
+                            <img className="event-image" src={event.icon} alt={event.name} />
+                        </div>
                         <span className="name">{event.name}</span>
                     </div>
-                    {event.needRegistration &&
+                    {event.button !== null &&
                     <a href={event.registrationLink} target="_blank" rel="noreferrer">
                         <button className="event-register-button">{event.button}</button>
                     </a>}

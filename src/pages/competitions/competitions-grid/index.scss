@@ -20,8 +20,10 @@
       // grid-template-rows: auto;
       // justify-content: space-between;
       // gap: 0.6rem;
-
+      margin-left: 0px;
       font-size: 0.75rem;
+      display: flex;
+      justify-content: center;
     }
 
     .Dropdown-placeholder {
@@ -32,14 +34,18 @@
 
     .drop-down {
       width: 15rem;
+      .is-selected{
+        background-color: transparent !important;
+        color: white !important
+      }
       .Dropdown-option {
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
         color: white;
         .is-selected{
-          background-color: rgba(238, 221, 247, 0.767) !important;
-          color: black;
+          background-color: rgba(224, 173, 247, 0.637) !important;
+          color: #333 !important
         }
       }
       .Dropdown-option:hover{
@@ -50,7 +56,7 @@
       } 
 
       @include mobile-view {
-        max-width: 8rem;
+        max-width: 7rem;
       }
     }
   }
@@ -66,6 +72,8 @@
 
     @include mobile-view {
       grid-template-columns: repeat(1, 1fr);
+      padding: 20px 0px;
+      margin-left: 15px;
     }
 
     @include tablet-view {
@@ -169,14 +177,22 @@
 @media screen and (max-width:1700px){
 	.competition-cards-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(4, 1fr) !important;
   }
 }
 
-@media screen and (max-width:1250px){
+@media screen and (max-width:1400px){
 	.competition-cards-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1rem !important;
+  }
+}
+
+@media screen and (max-width:1150px){
+	.competition-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
   }
 }
 
