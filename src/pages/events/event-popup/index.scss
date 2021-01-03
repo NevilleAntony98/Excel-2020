@@ -13,6 +13,11 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      max-width: 11rem;
+      overflow-wrap: break-word;
+      @include mobile-view {
+        max-width: 13rem
+      }
       .name {
         margin-top: 30px !important;
       }

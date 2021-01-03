@@ -256,53 +256,53 @@
     }
 }
 
-@media screen and (max-width:1048px){
-	.competition-card {
-        width: 300px;
-        height: 300px;
-        .icon {
-            img {
-                max-width: 4rem;
-            }
-        }
-        .title {
-            margin: 0.5rem 0;
-            span {
-                font-size: 1.4  rem;
-            }
-        }
-    }
-}
+// @media screen and (max-width:1048px){
+// 	.competition-card {
+//         width: 300px;
+//         height: 300px;
+//         .icon {
+//             img {
+//                 max-width: 4rem;
+//             }
+//         }
+//         .title {
+//             margin: 0.5rem 0;
+//             span {
+//                 font-size: 1.4  rem;
+//             }
+//         }
+//     }
+// }
 
-@media screen and (max-width:950px){
-	.competition-card {
-        width: 300px;
-        height: 300px;
-        .icon {
-            img {
-                max-width: 5rem;
-            }
-        }
-        .title {
-            margin: 0.5rem 0;
-            span {
-                font-size: 1.4rem;
-            }
-        }
-    }
-}
+// @media screen and (max-width:950px){
+// 	.competition-card {
+//         width: 300px;
+//         height: 300px;
+//         .icon {
+//             img {
+//                 max-width: 5rem;
+//             }
+//         }
+//         .title {
+//             margin: 0.5rem 0;
+//             span {
+//                 font-size: 1.4rem;
+//             }
+//         }
+//     }
+// }
 
-@media screen and (max-width:850px){
+@media screen and (max-width:870px){
     .competition-card-container{
-        width: 250px;
+        width: 220px;
     }
     .competition-card {
-        width: 250px;
-        height: 250px;
+        width: 220px;
+        height: 220px;
         .icon {
-            padding: 1rem;
+            padding: 0.2rem;
             img {
-                max-width: 5rem;
+                max-width: 4rem;
             }
         }
         .title {

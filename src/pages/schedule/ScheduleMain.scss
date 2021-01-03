@@ -1,18 +1,17 @@
 @import '../../sass/variables';
 @import '../../sass/mixins';
 
-
 .schedule {
-  position: relative;
   z-index: 100;
   // background-color: $bg-color;
-  padding-bottom: 3rem;
+  padding-bottom: 100px;
 }
 .scheduleContainer {
   max-width: 75%;
   min-width: 280px;
   margin: 0 auto;
 }
+
 .scheduleFilter {
   color: white;
   display: flex;
@@ -35,8 +34,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  padding-bottom: 0.5rem;
   // background-color: $background-color-light;
-  // background-color: transparent;  
+  // background-color: transparent;
   // background: rgba(13, 11, 41, 0.8);
   // border: 1px solid rgba(255, 255, 255, 0.18);
   // border-radius: 20px;
@@ -56,14 +56,14 @@
   // opacity: 0.75;
   align-items: center;
   justify-content: center;
-  padding: 16px 0px;
   cursor: pointer;
+  padding: 16px 0;
   // background-color: $bg-color;
   border-color: $border-color !important;
   // box-shadow: 6px 6px 12px $shadow-dark, -6px -6px 12px $shadow-light !important;
   // border: 0.0625rem solid rgba(243, 247, 250, 0.05);
   border-radius: 6px;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   // background: rgba(195, 138, 221, 0.233) !important;
   // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   // border-radius: 20px;
@@ -71,6 +71,10 @@
   // backdrop-filter: blur(10.5px);
   color: white;
   z-index: 1;
+
+  @include mobile-view {
+    padding: 10px 0;
+  }
 }
 .scheduleDay:hover {
   opacity: 1;
@@ -89,7 +93,7 @@
   // border-color: $border-color;
   // background-color: white;
   background: rgba(236, 207, 250, 0.623) !important;
-  box-shadow: 0 10px 35px 0 rgba( 31, 38, 135, 0.37 );
+  box-shadow: 0 10px 35px 0 rgba(31, 38, 135, 0.37);
   border-radius: 20px;
   -webkit-backdrop-filter: blur(10.5px);
   backdrop-filter: blur(10.5px);
@@ -107,11 +111,11 @@
   cursor: default;
 }
 
-@media only screen and (max-width:980px) {
+@media only screen and (max-width: 980px) {
   .scheduleContainer {
-    max-width: 90% ;
+    max-width: 90%;
   }
-  .scheduleDayContainer{
+  .scheduleDayContainer {
     div {
       font-variant-caps: petite-caps;
       // margin: 0 5px;

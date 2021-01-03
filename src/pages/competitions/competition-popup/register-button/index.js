@@ -1,4 +1,4 @@
-import { useState, Fragment } from 'react'
+import { useState } from 'react'
 import Popup from 'reactjs-popup'
 
 import RegHelper from '../../../../utils/registrationHelper'
@@ -96,7 +96,7 @@ const RegisterButton = ({competition, hasRegistered, setHasRegistered, setActive
     }
 
     return (
-        <Fragment>
+        <>
             <button
             className={`register-button ${hasRegistered && !competition.isTeam ? "registered" : ""}`}
             onClick={onRegisterClicked}>
@@ -105,7 +105,7 @@ const RegisterButton = ({competition, hasRegistered, setHasRegistered, setActive
                     "Register"}
             </button>
             <UpdateMobilePopup open={open} closeFunc={() => setOpen(false)} />
-        </Fragment>
+        </>
     )
 }
 

@@ -18,7 +18,7 @@ import Joel from '../../img/Joel.jpg'
 import Sujith from '../../img/Sujith.jpeg'
 import VR from '../../img/VR.png'
 import Anjali from '../../img/Anjali.jpeg'
-import Anand from '../../img/AnandSanthosh.jpg'
+import Sneha from '../../img/Sneha.jpg'
 import Ashwanth from '../../img/Labeeb.jpeg'
 import Nikhil from '../../img/Nikhil.jpg'
 import Pooja from '../../img/Pooja.jpeg'
@@ -36,7 +36,7 @@ export default class Contacts extends Component {
                {desig:"Event Manager",name:"Joel Mathew Jose",descp:"",email:"joelmj.mec@gmail.com",phno:"919539861180",img:Joel,insta:"https://instagram.com/myself_joel_mj",linkln:"https://www.linkedin.com/in/joel-jose-7b2a54187"},
                {desig:"Event Manager",name:"Sidharth Mohan",descp:"",email:"sujithk@excelmec.org",phno:"+91 8281515845",img:Sujith,insta:"https://ibeto.excelmec.org/",linkln:"https://linkedin.com/in/sujith-k-8a4a3217b"},
                {desig:"Marketing Manager ",name:"Aarish Ali",descp:"",email:"anjalisunil@excelmec.org",phno:"+91 8547746060",img:Anjali,insta:"https://ibeto.excelmec.org/",linkln:"https://linkedin.com/in/anjalisunil939423162"},
-               {desig:"Marketing Manager(PC)",name:"Sneha Surendran",descp:"",email:"anandsanthosh@excelmec.org",phno:"+91 9562355862",img:Anand,insta:"https://ibeto.excelmec.org/",linkln:"https://linkedin.com/in/anand-santhosh-17a805163"},
+               {desig:"Marketing Manager(PC)",name:"Sneha Surendran",descp:"",email:"snehasurendran.mec@gmail.com",phno:"+91 90727 39452",img:Sneha,insta:"https://instagram.com/ms_marar?igshid=un23qrtrfi8w",linkln:"https://www.linkedin.com/in/snehasurendran28"},
                {desig:"Finance Manager",name:"Aswanth N",descp:"",email:"ashwanth.mec@gmail.com ",phno:"+91 9495001606",img:Ashwanth,insta:"https://www.instagram.com/ashwanth.n/",linkln:"https://www.linkedin.com/in/ashwanth-n-8a0135181"},
                {desig:"General Tech Manager",name:"Menny Thankachan",descp:"",email:"mennyt11@gmail.com",phno:"+91 9446717230",img:Menny,insta:"https://www.instagram.com/_menny_t/",linkln:"https://www.linkedin.com/in/mennyt/"},
                {desig:"CS Tech Manager",name:"Ajesh Kumar S",descp:"",email:"ajeshkumar.mec@gmail.com",phno:"+91 919074249658",img:Ajesh,insta:"https://www.instagram.com/ajeshkumars.35/",linkln:"https://www.linkedin.com/in/ajesh-kumar-s/"},
