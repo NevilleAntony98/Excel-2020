@@ -58,7 +58,7 @@ const SchedulePopup = ({filters, selectedFilters, setSelectedFilters, close}) =>
           />
         ))}
       </div>
-      <div className="schedulePopupTitle">Event status</div>
+    {/*      <div className="schedulePopupTitle">Event status</div>
       <div className="schedulePopupOptionsContainer">
         <RadioButton
           value="All"
@@ -78,6 +78,7 @@ const SchedulePopup = ({filters, selectedFilters, setSelectedFilters, close}) =>
           />
         ))}
       </div>
+      */}
       <button
         onClick={() => {
           setSelectedFilters({
