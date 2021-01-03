@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import './HomeAnimation.scss';
-import Logo from '../../assets/svg/Logo.svg';
-import MobileLogo from '../../assets/svg/logoformobile.svg';
+import Logo from '../../assets/png/Logo.png';
+import MobileLogo from '../../assets/png/logoformobile.png';
 import Circuits from '../../assets/svg/Circuits.svg';
 import Glow from '../../assets/svg/Glow.svg';
 import fire from '../../assets/svg/fire.svg';

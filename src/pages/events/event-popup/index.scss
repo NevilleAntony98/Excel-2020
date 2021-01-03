@@ -13,6 +13,9 @@
       font-size: 1.1rem;
       border-radius: 10px;
       transition: 200ms ease-in-out;
+      &:focus{
+        outline: none !important;
+      }
     }
 
     .event-register-button:hover {

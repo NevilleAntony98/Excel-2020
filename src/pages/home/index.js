@@ -12,7 +12,8 @@ import excel2017 from '../../assets/png/excel2017.png';
 import excel2018 from '../../assets/png/excel2018.png';
 import excel2019 from '../../assets/png/excel2019.png';
 import excel2020withtext from '../../assets/png/excel2020withtext.png';
-
+import calendar from '../../assets/svg/calendar.svg';
+import location from '../../assets/svg/pin.svg';
 export default class Home extends Component {
     render() {
         return (
@@ -47,6 +48,12 @@ export default class Home extends Component {
             
             </div>
             <div className="home-legacy">
+              <div className="mobile-dates">
+                <div><span><img className="tagline-icon" alt="calender" src={calendar}></img></span>Jan 29, 30, 31
+                </div>
+                <div><span><img className="tagline-icon" alt="pin" src={location}></img></span>Virtual
+                </div>
+              </div>
               <h1>LEGACY</h1>
               <div className="legacy-container">
                 <img src={college} alt=""/>

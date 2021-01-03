@@ -29,7 +29,7 @@ const SmallSidebar = ({ setIsSidebarOpen }) => {
 
         <NavProfileIcon isMobile={false}/>
 
-        <NavLink to="/" style={{ textDecoration: 'none' }} >
+        <NavLink exact to="/" style={{ textDecoration: 'none' }} activeClassName="smallSidebarActive" >
           <div className="smallSidebarLink">
             <img alt="home" src={home} className="smallSidebarIcon" />
             <span className="toolTip backdrop-filter-blur">

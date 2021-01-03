@@ -88,6 +88,13 @@
     border-radius: 20px;
     color: white;
     box-shadow: 10px -90px 90px #02011f !important;
+    .mobile-dates{
+        display: none;
+        align-items: center;
+        align-content: center;
+        justify-content: space-around;
+        font-weight: bold;
+    }
     h1{
         font-size: 35px;
         letter-spacing: 1px;
@@ -253,7 +260,25 @@
         transform: translateX(2.5%);
         top: 45%;
         width: 95%;
-        padding: 40px 0px 100px 0px;
+        padding: 140px 0px 150px 0px;
+        .mobile-dates{
+            position: absolute;
+            top: 30px;
+            width: 95%;
+            display: flex;
+            font-size: 18px;
+            color: white;
+            background-color: rgba(186, 130, 238, 0.26);
+            padding: 10px;
+            margin: 0 auto;
+            div{
+                margin: 7px 0;
+              }
+              .tagline-icon{
+                width: 20px;
+                margin:5px 10px 0 0; 
+              }
+        }
         h1{
             margin-left: 40px;
         }
@@ -280,13 +305,14 @@
             }
         }
         .social{
+            position: absolute;
             background-color: rgba(255, 255, 255, 0.178) !important;
-            padding: 20px !important;
-            width: 100% !important;
-            margin-left: 0px !important;
-            margin-top: 40px;
-            margin-right: 0 !important;
-
+            padding: 10px !important;
+            width: 95% !important;
+            margin: 0 auto !important;
+            svg{
+                width: 20px;
+            }
         }    
     }
 }

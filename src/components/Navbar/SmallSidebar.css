@@ -85,7 +85,7 @@
 
 .smallSidebarLink:hover {
   /* background-color: #b2dff8; */
-  transition: 0.3s ease-in;
+  background: rgba(255, 255, 255, 0.13);
 }
 
 .smallSidebarIcon {
