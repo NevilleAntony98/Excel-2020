@@ -8,19 +8,22 @@
   border-radius: 12px;
   padding: 40px;
   font-family: "Montserrat";
+  width: fit-content;
   @include mobile-view {
     max-height: 80vh;
     // overflow: scroll;
     margin-top: -60px;
     padding: 0px;
     padding-bottom: 20px;
+    padding-right: 5px
   }
 }
 .schedule-popup-content {
   @include mobile-view{
-    max-height: 50vh;
-  overflow: scroll;
-  padding: 30px;
+    width: 260px;
+    max-height: 60vh;
+    overflow: scroll;
+    padding: 30px;
   }
 }
 .schedulePopupTitle {
@@ -74,7 +77,11 @@
   }
 }
 .close-container-mobile {
-  display: none;
+  // display: none;
+  @include mobile-view{
+    display: flex;
+    flex-direction: row-reverse ;
+  }
 
   @include desktop-view {
     display: flex;
@@ -91,6 +98,9 @@
     cursor: pointer;
 
     transition: 100ms ease-in-out;
+    @include mobile-view {
+      width: 2.7rem;
+    }
 
     &:hover {
       transform: scale(1.1);
