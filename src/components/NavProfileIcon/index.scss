@@ -8,12 +8,12 @@
   position: fixed !important;
 }
 .popup-arrow {
-  background: rgba(217, 177, 250, 0.233);
+  // background: rgba(217, 177, 250, 0.233);
   backdrop-filter: blur(10.5px);
   -webkit-backdrop-filter: blur(10.5px);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   path{
-    opacity: 0;
+    fill: rgba(217, 177, 250, 0.233);
   }
 }
 [role='tooltip'].popup-content {
@@ -45,7 +45,7 @@
 .profile-popup {
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.116);
+  // background-color: rgba(255, 255, 255, 0.116);
   border-radius: 6px;
   box-shadow:  4px 0px 12px #00000044;
   color: white;

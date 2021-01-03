@@ -17,8 +17,11 @@
   /* top: 20px; */
   /* bottom: 20px; */
   border-radius: 20px;
-  margin-top: 24vh;
+  /* margin-top: 24vh; */
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 102;
+  padding-bottom: 20px;
 }
 
 .smallSidebarInnerContainer {
