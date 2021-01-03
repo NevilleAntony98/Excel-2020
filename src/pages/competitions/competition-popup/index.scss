@@ -367,8 +367,8 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        margin: 1.5rem 7rem;
+        // align-items: center;
+        margin: 1.5rem 5rem;
 
         @include mobile-view{
           margin: 20px 0;
@@ -380,10 +380,11 @@
         }
         .name {
           font-size: 1.5rem;
-          font-weight: 600;
+          font-weight: 400;
           display: flex;
           justify-content: center;
           align-items: center;
+          white-space: nowrap;
 
           @include mobile-view {
             font-size: 18px;
@@ -399,7 +400,14 @@
           color: lightgreen;
         }
         .phone {
-          font-style: italic;
+          font-weight: 400;
+          color: white;
+          text-decoration: underline;
+          text-decoration-color: rgba(40, 38, 80, 0.938);
+          &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
       }
     }

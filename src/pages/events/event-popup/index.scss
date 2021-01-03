@@ -1,3 +1,6 @@
+@import '../../../sass/variables';
+@import '../../../sass/mixins';
+
 .events {
 
   .header-container {
@@ -49,7 +52,16 @@
       color: black;
     }
   }
-  // .event-contacts{
-
-  // }
+  .event-about-section{
+    justify-content: left;
+    text-align: left !important;
+    margin-left: 20px;
+  }
+  .event-contacts{
+   @include mobile-view
+   { 
+     align-items: flex-start;
+      line-height: 1.5rem;
+      margin-left: 20px;}
+  }
 }

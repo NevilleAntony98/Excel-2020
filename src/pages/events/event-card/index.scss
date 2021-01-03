@@ -1,11 +1,11 @@
 @import '../../../sass/variables';
 @import '../../../sass/mixins';
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 .eventCardContainer {
   position: relative;
   display: flex;
   gap: 2rem;
-  padding: 3rem;
+  padding: 2rem 3rem;
   border-radius: 0.55rem;
   // color: black;
   // background: $bg-color;
@@ -95,10 +95,11 @@
 
     .eventCardTitle {
       font-size: 35px;
-      font-weight: 800;
+      font-weight: 900;
       // font-family: 'Lemon Milk';
       text-transform: uppercase;
       line-height: 40px;
+      font-family: 'Montserrat', sans-serif;
       @include desktop-view {
         // min-width: 8rem;
         
@@ -133,7 +134,7 @@
 	
 .eventCardContainer {
   gap: 2rem;
-  padding: 3rem;
+  padding: 2rem 3rem;
 
   }
 
