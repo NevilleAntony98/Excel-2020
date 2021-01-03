@@ -63,6 +63,8 @@ const ScheduleMain = () => {
     }
   }, [scheduleData, selectedDay, selectedFilters]);
 
+  console.log(filteredData);
+
   return isLoading ? (
     <Loader />
   ) : (
@@ -108,7 +110,7 @@ const ScheduleMain = () => {
               subtitle={'Chose a different category to view more events!'}
             />
           ) : (
-            filteredData.events.map((item, id) => <ScheduleCard key={item.id} event={item} />)
+            filteredData.events.map(item => <ScheduleCard event={item} />)
           )}
         </div>
       </div>
