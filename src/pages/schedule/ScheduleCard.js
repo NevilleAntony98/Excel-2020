@@ -16,7 +16,7 @@ const FlipScheduleImage = ({event}) => {
     img.onload = () => setIsLoading(false);
   });
 
-  if (isLoading) return <img src={excelIcon} alt={event.name} />;
+  if (isLoading) return <img className="scheduleflipIcon" src={excelIcon} alt={event.name} />;
 
   return (
     // <Spring
