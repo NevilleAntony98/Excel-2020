@@ -104,6 +104,9 @@
         // min-width: 8rem;
         
       }
+      @include mobile-view{
+        font-size: 30px !important;
+      }
     }
 
     .eventCardInfo {
