@@ -26,7 +26,7 @@ const FlipScheduleImage = ({event}) => {
     // {props => (
     // <div style={props}>
     <div className="scheduleflipIconbg">
-      <img className="scheduleflipIcon" src={event.icon} alt={event.name} className="scheduleflipIcon" />
+      <img className="scheduleflipIcon" src={event.icon} alt={event.name} />
     </div>
     // )}
     // </Spring>
