@@ -11,7 +11,7 @@ import './SmallSidebar.css';
 import home from '../../assets/svg/home.svg';
 import competitions from '../../assets/svg/competitions.svg';
 import events from '../../assets/svg/events.svg';
-import schedule from '../../assets/svg/calendar.svg';
+import schedule from '../../assets/svg/schedule.svg';
 import contacts from '../../assets/svg/contacts.svg';
 // import logoutpic from '../../assets/svg/icons8-export-50.png';
 
