@@ -42,7 +42,7 @@ const ScheduleCard = ({event}) => {
         <FlipScheduleImage event={event} />
         <div className="scheduleContent">
           <div className="scheduleCardTitle">{event.name}</div>
-          <div className="scheduleCardEventType">{event.category.split('_').join(' ')}</div>
+          <div className="scheduleCardEventType">{event.round}</div>
           {/* <div className="scheduleCardDay">{dayjs(event.datetime).format('D/M/YYYY')}</div> */}
         </div>
         <div className="scheduleCardTime">{dayjs(event.datetime).format('h:mm a')}</div>
