@@ -27,7 +27,7 @@
   // background: rgba(195, 138, 221, 0.233) !important;
   // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   // border-radius: 20px;
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   background: rgba(217, 177, 250, 0.233);
   -webkit-backdrop-filter: blur(10.5px);
   backdrop-filter: blur(10.5px);
@@ -41,7 +41,7 @@
   }
 }
 /* no support backdrop-filter */
-@supports  not ( (-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px)) )  {
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
   .scheduleCardContainer {
     background: rgba(189, 185, 243, 0.281);
     box-shadow: 0 5px 20px 0 rgba(4, 6, 44, 0.568);
@@ -54,13 +54,13 @@
   text-transform: uppercase;
 }
 
-.scheduleContent{
+.scheduleContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-width: 12rem;
-  @include mobile-view{
+  @include mobile-view {
     min-width: 7.5rem;
   }
 }
@@ -96,8 +96,9 @@
   width: 7rem;
   // margin: auto;
   @include mobile-view {
-    height: 3rem;
-    width: 3rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 3px;
   }
 }
 
@@ -134,7 +135,7 @@
   .scheduleCardEventType {
     text-transform: capitalize;
     font-variant-caps: petite-caps;
-    
+
     @include mobile-view {
       font-size: 13px;
       max-width: 8rem;
