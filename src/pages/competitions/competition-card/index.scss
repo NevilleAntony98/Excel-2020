@@ -376,6 +376,10 @@
 	.competition-card {
         width: 180px;
         height: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         .icon {
             padding: 0rem;
             padding-bottom: 0rem;
@@ -395,6 +399,7 @@
         }
         .category {
             font-size: 0.75rem;
+            padding-bottom: 10px;
         }
     }
 }
