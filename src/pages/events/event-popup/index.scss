@@ -16,7 +16,8 @@
       max-width: 11rem;
       overflow-wrap: break-word;
       @include mobile-view {
-        max-width: 13rem
+        max-width: 13rem;
+        margin-top: 10px;
       }
       .name {
         margin-top: 30px !important;

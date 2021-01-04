@@ -90,6 +90,12 @@
         height: auto;
         fill: white;
         right: 10px;
+        @include mobile-view {
+          position: relative;
+          right: -10px;
+          top: 0px;
+          width: 4rem;
+        }
       }
     }
 
@@ -114,6 +120,9 @@
           max-width: 8rem;
           border: none;
           box-shadow:  none;
+          @include mobile-view {
+            margin-top: 0;
+          }
         }
 
         .name {
