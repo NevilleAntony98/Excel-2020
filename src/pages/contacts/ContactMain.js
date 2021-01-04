@@ -10,7 +10,7 @@ import Ajesh from '../../img/Ajesh.jpg'
 import Rose from '../../img/Rose.jpg'
 import Akshay from '../../img/AkshayB.jpg'
 import Shemrin from '../../img/Shemrin.jpg'
-import Bhairavi from '../../img/bhairavi.jpeg'
+import Alan from '../../img/bhairavi.jpeg'
 import Boby from '../../img/Boby.jpg'
 import Vysakh from '../../img/Vysakh.jpg'
 import Namitha from '../../img/Namitha.jpg'
@@ -19,7 +19,7 @@ import Sujith from '../../img/Sujith.jpeg'
 import VR from '../../img/VR.png'
 import Anjali from '../../img/Anjali.jpeg'
 import Sneha from '../../img/Sneha.jpg'
-import Ashwanth from '../../img/Labeeb.jpeg'
+import Ashwanth from '../../img/Ashwanth.jpg'
 import Nikhil from '../../img/Nikhil.jpg'
 import Pooja from '../../img/Pooja.jpeg'
 import Lakshmi from '../../img/Lakshmi.jpg'
@@ -46,7 +46,7 @@ export default class Contacts extends Component {
                {desig:"Media Relations Manager",name:"Boby Sebastian Tharappel",descp:"",email:"bobytharappel.mec@gmail.com",phno:"+91 9961398170",img:Boby,insta:"https://www.instagram.com/b.tharappel/",linkln:"https://www.linkedin.com/in/boby-tharappel-65378818b"},
                {desig:"Conferences Manager",name:"Gouri S Nair ",descp:"",email:"gourisunilnair.mec@gmail.com",phno:"+91 9496588536",img:Gouri,insta:"https://www.instagram.com/noseinabook11?r=nametag",linkln:" https://www.linkedin.com/in/gouri-s-nair-64238b187 "},
                {desig:"Conferences Manager",name:"Vighnesh Radhakrishnan",descp:"",email:"vighneshradhakrishnan.mec@gmail.com",phno:"+91 8606188766",img:VR,insta:"https://www.instagram.com/vighnesh_radhakrishnan/",linkln:"https://www.linkedin.com/in/vighnesh-radhakrishnan-b73649191"},
-               {desig:"Social Initiatives Manager",name:"Alan Bince",descp:"",email:"alanbince.mec@gmail.com",phno:"+91 8921417257",img:Bhairavi,insta:"",linkln:""},
+               {desig:"Social Initiatives Manager",name:"Alan Bince",descp:"",email:"alanbince.mec@gmail.com",phno:"+91 8921417257",img:Alan,insta:"https://www.instagram.com/bince.jr/",linkln:"https://www.linkedin.com/in/alan-bince-jacob-294312158/"},
                {desig:"Talks Manager",name:"Rose Binoy Mechery ",descp:"",email:"rosebinoymechery.mec@gmail.com",phno:"+91 8078201072",img:Rose,insta:"https://instagram.com/r._.o._.se?igshid=1v2mkyxe8w7mm",linkln:"https://www.linkedin.com/in/rose-binoy-mechery-215582160"},
                {desig:"Online Media Relations",name:"Namitha Shajan",descp:"",email:"namithashajan.mec@gmail.com",phno:"+91 7902420864",img:Namitha,insta:"https://instagram.com/_nami.tha_?igshid=889m9x0bkorm",linkln:"https://www.linkedin.com/in/namitha-shajan-1008881a1"},
                {desig:"Design Manager",name:"Vysakh G Nair",descp:"",email:"vysakhgnair.mec@gmail.com",phno:"+91 9074254231",img:Vysakh,insta:"https://www.instagram.com/vysakhgnair17/",linkln:"https://www.linkedin.com/in/vysakhgnair/"},
