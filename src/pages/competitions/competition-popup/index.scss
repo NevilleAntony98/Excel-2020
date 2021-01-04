@@ -145,19 +145,22 @@
       }
 
       .alt-register {
-        margin-top: 25px;
-        text-align: center;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%; 
+        font-style: italic;
+        
         @include mobile-view {
           margin-top: 10px;
           margin-bottom: 15px;
+          font-size: 15px;
         }
-        a{
+        span{
+          max-width: 15rem;
           color: white;
-          text-decoration: underline;
-          &:hover{
-            color: lightgreen;
-            cursor: pointer;
-          }
+          text-align: center;
         }
       }
     }

@@ -132,7 +132,7 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
                             setActiveSection={setActiveSection} />
                     </div>
                     {/* {competition.needRegistration && competition.registrationOpen && <div className="alt-register">
-                        <a href={competition.registrationLink} target="_blank" rel="noreferrer">Unable to register? Click here</a>
+                        <span> Unable to login? Clear cookies and try again </span>
                     </div>} */}
                 </div>
                 <div className="popup-stack-switcher">
