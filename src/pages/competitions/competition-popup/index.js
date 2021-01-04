@@ -131,6 +131,10 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
                             setHasRegistered={setHasRegistered}
                             setActiveSection={setActiveSection} />
                     </div>
+                    {competition.button !== null &&
+                    <a href={competition.registrationLink} className="event-anchor-tag" target="_blank" rel="noreferrer">
+                        <button className="event-register-button">{competition.button}</button>
+                    </a>}
                     {/* {competition.needRegistration && competition.registrationOpen && <div className="alt-register">
                         <span> Unable to login? Clear cookies and try again </span>
                     </div>} */}

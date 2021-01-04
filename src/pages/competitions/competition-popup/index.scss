@@ -127,8 +127,38 @@
             font-size: 2rem !important;
           }
         }
+        
+    }
+    .event-anchor-tag{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .event-register-button {
+      background-color: transparent;
+      color: white;
+      margin: 0 2rem;
+      margin-top: 1rem;
+      padding: 0.5rem 2.5rem;
+      font-size: 1.3rem;
+      border-radius: 10px;
+      font-family: "Montserrat";
+      border: 0.0625rem solid #0086ce;
+      border-color: #afd9f0;
+      cursor: pointer;
+      transition: 200ms ease-in-out;
+      &:focus{
+        outline: none !important;
       }
-
+  }
+  .event-register-button:hover {
+    background-color: white;
+    transform: scale(1.05);
+    color: black;
+    outline: none;
+  }
+    
+    
       .reg-prize-box {
         display: flex;
         flex-direction: column;
