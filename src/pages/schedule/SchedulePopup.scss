@@ -11,6 +11,10 @@
   // width: fit-content;
   margin-left: -25rem;
   width: 58rem;
+  @include tablet-view {
+    width: 30rem;
+    margin-left: -12rem;
+  }
   @include mobile-view {
     max-height: 80vh;
     // overflow: scroll;
@@ -83,14 +87,10 @@
 }
 .close-container-mobile {
   // display: none;
-  @include mobile-view{
     display: flex;
     flex-direction: row-reverse ;
-  }
 
   @include desktop-view {
-    display: flex;
-    flex-direction: row-reverse;
     padding-top: -20px;
     padding-right: 15px;
   }
