@@ -134,7 +134,12 @@
   .scheduleCardEventType {
     text-transform: capitalize;
     font-variant-caps: petite-caps;
-    font-size: 0.8rem;
+    
+    @include mobile-view {
+      font-size: 13px;
+      max-width: 8rem;
+      overflow: hidden;
+    }
   }
 
   .scheduleCardDay {
