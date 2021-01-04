@@ -362,7 +362,7 @@
       @include mobile-view {
         margin-top: 0rem;
         flex-direction: column;
-        align-items: center;
+        // align-items: center;
       }
 
       div {
@@ -374,6 +374,7 @@
 
         @include mobile-view{
           margin: 20px 0;
+          margin-top: 0px;
         }
 
         img {
