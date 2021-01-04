@@ -38,7 +38,7 @@ const ScheduleCard = ({event}) => {
 
   return (
     <div>
-      <div className="scheduleCardContainer backdrop-filter-blur">
+      <div className="scheduleCardContainer">
         <FlipScheduleImage event={event} />
         <div className="scheduleContent">
           <div className="scheduleCardTitle">{event.name}</div>

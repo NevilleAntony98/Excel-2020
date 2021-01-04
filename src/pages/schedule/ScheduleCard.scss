@@ -7,7 +7,7 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  border-radius: 6px;
+  border-radius: 20px;
   padding: 0.5rem 0;
   margin: 20px 0;
   // background: linear-gradient(145deg, #5bc6ff, #4da7db);
@@ -27,8 +27,10 @@
   // background: rgba(195, 138, 221, 0.233) !important;
   // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   // border-radius: 20px;
-  // -webkit-backdrop-filter: blur(10.5px);
-  // backdrop-filter: blur(10.5px);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  background: rgba(217, 177, 250, 0.233);
+  -webkit-backdrop-filter: blur(10.5px);
+  backdrop-filter: blur(10.5px);
   color: white;
 
   @include desktop-view {
@@ -38,7 +40,15 @@
     }
   }
 }
-
+/* no support backdrop-filter */
+@supports  not ( (-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px)) )  {
+  .scheduleCardContainer {
+    background: rgba(189, 185, 243, 0.281);
+    box-shadow: 0 5px 20px 0 rgba(4, 6, 44, 0.568);
+    // background: rgba(195,138,221,0.233);
+    // box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+  }
+}
 .scheduleCardTime {
   font-size: 1.4rem;
   text-transform: uppercase;

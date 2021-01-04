@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 import './Bottombar.scss';
 
-import schedule from '../../assets/svg/calendar.svg';
+import schedule from '../../assets/svg/schedule.svg';
 import competitions from '../../assets/svg/competitions.svg';
 import contacts from '../../assets/svg/contacts.svg';
 import events from '../../assets/svg/events.svg';
