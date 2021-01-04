@@ -36,6 +36,7 @@
         margin: 0 !important;
         min-height: 7rem;
         min-width: 7rem;
+        object-fit: contain;
       }
       
     }
@@ -49,6 +50,7 @@
       font-size: 1.1rem;
       border-radius: 10px;
       transition: 200ms ease-in-out;
+      border: .0625rem solid #afd9f0;
       &:focus{
         outline: none !important;
       }
@@ -58,6 +60,7 @@
       background-color: white;
       transform: scale(1.05);
       color: black;
+      outline: none;
     }
   }
   .event-about-section{
@@ -75,4 +78,7 @@
   .role{
     color: lightgreen;
   }
+}
+.event-anchor-tag:focus{
+  outline: none;
 }

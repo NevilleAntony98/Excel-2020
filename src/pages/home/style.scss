@@ -76,10 +76,10 @@
 }
 .home-legacy{
     position: absolute;
-    transform: translateX(1%);
+    transform: translateX(5%);
     top: 45%;
     width: 80%;
-    padding: 40px;
+    padding: 40px 0;
     background: rgba( 13, 11, 41, 0.80 );
     /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
     border: 1px solid rgba( 255, 255, 255, 0.18 );
@@ -99,11 +99,13 @@
         font-size: 35px;
         letter-spacing: 1px;
         font-weight: bolder;
+        margin-left: 40px;
     }
     .legacy-container{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0 40px;
         img{
             width: 30%;
         }
@@ -178,19 +180,19 @@
     }
     .social{
         background-color: rgba(255, 255, 255, 0.178) !important;
-        padding: 20px !important;
-        width: calc(100% + 40px) !important;
-        margin-left: -40px;
+        padding: 10px 0 !important;
+        width: 100%;
+        // width: calc(100% + 40px) !important;
+        // margin-left: -40px;
         margin-top: 40px;
     }
 }
 
 @media only screen and (max-width: 1200px) {
     .home-legacy{
-        transform: translateX(-1%);
+        transform: translateX(5%);
         top: 45%;
-        width: 85%;
-        padding: 40px;
+        width: 80%;
     }
 }
 @media only screen and (max-width: 1100px) {
@@ -198,20 +200,26 @@
 }
 @media only screen and (max-width: 1000px) {
     .home-legacy{
-        transform: translateX(-1%);
+        transform: translateX(5%);
         top: 45%;
-        width: 85%;
-        padding: 30px;
+        width: 80%;
+        padding: 30px 0;
     }
     .social{
         background-color: rgba(255, 255, 255, 0.178) !important;
-        padding: 20px !important;
-        width: calc(100% + 30px) !important;
-        margin-left: -30px !important;
+        padding: 20px;
+        width: calc(100% + 30px);
+        margin-left: -30px;
         margin-top: 40px;
     }
 }
 @media only screen and (max-width: 900px) {
+    .home-legacy{
+        transform: translateX(8%);
+        top: 45%;
+        width: 75%;
+        padding: 30px 0;
+    }
     .legacy-container{
         flex-direction: column;
         margin-top: 40px;
@@ -228,6 +236,12 @@
     }
 }
 @media only screen and (max-width: 800px) {
+    .home-legacy{
+        transform: translateX(5%);
+        top: 45%;
+        width: 75%;
+        padding: 30px 0;
+    }
     .college-excel-logo{
         margin: 0  auto;
         width: 40%;
@@ -249,9 +263,18 @@
         .excel-2016{
             margin-left: -10px;
         }
-    }    
+    }
 }
 @media only screen and (max-width: 700px) {
+    .home-legacy{
+        transform: translateX(6%);
+        top: 45%;
+        width: 70%;
+        padding: 30px 0;
+    }
+    .legacy-container{
+        padding: 30px;
+    }
     .college-excel-logo{
         margin: 0  auto;
         width: 40%;
@@ -266,17 +289,18 @@
         transform: translateX(5.5%);
         top: 45%;
         width: 90%;
-        padding: 140px 0px 150px 0px;
+        padding: 50px 0px 100px 0px;
+        .legacy-container{
+            padding: 0;
+        }
         .mobile-dates{
-            position: absolute;
-            top: 30px;
-            width: 95%;
+            // width: 100%;
             display: flex;
-            font-size: 18px;
+            font-size: 20px;
             color: white;
             background-color: rgba(186, 130, 238, 0.26);
             padding: 10px;
-            margin: 0 auto;
+            margin-bottom: 50px;
             div{
                 margin: 7px 0;
               }
@@ -286,7 +310,8 @@
               }
         }
         h1{
-            margin-left: 40px;
+            text-align: center;
+            margin-left: 0;
         }
         .college-excel-logo{
             margin: 0  auto;
@@ -311,19 +336,101 @@
             }
         }
         .social{
-            position: absolute;
-            background-color: rgba(255, 255, 255, 0.178) !important;
-            padding: 10px !important;
-            width: 95% !important;
-            margin: 0 auto !important;
-            svg{
-                width: 20px;
-            }
-        }    
+            width: 100%;
+        }  
     }
     /* width */
 ::-webkit-scrollbar {
     width: 0px !important;
   }
   
+}
+@media only screen and (max-width: 350px) {
+    .home-legacy{
+        transform: translateX(5.5%);
+        top: 45%;
+        width: 90%;
+        padding: 50px 0px 100px 0px;
+        .legacy-container{
+            padding: 0;
+        }
+        .mobile-dates{
+            // width: 100%;
+            display: flex;
+            font-size: 16px;
+            color: white;
+            background-color: rgba(186, 130, 238, 0.26);
+            padding: 10px;
+            margin-bottom: 50px;
+            div{
+                margin: 7px 0;
+              }
+              .tagline-icon{
+                width: 15px;
+                margin:5px 10px 0 0; 
+              }
+        }
+        h1{
+            text-align: center;
+            margin-left: 0;
+        }
+        .college-excel-logo{
+            margin: 0  auto;
+            width: 40%;
+            img{
+                width: 120px !important;
+                margin: 10px !important;
+            }
+        }
+        .previous-sites{
+            margin: 0  auto;
+            width: 40%;
+            img{
+                width: 50px;
+                margin: 10px;
+            }
+            .excel-2018{
+                width: 30px;
+            }
+            .excel-2016{
+                margin-left: -10px;
+            }
+        }
+        .social{
+            width: 100%;
+            svg{
+                width:15px;
+            }
+        }  
+    }
+    /* width */
+::-webkit-scrollbar {
+    width: 0px !important;
+  }
+  
+}
+@media only screen and (min-height: 750px) {
+    .home-body{
+        height: 220vh;
+    }
+}
+@media only screen and (min-height: 850px) {
+    .home-body{
+        height: 200vh;
+    }
+}
+@media only screen and (min-height: 950px) {
+    .home-body{
+        height: 180vh;
+    }
+}
+@media only screen and (min-height: 1050px) {
+    .home-body{
+        height: 150vh;
+    }
+}
+@media only screen and (min-height: 1150px) {
+    .home-body{
+        height: 120vh;
+    }
 }
