@@ -38,20 +38,12 @@ const RegisterButton = ({competition, hasRegistered, setHasRegistered, setActive
   if (!competition.needRegistration) return null;
 
   const onRegisterButtonClicked = () => {
-    if (!competition.isTeam) {
-      if (!hasRegistered) {
-        if (!window.confirm('Are you sure you want to register? This cannot be done')) {
-          return;
-        } else {
-          onRegisterClicked();
-        }
-      } else {
-        onRegisterClicked();
+    if (!competition.isTeam && !hasRegistered) {
+      if (!window.confirm('Confirm registeration ?')) {
+        return;
       }
-      onRegisterClicked();
-    } else {
-      onRegisterClicked();
     }
+    onRegisterClicked();
   };
 
   const onRegisterClicked = async () => {
