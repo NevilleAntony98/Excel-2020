@@ -3,7 +3,7 @@
 
 .schedulePopupContainer {
   margin: auto;
-  background: rgba(40, 38, 80, 0.938);
+  background: rgb(40, 38, 80);
   box-shadow: 0 5px 20px 0 rgba(4, 6, 44, 0.568);
   border-radius: 12px;
   padding: 40px;
@@ -71,12 +71,18 @@
   color: white;
   font-size: 1.3rem;
   cursor: pointer;
-  padding: 10px;
+  padding: 10px 20px;
   font-family: "Montserrat";
+  border: .0625rem solid #0086ce;
+  border-color:  #afd9f0;
+  border-radius: 15px;
   &:hover {
-    background: rgba(236, 207, 250, 0.623);
-    color: white;
-    transition: 0.5s;
+    background: rgba(255, 255, 255, 0.904);
+    color: black;
+    transition: 0.3s;
+  }
+  &:focus{
+    outline: none;
   }
   @include mobile-view {
     font-size: 1rem;
