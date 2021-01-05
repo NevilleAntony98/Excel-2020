@@ -39,7 +39,7 @@
     height: 100vh;
     border-radius: 0;
     padding: 0;
-    // overflow: scroll;
+    overflow: scroll;
   }
 
   @include mobile-view {
@@ -48,7 +48,7 @@
     height: 100vh;
     border-radius: 0;
     padding: 0;
-    // overflow: scroll;
+    overflow: scroll;
   }
 
   .popup-sidebar {
