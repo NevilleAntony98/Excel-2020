@@ -35,7 +35,7 @@
 
 /* width */
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 5px;
 }
 
 /* Track */
@@ -46,7 +46,9 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  // background: $color-excel;
+  @include desktop-view{
+    background: $color-excel;
+  }
   border-radius: 10px;
 }
 
