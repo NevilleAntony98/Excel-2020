@@ -352,7 +352,7 @@
       white-space: nowrap;
 
       @include mobile-view {
-        margin: 0 1rem;
+        margin: 0 10px;
         font-size: 17px;
         padding-bottom: 100px;
       }
@@ -369,7 +369,22 @@
           flex-direction: column;
           align-items: center;
           justify-content: center;
+          text-align: center;
       }
+      .venue {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 15rem;
+        // white-space: normal;
+        overflow-wrap: break-word;
+        text-align: center;
+        @include mobile-view {
+          white-space: normal;
+          // max-width: 120rem;
+        }
+    }
     }
 
     .about-extra-header {

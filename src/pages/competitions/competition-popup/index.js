@@ -61,12 +61,13 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
                     </span>}
                     </div>
                     <div className="about-extra-content" >
-                    {competition.datetime && <span className="date">
+                    {competition.datetime && <span className="venue">
                         {/* <img src={clock_icon} alt="time"></img> */}
                         <div className="about-extra-header">
-                            Time
+                            Platform
                         </div>
-                        <span style={{marginLeft:"5px"}}>{dayjs(competition.datetime).format('mm:ss a')}</span>
+                        {/* <span style={{marginLeft:"5px"}}>{dayjs(competition.datetime).format('mm:ss a')}</span> */}
+                        <span>{competition.venue}</span>
                     </span>}
                     </div>
                 </div>
