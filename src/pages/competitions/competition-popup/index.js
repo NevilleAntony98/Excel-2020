@@ -136,9 +136,9 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
                     <a href={competition.registrationLink} className="event-anchor-tag" target="_blank" rel="noreferrer">
                         <button className="event-register-button">{competition.button}</button>
                     </a>}
-                    {/* {competition.needRegistration && competition.registrationOpen && <div className="alt-register">
-                        <span> Unable to login? Clear cookies and try again </span>
-                    </div>} */}
+                    {competition.needRegistration && competition.registrationOpen && !competition.isTeam && <div className="alt-register">
+                        <span> !! Once registered, the process cannot be undone. </span>
+                    </div>}
                 </div>
                 <div className="popup-stack-switcher">
                     <ul className="popup-nav">
