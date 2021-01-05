@@ -466,6 +466,11 @@
           // align-items: center;
           }
         }
+        .email {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
         .phone {
           font-weight: 400;
           color: white;
