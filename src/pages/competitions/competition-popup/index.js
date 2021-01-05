@@ -100,6 +100,7 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
                         <span className="name"><img  src={contact} alt="contact" />{competition.eventHead1.name}</span>
                         {/* <a className="email" href={"mailto:" + competition.eventHead1.email}>{competition.eventHead1.email}</a> */}
                         <span className="role"> Event Head</span>
+                        <a href={"mailto:"+competition.eventHead1.email}><span className="email phone">{competition.eventHead1.email}</span></a>
                         <a href={"tel:"+competition.eventHead1.phoneNumber}><span className="phone">{competition.eventHead1.phoneNumber}</span></a>
                     </div>}
                 {competition.eventHead2 !== null &&
@@ -107,6 +108,7 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
                         <span className="name"><img  src={contact} alt="phone" />{competition.eventHead2.name}</span>
                         {/* <a className="email" href={"mailto:" + competition.eventHead2.email}>{competition.eventHead2.email}</a> */}
                         <span className="role"> Event Head</span>
+                        <a href={"mailto:"+competition.eventHead2.email}><span className="email phone">{competition.eventHead2.email}</span></a>
                         <a href={"tel:"+competition.eventHead2.phoneNumber}><span className="phone">{competition.eventHead2.phoneNumber}</span></a>
                     </div>}
             </div>

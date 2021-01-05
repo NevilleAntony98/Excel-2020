@@ -26,6 +26,7 @@ const EventPopup = ({ event, closeFunc }) => {
                             <span className="name"><img  src={contact} alt="phone" />{event.eventHead1.name}</span>
                             {/* <a className="email" href={"mailto:" + event.eventHead1.email}>{event.eventHead1.email}</a> */}
                             <span className="role"> Event Head</span>
+                            <a href={"mailto:"+event.eventHead1.email}><span className="email phone">{event.eventHead1.email}</span></a>
                             <span className="phone">{event.eventHead1.phoneNumber}</span>
                         </div>}
                     {event.eventHead2 !== null &&
@@ -33,6 +34,7 @@ const EventPopup = ({ event, closeFunc }) => {
                             <span className="name"><img  src={contact} alt="phone" />{event.eventHead2.name}</span>
                             {/* <a className="email" href={"mailto:" + event.eventHead2.email}>{event.eventHead2.email}</a> */}
                             <span className="role"> Event Head</span>
+                            <a href={"mailto:"+event.eventHead2.email}><span className="email phone">{event.eventHead2.email}</span></a>
                             <span className="phone">{event.eventHead2.phoneNumber}</span>
                         </div>}
                 </div>
