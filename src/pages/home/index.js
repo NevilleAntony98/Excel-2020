@@ -1,10 +1,10 @@
 import { Component } from 'react';
 import HomeAnimation from './HomeAnimation';
 import './style.scss';
-import litmus from '../../assets/png/litmus.png';
-import townscript from '../../assets/png/townscript.png';
-import eventoz from '../../assets/png/eventoz.png';
-import thenewindianexp from '../../assets/png/thenewindianexp.png';
+// import litmus from '../../assets/png/litmus.png';
+// import townscript from '../../assets/png/townscript.png';
+// import eventoz from '../../assets/png/eventoz.png';
+// import thenewindianexp from '../../assets/png/thenewindianexp.png';
 import college from '../../assets/png/college.png';
 import meclogo from '../../assets/png/meclogo.png';
 import excel2016 from '../../assets/png/excel2016.png';
@@ -20,7 +20,7 @@ export default class Home extends Component {
           <div className="home-body">
           <div className="home-sidebar-background-hide"></div>
             <HomeAnimation />
-            <div className="home-register">
+          {/*  <div className="home-register">
               Register
             </div>
             <div className="home-sponsers">
@@ -47,6 +47,7 @@ export default class Home extends Component {
             <div className="home-sections">
             
             </div>
+        */}
             <div className="home-legacy">
               <div className="mobile-dates">
                 <div><span><img className="tagline-icon" alt="calender" src={calendar}></img></span>Jan 29, 30, 31

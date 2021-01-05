@@ -1,3 +1,6 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
 .cls-1{isolation:isolate;}
 .cls-2{mix-blend-mode:screen;}
 .cls-3{fill:#2db9f7;}
@@ -12,7 +15,9 @@
   width: 100vw;
   margin-left: -120px;
   overflow-x: hidden;
-
+  @include mobile-view{
+    height: 100vh;
+  }
 }
 .svg-container{
   transform-style: preserve-3d;
@@ -361,8 +366,23 @@
   .excel-logo{
     width: 150px;
     left: 50%;
-    transform: translateX(-50%) translateY(50%);
+    transform: translateX(-50%) translateY(40%);
     filter:drop-shadow(0px 0px 30px rgb(1, 105, 88))
+  }
+  .glow{
+    transform-style: flat;
+    position: absolute;
+    width: 500px;
+    left: 9%;
+    top: 33%;
+  }
+  .rings{
+    width: 600px;
+    /* position: absolute;
+    left: 50%;
+    top: 200px;*/
+    overflow-y: hidden;
+    transform:perspective(400px) translateX(0%) translateY(-5%) rotateX(70deg);
   }
   .tagline{
     display: none;
