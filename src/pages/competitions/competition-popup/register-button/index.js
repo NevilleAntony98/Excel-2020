@@ -39,7 +39,7 @@ const RegisterButton = ({competition, hasRegistered, setHasRegistered, setActive
 
   const onRegisterButtonClicked = () => {
     if (!competition.isTeam && !hasRegistered) {
-      if (!window.confirm('Confirm registeration ?')) {
+      if (!window.confirm('Confirm registration ?')) {
         return;
       }
     }
