@@ -74,7 +74,7 @@ const EventPopup = ({ event, closeFunc }) => {
                         <span className="name">{event.name}</span>
                     </div>
                     {event.button !== null &&
-                    <a href={event.registrationLink} target="_blank" rel="noreferrer">
+                    <a href={event.registrationLink} className="event-anchor-tag" target="_blank" rel="noreferrer">
                         <button className="event-register-button">{event.button}</button>
                     </a>}
                 </div>

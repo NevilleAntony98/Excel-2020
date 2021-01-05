@@ -13,6 +13,12 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      max-width: 11rem;
+      overflow-wrap: break-word;
+      @include mobile-view {
+        max-width: 13rem;
+        margin-top: 10px;
+      }
       .name {
         margin-top: 30px !important;
       }
@@ -31,37 +37,67 @@
         margin: 0 !important;
         min-height: 7rem;
         min-width: 7rem;
+        object-fit: contain;
       }
       
     }
 
+    // .event-register-button {
+    //   cursor: pointer;
+    //   background-color: transparent;
+    //   color: white;
+    //   margin-top: 1rem;
+    //   padding: 0.5rem;
+    //   font-size: 1.3rem;
+    //   border-radius: 10px;
+    //   transition: 200ms ease-in-out;
+    //   border: .0625rem solid #afd9f0;
+    //   font-family: "Montserrat";
+      // &:focus{
+      //   outline: none !important;
+      // }
+    // }
+
     .event-register-button {
-      cursor: pointer;
       background-color: transparent;
       color: white;
+      margin: 0 2rem;
       margin-top: 1rem;
-      padding: 0.5rem 2.5rem;
-      font-size: 1.1rem;
+      padding: 0.5rem 1rem;
+      font-size: 1.3rem;
       border-radius: 10px;
+      font-family: "Montserrat";
+      border: 0.0625rem solid #0086ce;
+      border-color: #afd9f0;
+      cursor: pointer;
       transition: 200ms ease-in-out;
+      &:focus{
+        outline: none !important;
+      }
     }
-
     .event-register-button:hover {
       background-color: white;
       transform: scale(1.05);
       color: black;
+      outline: none;
     }
   }
   .event-about-section{
-    justify-content: left;
+    justify-content: left !important;
     text-align: left !important;
     margin-left: 20px;
   }
   .event-contacts{
    @include mobile-view
    { 
-     align-items: flex-start;
+     align-items: flex-start !important;
       line-height: 1.5rem;
       margin-left: 20px;}
   }
+  .role{
+    color: lightgreen;
+  }
+}
+.event-anchor-tag:focus{
+  outline: none;
 }

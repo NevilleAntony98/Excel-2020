@@ -15,25 +15,25 @@ const EventsContainer = () => {
     axios
       .get('https://events.excelmec.org/events')
       .then(res => {
-        let events = res.data.filter(event => event.eventType !== "competition")
+        let events = res.data.filter(event => event.eventType !== 'competition');
 
-        let promises = []
-        events.forEach((event) => {
-          promises.push(axios.get("https://events.excelmec.org/events/" + event.id))
-        })
+        let promises = [];
+        events.forEach(event => {
+          promises.push(axios.get('https://events.excelmec.org/events/' + event.id));
+        });
 
-        Promise.all(promises).then((responses) => {
-          let eventsData = []
-          responses.forEach((response) => {
-            eventsData.push(response.data)
-          })
+        Promise.all(promises).then(responses => {
+          let eventsData = [];
+          responses.forEach(response => {
+            eventsData.push(response.data);
+          });
 
-          setEventsData(eventsData)
-          setIsLoading(false)
-        })
+          setEventsData(eventsData);
+          setIsLoading(false);
+        });
       })
       .catch(err => console.log(err));
-  }, [])
+  }, []);
 
   return isLoading ? (
     <Loader />
@@ -42,7 +42,11 @@ const EventsContainer = () => {
       {eventsData.length === 0 ? (
         <DeadEnd title={'Nothing to see here'} subtitle={'Oops something went wrong :('} />
       ) : (
-        eventsData.map((item, id) => <EventCard key={item.id} event={item} />)
+        eventsData
+          .sort((a, b) => {
+            return a.name.localeCompare(b.name);
+          })
+          .map((item, id) => <EventCard key={item.id} event={item} />)
       )}
     </div>
   );

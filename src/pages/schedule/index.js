@@ -4,7 +4,7 @@ import ScheduleMain from './ScheduleMain';
 
 const Schedule = () => {
   return (
-    <div>
+    <div style={{position: 'relative'}}>
       <HeaderBar title="Schedule" subtitle="Excel 2020" />
       <ScheduleMain />
       {/* <Background /> */}

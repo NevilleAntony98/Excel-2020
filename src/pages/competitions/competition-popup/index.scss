@@ -90,6 +90,12 @@
         height: auto;
         fill: white;
         right: 10px;
+        @include mobile-view {
+          position: relative;
+          right: -10px;
+          top: 0px;
+          width: 4rem;
+        }
       }
     }
 
@@ -114,6 +120,9 @@
           max-width: 8rem;
           border: none;
           box-shadow:  none;
+          @include mobile-view {
+            margin-top: 0;
+          }
         }
 
         .name {
@@ -127,8 +136,40 @@
             font-size: 2rem !important;
           }
         }
+        
+    }
+    .event-anchor-tag{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+    }
+    .event-register-button {
+      
+      background-color: transparent;
+      color: white;
+      margin: 0 2rem;
+      margin-top: 1rem;
+      padding: 0.5rem 2.5rem;
+      font-size: 1.3rem;
+      border-radius: 10px;
+      font-family: "Montserrat";
+      border: 0.0625rem solid #0086ce;
+      border-color: #afd9f0;
+      cursor: pointer;
+      transition: 200ms ease-in-out;
+      &:focus{
+        outline: none !important;
       }
-
+  }
+  .event-register-button:hover {
+    background-color: white;
+    transform: scale(1.05);
+    color: black;
+    outline: none;
+  }
+    
+    
       .reg-prize-box {
         display: flex;
         flex-direction: column;
@@ -145,19 +186,22 @@
       }
 
       .alt-register {
-        margin-top: 25px;
-        text-align: center;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%; 
+        font-style: italic;
+        
         @include mobile-view {
           margin-top: 10px;
           margin-bottom: 15px;
+          font-size: 15px;
         }
-        a{
+        span{
+          max-width: 15rem;
           color: white;
-          text-decoration: underline;
-          &:hover{
-            color: lightgreen;
-            cursor: pointer;
-          }
+          text-align: center;
         }
       }
     }
@@ -304,12 +348,12 @@
       align-items: center;
       justify-content: center;
       margin: 2rem 5rem;
-      font-size: 25px;
+      font-size: 18px;
       white-space: nowrap;
 
       @include mobile-view {
-        margin: 0 1rem;
-        font-size: 20px;
+        margin: 0 10px;
+        font-size: 17px;
         padding-bottom: 100px;
       }
 
@@ -325,11 +369,26 @@
           flex-direction: column;
           align-items: center;
           justify-content: center;
+          text-align: center;
       }
+      .venue {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 15rem;
+        // white-space: normal;
+        overflow-wrap: break-word;
+        text-align: center;
+        @include mobile-view {
+          white-space: normal;
+          // max-width: 120rem;
+        }
+    }
     }
 
     .about-extra-header {
-      font-size: 30px;
+      font-size: 25px;
       font-weight: 700;
       color: lightgreen;
       padding-bottom: 20px;
@@ -341,7 +400,7 @@
 
     .section {
       margin: 2rem;
-      font-size: 22px;
+      font-size: 19px;
 
       @include mobile-view {
         font-size: 17px;
@@ -358,20 +417,23 @@
       display: flex;
       justify-content: center;
 
+
       @include mobile-view {
         margin-top: 0rem;
         flex-direction: column;
+        // align-items: center;
       }
 
       div {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        // align-items: center;
+        align-items: flex-start;
         margin: 1.5rem 5rem;
 
         @include mobile-view{
           margin: 20px 0;
+          margin-top: 0px;
         }
 
         img {
@@ -379,7 +441,7 @@
           padding-right: 10px;
         }
         .name {
-          font-size: 1.5rem;
+          font-size: 20px;
           font-weight: 400;
           display: flex;
           justify-content: center;
@@ -398,6 +460,11 @@
 
         .role {
           color: lightgreen;
+          @include mobile-view {
+          //   display: flex;
+          // justify-content: center;
+          // align-items: center;
+          }
         }
         .phone {
           font-weight: 400;
@@ -407,6 +474,11 @@
           &:hover{
             text-decoration: underline;
             cursor: pointer;
+          }
+          @include mobile-view {
+          //   display: flex;
+          // justify-content: center;
+          // align-items: center;
           }
         }
       }

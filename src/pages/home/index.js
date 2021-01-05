@@ -1,10 +1,10 @@
 import { Component } from 'react';
 import HomeAnimation from './HomeAnimation';
 import './style.scss';
-import litmus from '../../assets/png/litmus.png';
-import townscript from '../../assets/png/townscript.png';
-import eventoz from '../../assets/png/eventoz.png';
-import thenewindianexp from '../../assets/png/thenewindianexp.png';
+// import litmus from '../../assets/png/litmus.png';
+// import townscript from '../../assets/png/townscript.png';
+// import eventoz from '../../assets/png/eventoz.png';
+// import thenewindianexp from '../../assets/png/thenewindianexp.png';
 import college from '../../assets/png/college.png';
 import meclogo from '../../assets/png/meclogo.png';
 import excel2016 from '../../assets/png/excel2016.png';
@@ -12,14 +12,15 @@ import excel2017 from '../../assets/png/excel2017.png';
 import excel2018 from '../../assets/png/excel2018.png';
 import excel2019 from '../../assets/png/excel2019.png';
 import excel2020withtext from '../../assets/png/excel2020withtext.png';
-
+import calendar from '../../assets/svg/calendar.svg';
+import location from '../../assets/svg/pin.svg';
 export default class Home extends Component {
     render() {
         return (
           <div className="home-body">
           <div className="home-sidebar-background-hide"></div>
             <HomeAnimation />
-            <div className="home-register">
+          {/*  <div className="home-register">
               Register
             </div>
             <div className="home-sponsers">
@@ -46,12 +47,19 @@ export default class Home extends Component {
             <div className="home-sections">
             
             </div>
+        */}
             <div className="home-legacy">
+              <div className="mobile-dates">
+                <div><span><img className="tagline-icon" alt="calender" src={calendar}></img></span>Jan 29, 30, 31
+                </div>
+                <div><span><img className="tagline-icon" alt="pin" src={location}></img></span>Virtual
+                </div>
+              </div>
               <h1>LEGACY</h1>
               <div className="legacy-container">
                 <img src={college} alt=""/>
                 <p>
-                Excel, the nation’s second and South India’s first ever fest of its kind, was started in 2001 by the students of Govt. Model Engineering College. The aim was simple: to inspire, innovate, engineer. Over the years, Excel has grown exponentially, consistently playing host to some of the most talented students, the most illustrious speakers and the most reputed companies. Now gearing towards the landmark 20th edition, Excel continues to excite the participants with its wide array of technical and non-technical events and with a promise to live up to its motto.<span className="hide-mobile">What sets Excel apart is the drive towards delivering excellence in all aspects. Excel is renowned for the dynamic nature of events and active participation amongst the student community. Excel 2019 incorporates a wide variety of technical, managerial and general events which includes both online and onsite competitions, workshops, summits, hackathons, exhibitions and so on.</span> 
+                Excel, the nation’s second and South India’s first ever fest of its kind, was started in 2001 by the students of Govt. Model Engineering College. The aim was simple: to inspire, innovate, engineer. Over the years, Excel has grown exponentially, consistently playing host to some of the most talented students, the most illustrious speakers and the most reputed companies. Now gearing towards the landmark 21st edition, Excel continues to excite the participants with its wide array of technical and non-technical events and with a promise to live up to its motto.<span className="hide-mobile">&nbsp;What sets Excel apart is the drive towards delivering excellence in all aspects. Excel is renowned for the dynamic nature of events and active participation amongst the student community. Excel 2020 incorporates a wide variety of technical, managerial and general events which includes competitions, workshops, summits, hackathons, exhibitions and so on.</span> 
                 </p>
               </div>
               <div className="college-excel-logo">

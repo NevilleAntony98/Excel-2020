@@ -4,9 +4,13 @@
 .competition-grid {
   position: relative;
   z-index: 101;
-  padding: 0 6vw;
-  padding-bottom: 70px;
-
+  @include desktop-view{
+    padding: 0 6vw;
+    padding-bottom: 70px;
+  }
+  @include mobile-view {
+    // margin: 0 20px !important;
+  }
   .sort-filter-box {
     display: grid;
     grid-template-columns: auto auto;
@@ -15,13 +19,21 @@
     gap: 5rem;
     margin-left: 40px;
 
+    @include tablet-view {
+      // margin-left: 0px;
+      font-size: 0.75rem;
+      display: flex;
+      justify-content: center;
+    }
     @include mobile-view {
       // grid-template-columns: auto auto;
       // grid-template-rows: auto;
       // justify-content: space-between;
-      // gap: 0.6rem;
+      gap: 0rem;
+      padding: 1.5rem 0px;
+      
       margin-left: 0px;
-      font-size: 0.75rem;
+      font-size: 12px;
       display: flex;
       justify-content: center;
     }
@@ -55,8 +67,14 @@
         backdrop-filter: blur(10.5px);
       } 
 
+      @include tablet-view{
+        @include mobile-view {
+          max-width: 7rem;
+        }
+      }
       @include mobile-view {
         max-width: 7rem;
+        margin: 0 30px;
       }
     }
   }
@@ -71,9 +89,16 @@
     padding: 1.5rem 0;
 
     @include mobile-view {
-      grid-template-columns: repeat(1, 1fr);
       padding: 20px 0px;
-      margin-left: 15px;
+      // margin-left: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      // padding: 0 20px;
+      // &::after {
+      //   content: "";
+      //   flex: auto;
+      // }
     }
 
     @include tablet-view {
@@ -196,6 +221,20 @@
   }
 }
 
+// @media screen and (max-width:870px){
+// 	.competition-cards-container {
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr) !important;
+//   }
+// }
+
+@media screen and (max-width:850px){
+	.competition-cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
 
 @media screen and (max-width:580px){
   .competition-grid {
@@ -204,6 +243,6 @@
   }
 	.competition-cards-container {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1.25rem 0rem !important;
+    gap: 0rem!important;
   }
 }

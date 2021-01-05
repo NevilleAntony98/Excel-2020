@@ -4,12 +4,12 @@
 .scheduleCardContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
-  border-radius: 6px;
-  padding: 24px 0;
-  margin: 24px 0;
+  border-radius: 20px;
+  padding: 0.5rem 50px;
+  margin: 20px 0;
   // background: linear-gradient(145deg, #5bc6ff, #4da7db);
   // box-shadow: 5px 5px 15px #224a61, -5px -5px 15px #88ffff;
   // box-shadow:  6px 6px 12px $shadow-dark,-6px -6px 12px $shadow-light !important; // much darker than original then lighter than original
@@ -27,8 +27,10 @@
   // background: rgba(195, 138, 221, 0.233) !important;
   // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   // border-radius: 20px;
-  // -webkit-backdrop-filter: blur(10.5px);
-  // backdrop-filter: blur(10.5px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background: rgba(217, 177, 250, 0.233);
+  -webkit-backdrop-filter: blur(10.5px);
+  backdrop-filter: blur(10.5px);
   color: white;
 
   @include desktop-view {
@@ -38,18 +40,39 @@
     }
   }
 }
-
+/* no support backdrop-filter */
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .scheduleCardContainer {
+    background: rgba(189, 185, 243, 0.281);
+    box-shadow: 0 5px 20px 0 rgba(4, 6, 44, 0.568);
+    // background: rgba(195,138,221,0.233);
+    // box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+  }
+}
 .scheduleCardTime {
   font-size: 1.4rem;
   text-transform: uppercase;
 }
 
+.scheduleContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // min-width: 12rem;
+  // @include mobile-view {
+  //   min-width: 7.5rem;
+  // }
+  width: max-content;
+}
 .scheduleCardTitle {
   // color: $color-title-dark;
   color: white;
   font-variant-caps: petite-caps;
   font-size: 1.4rem;
   font-weight: 700;
+  // max-width: 9rem;
+  white-space: nowrap;
 }
 
 .scheduleCardEventType {
@@ -57,6 +80,7 @@
   text-transform: capitalize;
   font-variant-caps: petite-caps;
   font-size: 1.1rem;
+  width: max-content;
 }
 
 .scheduleCardDay {
@@ -64,61 +88,79 @@
 }
 
 .scheduleflipIconbg {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 1);
   border-radius: 12px;
   // box-shadow: 5px 5px 7px $shadow-dark, -5px -5px 7px $shadow-light;
   display: flex;
   justify-content: center;
   align-items: center;
-  // min-height: 7rem;
-  // min-width: 7rem;
+  height: 7rem;
+  width: 7rem;
   // margin: auto;
-  padding: 1.25rem;
-
   @include mobile-view {
-    padding: 10px;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 3px;
   }
 }
 
 .scheduleflipIcon {
   // background-color: white;
   // border-radius: 50%;
-  
+
   // padding: 20px;
 
-  max-width: 7.2rem;
-  max-height: 7.2rem;
+  max-width: 6rem;
+  max-height: 6rem;
 
   @include mobile-view {
-    max-width: 4rem;
-    max-height: 4rem;
+    max-width: 3rem;
+    max-height: 3rem;
   }
 }
 
-@media only screen and (max-width:980px) {
+@media only screen and (max-width: 980px) {
+  .scheduleCardContainer {
+    margin: 12px 0;
+  }
+  .scheduleCardTime {
+    font-size: 0.8rem;
+  }
 
-.scheduleCardContainer {
-  margin: 12px 0;
-}
-.scheduleCardTime {
-  font-size: 0.8rem;
-}
+  .scheduleCardTitle {
+    // color: $color-title-dark;
+    // color: $color-black;
+    font-variant-caps: petite-caps;
+    font-size: 1rem;
+  }
 
-.scheduleCardTitle {
-  // color: $color-title-dark;
-  // color: $color-black;
-  font-variant-caps: petite-caps;
-  font-size: 1rem;
-}
+  .scheduleCardEventType {
+    text-transform: capitalize;
+    font-variant-caps: petite-caps;
 
-.scheduleCardEventType {
-  text-transform: capitalize;
-  font-variant-caps: petite-caps;
-  font-size: 0.8rem;
-}
+    @include mobile-view {
+      font-size: 13px;
+      // max-width: 8rem;
+      overflow: hidden;
+    }
+  }
 
-.scheduleCardDay {
-  font-size: 20px;
+  .scheduleCardDay {
+    font-size: 20px;
+  }
 }
-
+@media only screen and (max-width: 650px) {
+  .scheduleCardContainer {
+    padding: 0.5rem 30px;
+  }
+}
+@media only screen and (max-width: 390px) {
+  .scheduleCardContainer {
+    padding: 0.5rem 15px;
+  }
+}
+@media only screen and (max-width: 390px) {
+  .scheduleCardContainer {
+    padding: 0.5rem 10px;
+  }
 }

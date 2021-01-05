@@ -61,12 +61,13 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
                     </span>}
                     </div>
                     <div className="about-extra-content" >
-                    {competition.datetime && <span className="date">
+                    {competition.datetime && <span className="venue">
                         {/* <img src={clock_icon} alt="time"></img> */}
                         <div className="about-extra-header">
-                            Time
+                            Platform
                         </div>
-                        <span style={{marginLeft:"5px"}}>{dayjs(competition.datetime).format('mm:ss a')}</span>
+                        {/* <span style={{marginLeft:"5px"}}>{dayjs(competition.datetime).format('mm:ss a')}</span> */}
+                        <span>{competition.venue}</span>
                     </span>}
                     </div>
                 </div>
@@ -131,9 +132,13 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
                             setHasRegistered={setHasRegistered}
                             setActiveSection={setActiveSection} />
                     </div>
-                    {/* {competition.needRegistration && competition.registrationOpen && <div className="alt-register">
-                        <a href={competition.registrationLink} target="_blank" rel="noreferrer">Unable to register? Click here</a>
-                    </div>} */}
+                    {competition.button !== null &&
+                    <a href={competition.registrationLink} className="event-anchor-tag" target="_blank" rel="noreferrer">
+                        <button className="event-register-button">{competition.button}</button>
+                    </a>}
+                    {competition.needRegistration && competition.registrationOpen && !competition.isTeam && <div className="alt-register">
+                        <span> !! Once registered, the process cannot be undone. </span>
+                    </div>}
                 </div>
                 <div className="popup-stack-switcher">
                     <ul className="popup-nav">

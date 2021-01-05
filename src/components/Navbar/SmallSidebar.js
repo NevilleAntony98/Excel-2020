@@ -11,7 +11,7 @@ import './SmallSidebar.css';
 import home from '../../assets/svg/home.svg';
 import competitions from '../../assets/svg/competitions.svg';
 import events from '../../assets/svg/events.svg';
-import schedule from '../../assets/svg/calendar.svg';
+import schedule from '../../assets/svg/schedule.svg';
 import contacts from '../../assets/svg/contacts.svg';
 // import logoutpic from '../../assets/svg/icons8-export-50.png';
 
@@ -29,7 +29,7 @@ const SmallSidebar = ({ setIsSidebarOpen }) => {
 
         <NavProfileIcon isMobile={false}/>
 
-        <NavLink to="/" style={{ textDecoration: 'none' }} >
+        <NavLink exact to="/" style={{ textDecoration: 'none' }} activeClassName="smallSidebarActive" >
           <div className="smallSidebarLink">
             <img alt="home" src={home} className="smallSidebarIcon" />
             <span className="toolTip backdrop-filter-blur">

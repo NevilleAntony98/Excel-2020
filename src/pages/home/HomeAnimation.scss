@@ -1,3 +1,6 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
 .cls-1{isolation:isolate;}
 .cls-2{mix-blend-mode:screen;}
 .cls-3{fill:#2db9f7;}
@@ -12,7 +15,9 @@
   width: 100vw;
   margin-left: -120px;
   overflow-x: hidden;
-
+  @include mobile-view{
+    height: 100vh;
+  }
 }
 .svg-container{
   transform-style: preserve-3d;
@@ -242,8 +247,8 @@
     filter:drop-shadow(0px 0px 30px rgb(1, 105, 88))
   }
   .tagline{
-    left:18%;
-    transform: translateX(-18%) translateY(130%);
+    left:15%;
+    transform: translateX(-15%) translateY(130%);
     font-size: 25px;
     div{
       margin: 7px 0;
@@ -274,8 +279,8 @@
     filter:drop-shadow(0px 0px 30px rgb(1, 105, 88))
   }
   .tagline{
-    left:18%;
-    transform: translateX(-18%) translateY(150%);
+    left:14%;
+    transform: translateX(-14%) translateY(150%);
     font-size: 22px;
     div{
       margin: 5px 0;
@@ -300,7 +305,7 @@
 }
 @media only screen and (max-width: 700px) {
   .excel-logo{
-    width: 120px;
+    width: 110px;
     left: 50%;
     transform: translateX(-50%) translateY(75%);
     filter:drop-shadow(0px 0px 30px rgb(1, 105, 88))
@@ -310,23 +315,23 @@
     /* position: absolute;
     left: 50%;
     top: 200px;*/
-    transform:perspective(400px) translateX(0%) translateY(5%) rotateX(70deg);
+    transform:perspective(400px) translateX(0%) translateY(0%) rotateX(70deg);
   }
   .tagline{
-    left:18%;
-    transform: translateX(-18%) translateY(180%);
+    left:15%;
+    transform: translateX(-15%) translateY(120%);
     font-size: 18px;
     div{
       margin: 2px 0;
     }
     .tagline-icon{
       width: 20px;
-      margin:5px 10px 0 0; 
+      margin:5px 5px 0 0; 
     }
   }
   .home-dates{
     right: 10%;
-    transform: translateX(25%) translateY(300%);
+    transform: translateX(25%) translateY(210%);
     font-size: 18px;
     div{
       margin: 2px 0;
@@ -350,6 +355,13 @@
   .desktop-logo{
     opacity: 0;
   }
+  .glow{
+    transform-style: flat;
+    position: absolute;
+    width: 500px;
+    left: 9%;
+    top: 36%;
+  }
   .tagline{
     display: none;
   }
@@ -361,13 +373,43 @@
   .excel-logo{
     width: 150px;
     left: 50%;
-    transform: translateX(-50%) translateY(50%);
+    transform: translateX(-50%) translateY(40%);
     filter:drop-shadow(0px 0px 30px rgb(1, 105, 88))
+  }
+  .glow{
+    transform-style: flat;
+    position: absolute;
+    width: 500px;
+    left: 9%;
+    top: 33%;
+  }
+  .rings{
+    width: 600px;
+    /* position: absolute;
+    left: 50%;
+    top: 200px;*/
+    overflow-y: hidden;
+    transform:perspective(400px) translateX(0%) translateY(-5%) rotateX(70deg);
   }
   .tagline{
     display: none;
   }
   .home-dates{
     display: none;
+  }
+}
+@media only screen and (min-height: 950px) {
+  .home-animation-container{
+    height: 180vh;
+  }
+}
+@media only screen and (min-height: 1050px) {
+  .home-animation-container{
+    height: 150vh;
+  }
+}
+@media only screen and (min-height: 1150px) {
+  .home-animation-container{
+    height: 120vh;
   }
 }

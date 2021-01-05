@@ -3,20 +3,56 @@
 
 .schedulePopupContainer {
   margin: auto;
-  background: white;
-  box-shadow: 5px 5px 15px #004e7a, -5px -5px 15px #002442;
+  background: rgb(40, 38, 80);
+  box-shadow: 0 5px 20px 0 rgba(4, 6, 44, 0.568);
   border-radius: 12px;
-  padding: 24px;
+  padding: 40px;
+  font-family: "Montserrat";
+  // width: fit-content;
+  margin-left: -25rem;
+  width: 58rem;
+  @include tablet-view {
+    width: 30rem;
+    margin-left: -12rem;
+  }
+  @include mobile-view {
+    max-height: 80vh;
+    // overflow: scroll;
+    margin-top: -60px;
+    padding: 0px;
+    padding-bottom: 20px;
+    padding-right: 5px;
+    width: 20rem;
+    margin-left: -3rem;
+
+  }
+}
+.schedule-popup-content {
+  @include mobile-view{
+    width: 260px;
+    max-height: 60vh;
+    overflow: scroll;
+    padding: 30px;
+  }
 }
 .schedulePopupTitle {
+  color: white;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding: 4px;
+  margin-top: 2rem;
+  @include mobile-view {
+    margin-top: 10px;
+    max-height: 80vh;
+    // overflow: scroll;
+  }
 }
+
 .schedulePopupOptionsContainer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   text-align: center;
+  margin-top: 20px;
 
   @include mobile-view {
     grid-template-columns: repeat(1, 1fr);
@@ -30,4 +66,56 @@
   display: flex;
   justify-self: end;
   margin: 12px 0 0 auto;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-family: "Montserrat";
+  border: .0625rem solid #0086ce;
+  border-color:  #afd9f0;
+  border-radius: 15px;
+  &:hover {
+    background: rgba(255, 255, 255, 0.904);
+    color: black;
+    transition: 0.3s;
+  }
+  &:focus{
+    outline: none;
+  }
+  @include mobile-view {
+    font-size: 1rem;
+    margin-right: 20px;
+    // margin-bottom: 20px;
+
+  }
+}
+.close-container-mobile {
+  // display: none;
+    display: flex;
+    flex-direction: row-reverse ;
+
+  @include desktop-view {
+    padding-top: -20px;
+    padding-right: 15px;
+  }
+
+  .close-button {
+    fill: white;
+    position: fixed;
+    width: 3.7rem;
+    height: auto;
+    cursor: pointer;
+
+    transition: 100ms ease-in-out;
+    @include mobile-view {
+      width: 2.7rem;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      fill: lightgreen;
+    }
+  }
 }

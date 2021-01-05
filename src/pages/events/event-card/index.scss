@@ -104,6 +104,9 @@
         // min-width: 8rem;
         
       }
+      @include mobile-view{
+        font-size: 30px !important;
+      }
     }
 
     .eventCardInfo {
@@ -112,7 +115,7 @@
       // max-height: 4.6rem;
       overflow: hidden;
       white-space: pre-line;
-      font-size: 23px;
+      font-size: 19px;
       
 
     //   &:after {
@@ -141,6 +144,10 @@
   .eventCardHeaderBox {
     gap: 80px;
     padding-top: 0.5rem;
+    padding-left: 25px;
+    @include mobile-view {
+      padding-left: 0px;
+    }
 
     .eventCardType {
       opacity: 0.7;
@@ -165,13 +172,14 @@
 
 
   .eventInfoBox {
+    margin-left: 1rem;
     .eventCardTitle {
-      font-size: 35px !important;
+      font-size: 30px !important;
     }
 
     .eventCardInfo {
-      font-size: 23px;
-      margin: 1rem 0;
+      font-size: 16px !important;
+      margin: 1rem 0 !important;
   }
 }
 }
@@ -193,10 +201,13 @@
     .eventInfoBox {
       margin-top: 5px;
       margin-left: 0;
-    
+      
+      .eventCardTitle {
+        font-size: 23px !important;
+      }
       .eventCardInfo {
         margin-top: 1rem;
-        font-size: 18px;
+        font-size: 15px !important;
         // max-height: 6.6rem;
 
       //   &:after {

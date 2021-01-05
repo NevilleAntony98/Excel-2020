@@ -1,33 +1,36 @@
 @import '../../sass/variables';
 @import '../../sass/mixins';
 
-.home-register{
-  display: none;
-  gap: 2rem;
-  padding: 2rem;
-  width: fit-content;
-  margin: 50px auto;
-  font-size: larger;
-  font-weight: bolder;
-  text-transform: uppercase;
-  border-radius: 8px;
-  color: black;
-  background: #c2eaff;
-  box-shadow:  6px 6px 12px #87c6e7,
-              -6px -6px 12px #f0faff;
+// .home-register{
+//   display: none;
+//   gap: 2rem;
+//   padding: 2rem;
+//   width: fit-content;
+//   margin: 50px auto;
+//   font-size: larger;
+//   font-weight: bolder;
+//   text-transform: uppercase;
+//   border-radius: 8px;
+//   color: black;
+//   background: #c2eaff;
+//   box-shadow:  6px 6px 12px #87c6e7,
+//               -6px -6px 12px #f0faff;
 
-  @include desktop-view {
-    transition: 0.3s;
-    &:hover {
-      box-shadow: 9px 9px 18px #5fa6cc, -9px -9px 18px #ffffff;
-      transform: scale(1.01);
-    }
-  }
+//   @include desktop-view {
+//     transition: 0.3s;
+//     &:hover {
+//       box-shadow: 9px 9px 18px #5fa6cc, -9px -9px 18px #ffffff;
+//       transform: scale(1.01);
+//     }
+//   }
 
-}
+// }
 .home-body{
     height: 240vh;
     background-color:#02011f;
+    @include mobile-view{
+        height: fit-content;
+    }
 }
 .home-sidebar-background-hide{
     background-color:#02011f;
@@ -37,49 +40,49 @@
     width: 200px;
     height: 50vh;
 }
-.home-sponsers{
-    display: none;
-    padding: 40px;
-    .sponsers-grid{
-        display: grid;
-        grid-template-columns: repeat(4,minmax(0, 1fr));
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        grid-gap:70px;
-        .sponser-container{
-            display: flex;
-            flex-wrap: wrap;
-            padding: 40px;
-            align-content: space-between;
-            justify-content: center;
-            align-items: center;
-            height: min-content;
-            background: #c2eaff;
-            box-shadow:  6px 6px 12px #87c6e7,
-                      -6px -6px 12px #f0faff;
-            img{
-                width: 250px;
-            }
-            h1{
-                font-size: 20px;
-            }
-            @include desktop-view {
-                transition: 0.3s;
-                &:hover {
-                  box-shadow: 9px 9px 18px #5fa6cc, -9px -9px 18px #ffffff;
-                  transform: scale(1.01);
-                }
-              }
-        }
-    }
-}
+// .home-sponsers{
+//     display: none;
+//     padding: 40px;
+//     .sponsers-grid{
+//         display: grid;
+//         grid-template-columns: repeat(4,minmax(0, 1fr));
+//         justify-content: center;
+//         align-items: center;
+//         align-content: center;
+//         grid-gap:70px;
+//         .sponser-container{
+//             display: flex;
+//             flex-wrap: wrap;
+//             padding: 40px;
+//             align-content: space-between;
+//             justify-content: center;
+//             align-items: center;
+//             height: min-content;
+//             background: #c2eaff;
+//             box-shadow:  6px 6px 12px #87c6e7,
+//                       -6px -6px 12px #f0faff;
+//             img{
+//                 width: 250px;
+//             }
+//             h1{
+//                 font-size: 20px;
+//             }
+//             @include desktop-view {
+//                 transition: 0.3s;
+//                 &:hover {
+//                   box-shadow: 9px 9px 18px #5fa6cc, -9px -9px 18px #ffffff;
+//                   transform: scale(1.01);
+//                 }
+//               }
+//         }
+//     }
+// }
 .home-legacy{
     position: absolute;
-    transform: translateX(1%);
+    transform: translateX(5%);
     top: 45%;
-    width: 85%;
-    padding: 40px;
+    width: 80%;
+    padding: 40px 0;
     background: rgba( 13, 11, 41, 0.80 );
     /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
     border: 1px solid rgba( 255, 255, 255, 0.18 );
@@ -88,22 +91,31 @@
     border-radius: 20px;
     color: white;
     box-shadow: 10px -90px 90px #02011f !important;
+    .mobile-dates{
+        display: none;
+        align-items: center;
+        align-content: center;
+        justify-content: space-around;
+        font-weight: bold;
+    }
     h1{
         font-size: 35px;
         letter-spacing: 1px;
         font-weight: bolder;
+        margin-left: 40px;
     }
     .legacy-container{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0 40px;
         img{
             width: 30%;
         }
         p{
             width: 67%;
-            font-size: 18px;
-            line-height: 27px;
+            font-size: 16px;
+            line-height: 25px;
             .hide-mobile{
                 @include mobile-view{
                     display: none;
@@ -171,19 +183,19 @@
     }
     .social{
         background-color: rgba(255, 255, 255, 0.178) !important;
-        padding: 20px !important;
-        width: calc(100% + 40px) !important;
-        margin-left: -40px;
+        padding: 10px 0 !important;
+        width: 100%;
+        // width: calc(100% + 40px) !important;
+        // margin-left: -40px;
         margin-top: 40px;
     }
 }
 
 @media only screen and (max-width: 1200px) {
     .home-legacy{
-        transform: translateX(-1%);
+        transform: translateX(5%);
         top: 45%;
-        width: 85%;
-        padding: 40px;
+        width: 80%;
     }
 }
 @media only screen and (max-width: 1100px) {
@@ -191,20 +203,26 @@
 }
 @media only screen and (max-width: 1000px) {
     .home-legacy{
-        transform: translateX(-1%);
+        transform: translateX(5%);
         top: 45%;
-        width: 85%;
-        padding: 30px;
+        width: 80%;
+        padding: 30px 0;
     }
     .social{
         background-color: rgba(255, 255, 255, 0.178) !important;
-        padding: 20px !important;
-        width: calc(100% + 30px) !important;
-        margin-left: -30px !important;
+        padding: 20px;
+        width: calc(100% + 30px);
+        margin-left: -30px;
         margin-top: 40px;
     }
 }
 @media only screen and (max-width: 900px) {
+    .home-legacy{
+        transform: translateX(8%);
+        top: 45%;
+        width: 75%;
+        padding: 30px 0;
+    }
     .legacy-container{
         flex-direction: column;
         margin-top: 40px;
@@ -214,13 +232,19 @@
         p{
             margin-top: 50px;
             width: 80% !important;
-            font-size: 18px;
-            line-height: 27px;
+            font-size: 14px;
+            line-height: 25px;
             text-align: justify;
         }
     }
 }
 @media only screen and (max-width: 800px) {
+    .home-legacy{
+        transform: translateX(5%);
+        top: 45%;
+        width: 75%;
+        padding: 30px 0;
+    }
     .college-excel-logo{
         margin: 0  auto;
         width: 40%;
@@ -242,9 +266,18 @@
         .excel-2016{
             margin-left: -10px;
         }
-    }    
+    }
 }
 @media only screen and (max-width: 700px) {
+    .home-legacy{
+        transform: translateX(6%);
+        top: 45%;
+        width: 70%;
+        padding: 30px 0;
+    }
+    .legacy-container{
+        padding: 30px;
+    }
     .college-excel-logo{
         margin: 0  auto;
         width: 40%;
@@ -256,12 +289,32 @@
 }
 @media only screen and (max-width: 600px) {
     .home-legacy{
-        transform: translateX(2.5%);
-        top: 45%;
-        width: 95%;
-        padding: 40px 0px 100px 0px;
+        transform: translateX(5.5%);
+        top: 100vh;
+        width: 90%;
+        padding: 50px 0px 100px 0px;
+        .legacy-container{
+            padding: 0;
+        }
+        .mobile-dates{
+            // width: 100%;
+            display: flex;
+            font-size: 20px;
+            color: white;
+            background-color: rgba(186, 130, 238, 0.26);
+            padding: 10px;
+            margin-bottom: 50px;
+            div{
+                margin: 7px 0;
+              }
+              .tagline-icon{
+                width: 20px;
+                margin:5px 10px 0 0; 
+              }
+        }
         h1{
-            margin-left: 40px;
+            text-align: center;
+            margin-left: 0;
         }
         .college-excel-logo{
             margin: 0  auto;
@@ -286,13 +339,101 @@
             }
         }
         .social{
-            background-color: rgba(255, 255, 255, 0.178) !important;
-            padding: 20px 0 !important;
-            width: 100% !important;
-            margin-left: 0px !important;
-            margin-top: 40px;
-            margin-right: 0 !important;
-
-        }    
+            width: 100%;
+        }  
+    }
+    /* width */
+::-webkit-scrollbar {
+    width: 0px !important;
+  }
+  
+}
+@media only screen and (max-width: 350px) {
+    .home-legacy{
+        transform: translateX(5.5%);
+        top: 100vh;
+        width: 90%;
+        padding: 50px 0px 100px 0px;
+        .legacy-container{
+            padding: 0;
+        }
+        .mobile-dates{
+            // width: 100%;
+            display: flex;
+            font-size: 16px;
+            color: white;
+            background-color: rgba(186, 130, 238, 0.26);
+            padding: 10px;
+            margin-bottom: 50px;
+            div{
+                margin: 7px 0;
+              }
+              .tagline-icon{
+                width: 15px;
+                margin:5px 10px 0 0; 
+              }
+        }
+        h1{
+            text-align: center;
+            margin-left: 0;
+        }
+        .college-excel-logo{
+            margin: 0  auto;
+            width: 40%;
+            img{
+                width: 120px !important;
+                margin: 10px !important;
+            }
+        }
+        .previous-sites{
+            margin: 0  auto;
+            width: 40%;
+            img{
+                width: 50px;
+                margin: 10px;
+            }
+            .excel-2018{
+                width: 30px;
+            }
+            .excel-2016{
+                margin-left: -10px;
+            }
+        }
+        .social{
+            width: 100%;
+            svg{
+                width:15px;
+            }
+        }  
+    }
+    /* width */
+::-webkit-scrollbar {
+    width: 0px !important;
+  }
+  
+}
+// @media only screen and (min-height: 750px) {
+//     .home-body{
+//         height: 220vh;
+//     }
+// }
+// @media only screen and (min-height: 850px) {
+//     .home-body{
+//         height: 200vh;
+//     }
+// }
+@media only screen and (min-height: 950px) {
+    .home-body{
+        height: 180vh;
+    }
+}
+@media only screen and (min-height: 1050px) {
+    .home-body{
+        height: 150vh;
+    }
+}
+@media only screen and (min-height: 1150px) {
+    .home-body{
+        height: 120vh;
     }
 }
