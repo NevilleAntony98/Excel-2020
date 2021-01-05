@@ -40,7 +40,11 @@ const RegisterButton = ({competition, hasRegistered, setHasRegistered, setActive
   const onRegisterButtonClicked = () => {
     if (!competition.isTeam) {
       if (!hasRegistered) {
-        alert('Once registered, the process cannot be undone.');
+        if (!window.confirm('Are you sure you want to register? This cannot be done')) {
+          return;
+        } else {
+          onRegisterClicked();
+        }
       } else {
         onRegisterClicked();
       }
