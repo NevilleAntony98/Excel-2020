@@ -11,10 +11,26 @@ export default class AuthHelper {
         return JSON.parse(window.localStorage.getItem("refresh_token"))
     }
 
+    static getCookie = (cname) => {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) === ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) === 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
     static aysncGetAccessToken = async () => {
-        const cookie = document.cookie
-        if (cookie != null && cookie !== "")
-            return cookie.split("=")[1]
+        const cookie = this.getCookie("access_token")
+        if (cookie != null)
+            return cookie
 
         // Access token is null so try to fetch access token
         let access_token = await this.asyncFetchAcessToken()
