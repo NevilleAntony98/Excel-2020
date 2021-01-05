@@ -355,6 +355,13 @@
   .desktop-logo{
     opacity: 0;
   }
+  .glow{
+    transform-style: flat;
+    position: absolute;
+    width: 500px;
+    left: 9%;
+    top: 36%;
+  }
   .tagline{
     display: none;
   }
