@@ -45,3 +45,15 @@
 .bottomBarLink {
   padding: 15px 20px;
 }
+
+@media screen and (max-width:334px){
+  .bottombarHomeContainer{
+    height: 50px;
+    width: 50px;
+    .bottombarHomeIcon {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
+}
