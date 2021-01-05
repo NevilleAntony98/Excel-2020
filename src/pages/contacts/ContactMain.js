@@ -3,7 +3,7 @@ import ContactCard from './ContactCard';
 import './ContactMain.scss';
 
 import Amal from '../../img/amal.jpg'
-import Ameesh from '../../img/ameesh.jpeg'
+import Ameesh from '../../img/Ameesh.jpg'
 import Jewel from '../../img/jewel.jpg'
 import Menny from '../../img/Menny.jpg'
 import Ajesh from '../../img/Ajesh.jpg'
