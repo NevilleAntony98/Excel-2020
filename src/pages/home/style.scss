@@ -290,7 +290,7 @@
 @media only screen and (max-width: 600px) {
     .home-legacy{
         transform: translateX(5.5%);
-        top: 100%;
+        top: 100vh;
         width: 90%;
         padding: 50px 0px 100px 0px;
         .legacy-container{
@@ -351,7 +351,7 @@
 @media only screen and (max-width: 350px) {
     .home-legacy{
         transform: translateX(5.5%);
-        top: 45%;
+        top: 100vh;
         width: 90%;
         padding: 50px 0px 100px 0px;
         .legacy-container{
@@ -412,16 +412,16 @@
   }
   
 }
-@media only screen and (min-height: 750px) {
-    .home-body{
-        height: 220vh;
-    }
-}
-@media only screen and (min-height: 850px) {
-    .home-body{
-        height: 200vh;
-    }
-}
+// @media only screen and (min-height: 750px) {
+//     .home-body{
+//         height: 220vh;
+//     }
+// }
+// @media only screen and (min-height: 850px) {
+//     .home-body{
+//         height: 200vh;
+//     }
+// }
 @media only screen and (min-height: 950px) {
     .home-body{
         height: 180vh;
