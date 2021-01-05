@@ -29,7 +29,7 @@ export default class AuthHelper {
 
     static aysncGetAccessToken = async () => {
         const cookie = this.getCookie("access_token")
-        if (cookie != null)
+        if (cookie != null && cookie !== "")
             return cookie
 
         // Access token is null so try to fetch access token
