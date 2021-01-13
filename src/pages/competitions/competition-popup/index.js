@@ -34,6 +34,10 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
     //     return string.replaceAll('\\\\n', '\n')
     //     }
     // }
+    var entry = competition.entryFee + ' /-';
+    if (competition.entryFee === null){
+        entry = "Free"
+    }
 
     const AboutSection = () => {
         return (
@@ -61,13 +65,15 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
                     </span>}
                     </div>
                     <div className="about-extra-content" >
-                    {competition.datetime && <span className="venue">
+                    {<span className="venue">
                         {/* <img src={clock_icon} alt="time"></img> */}
                         <div className="about-extra-header">
-                            Platform
+                            Entry Fee
                         </div>
                         {/* <span style={{marginLeft:"5px"}}>{dayjs(competition.datetime).format('mm:ss a')}</span> */}
-                        <span>{competition.venue}</span>
+                        <span>
+                            {entry}
+                        </span>
                     </span>}
                     </div>
                 </div>
