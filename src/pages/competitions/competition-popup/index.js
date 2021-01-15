@@ -144,8 +144,8 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
                     <a href={competition.registrationLink} className="event-anchor-tag" target="_blank" rel="noreferrer">
                         <button className="event-register-button">{competition.button}</button>
                     </a>}
-                    {competition.needRegistration && competition.registrationOpen && !competition.isTeam && <div className="alt-register">
-                        <span> !! Once registered, the process cannot be undone. </span>
+                    {competition.needRegistration && competition.registrationOpen && <div className="alt-register">
+                        <span> Or Use the <a href="https://bit.ly/Excel2020app" target="_blank" rel="noreferrer" style={{textDecoration:"underline",color:"white"}}>Excel App</a></span>
                     </div>}
                 </div>
                 <div className="popup-stack-switcher">
