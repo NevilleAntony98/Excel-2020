@@ -145,7 +145,7 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
                         <button className="event-register-button">{competition.button}</button>
                     </a>}
                     {competition.needRegistration && competition.registrationOpen && <div className="alt-register">
-                        <span> Or Use the <a href="https://bit.ly/Excel2020app" target="_blank" rel="noreferrer" style={{textDecoration:"underline",color:"white"}}>Excel App</a></span>
+                        <span> Or Use the <a href="https://play.google.com/store/apps/details?id=org.excelmec" target="_blank" rel="noreferrer" style={{textDecoration:"underline",color:"white"}}>Excel App</a></span>
                     </div>}
                 </div>
                 <div className="popup-stack-switcher">
