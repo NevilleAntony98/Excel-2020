@@ -134,6 +134,19 @@
             width: 250px;
             margin: 40px;
         }
+        // .media {
+        //     width: 200px;
+        //     height: 100px;
+        //     @include tablet-view {
+        //         width: 200px;
+        //         height: 100px;
+        //     }
+        //     @include mobile-view {
+        //         width: 130px !important;
+        //         height: 60px;
+        //     }
+        //     padding: 10px 0;
+        // }
     }
     .previous-sites{
         margin: 0  auto;
