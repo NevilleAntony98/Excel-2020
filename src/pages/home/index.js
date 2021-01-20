@@ -11,7 +11,8 @@ import excel2016 from '../../assets/png/excel2016.png';
 import excel2017 from '../../assets/png/excel2017.png';
 import excel2018 from '../../assets/png/excel2018.png';
 import excel2019 from '../../assets/png/excel2019.png';
-import excel2020withtext from '../../assets/png/excel2020withtext.png';
+// import excel2020withtext from '../../assets/png/excel2020withtext.png';
+import media from '../../assets/png/24 NEWS.png';
 import calendar from '../../assets/svg/calendar.svg';
 import location from '../../assets/svg/pin.svg';
 export default class Home extends Component {
@@ -64,7 +65,7 @@ export default class Home extends Component {
               </div>
               <div className="college-excel-logo">
                 <a href="http://mec.ac.in/" target="_blank" rel="noreferrer"><img src={meclogo} alt=""/></a>
-                <a href="http://excelmec.org"><img src={excel2020withtext} alt=""/></a>
+                <a href="https://www.twentyfournews.com/" target="_blank" rel="noreferrer" className="media"><img src={media} alt="" /></a>
               </div>
               <div className="previous-sites">
                 <a href="https://2019.excelmec.org/#/" target="_blank" rel="noreferrer"><img src={excel2019} alt=""/></a>
