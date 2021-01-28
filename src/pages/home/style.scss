@@ -130,17 +130,39 @@
         justify-content: center;
         align-items: center;
         align-content: center;
+        padding-bottom: 10px;
         img{
             width: 250px;
             margin: 40px;
         }
-        // .media {
-        //     width: 200px;
-        //     height: 100px;
-        //     @include tablet-view {
-        //         width: 200px;
-        //         height: 100px;
-        //     }
+        .media {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            // color: white;
+            text-decoration-color: red;
+            img{
+                margin-bottom: 10px;
+            }
+            .media-partner{
+                color: white;
+                text-decoration: underline;
+                text-decoration-color: #02011f;
+                @include mobile-view{
+                    font-size: 13px;
+                }
+                &:hover{
+                    text-decoration-color: white;
+                }
+            }
+            // width: 200px;
+            // height: 100px;
+        }
+            // @include tablet-view {
+            //     width: 200px;
+            //     height: 100px;
+            // }
         //     @include mobile-view {
         //         width: 130px !important;
         //         height: 60px;
