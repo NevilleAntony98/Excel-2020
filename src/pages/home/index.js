@@ -65,7 +65,7 @@ export default class Home extends Component {
               </div>
               <div className="college-excel-logo">
                 <a href="http://mec.ac.in/" target="_blank" rel="noreferrer"><img src={meclogo} alt=""/></a>
-                <a href="https://www.twentyfournews.com/" target="_blank" rel="noreferrer" className="media"><img src={media} alt="" /></a>
+                  <a href="https://www.twentyfournews.com/" target="_blank" rel="noreferrer"><div className="media"><img src={media} alt="" /><span className="media-partner">Media Partner</span></div></a>
               </div>
               <div className="previous-sites">
                 <a href="https://2019.excelmec.org/#/" target="_blank" rel="noreferrer"><img src={excel2019} alt=""/></a>
