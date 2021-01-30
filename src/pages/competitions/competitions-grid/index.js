@@ -1,10 +1,12 @@
 import {Component} from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import DropDown from 'react-dropdown';
 
 import Loader from '../../../components/Loader';
 import DeadEnd from '../../../components/DeadEnd';
 import CompetitionCard from '../competition-card';
+import competitionsjson from '../../../data/competitons.json';
+import constantsjson from '../../../data/constants.json';
 
 import 'react-dropdown/style.css';
 import './index.scss';
@@ -34,43 +36,44 @@ export default class CompetitionsGrid extends Component {
     this.categoryOptions = ['All'];
   }
 
-  getCompetitions = async () => {
-    let competitionsData = []
+  // getCompetitions = async () => {
+  //   let competitionsData = []
 
-    const data = await axios.get('https://events.excelmec.org/events/type/competition')
-    let promises = []
+  //   const data = await axios.get('https://events.excelmec.org/events/type/competition')
+  //   let promises = []
 
-    if (data.status === 200) {
-      data.data.forEach((event) => {
-        promises.push(axios.get("https://events.excelmec.org/events/" + event.id))
-      })
+  //   if (data.status === 200) {
+  //     data.data.forEach((event) => {
+  //       promises.push(axios.get("https://events.excelmec.org/events/" + event.id))
+  //     })
 
-      let responses = await Promise.all(promises)
-      responses.forEach(response => competitionsData.push(response.data))
-    }
+  //     let responses = await Promise.all(promises)
+  //     responses.forEach(response => competitionsData.push(response.data))
+  //   }
 
-    return competitionsData
-  }
+  //   return competitionsData
+  // }
 
   getCategories = async () => {
     let categories = []
-    let res = await axios.get('https://events.excelmec.org/constants')
+    // let res = await axios.get('https://events.excelmec.org/constants')
+    // let res = constantsjson
 
-    if (res.status === 200) {
-      categories = res.data.category
+    // if (res.status === 200) {
+      categories = constantsjson
 
       categories.forEach(category => {
         let words = category.split('_');
         let word = words.map(word => word[0].toUpperCase() + word.slice(1)).join(' ');
         this.categoryOptions.push(word);
       })
-    }
+    // }
 
     return categories
   }
 
   async componentDidMount() {
-    const competitions = await this.getCompetitions()
+    const competitions = competitionsjson
     const categories = await this.getCategories()
 
     this.setState({

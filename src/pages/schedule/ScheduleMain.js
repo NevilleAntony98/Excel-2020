@@ -1,11 +1,13 @@
 import {useEffect, useState} from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import Popup from 'reactjs-popup';
 
 import ScheduleCard from './ScheduleCard';
 import SchedulePopup from './SchedulePopup';
 import DeadEnd from '../../components/DeadEnd';
 import Loader from '../../components/Loader';
+import schedulejson from '../../data/schedule.json';
+import constantsjson from '../../data/constants.json';
 
 import filterIcon from '../../assets/svg/filter.svg';
 import './ScheduleMain.scss';
@@ -23,19 +25,22 @@ const ScheduleMain = () => {
   });
 
   useEffect(() => {
-    axios
-      .all([
-        axios.get('https://events.excelmec.org/schedule'),
-        axios.get('https://events.excelmec.org/constants')
-      ])
-      .then(
-        axios.spread((response1, response2) => {
-          setScheduleData(response1.data);
-          setFilters(response2.data);
-          setIsLoading(false);
-        })
-      )
-      .catch(e => console.log(e));
+    // axios
+    //   .all([
+    //     axios.get('https://events.excelmec.org/schedule'),
+    //     axios.get('https://events.excelmec.org/constants')
+    //   ])
+    //   .then(
+    //     axios.spread((response1, response2) => {
+    //       setScheduleData(response1.data);
+    //       setFilters(response2.data);
+    //       setIsLoading(false);
+    //     })
+    //   )
+      setScheduleData(schedulejson);
+      setFilters(constantsjson);
+      setIsLoading(false);
+      // .catch(e => console.log(e));
   }, []);
 
   useEffect(() => {
