@@ -211,7 +211,7 @@
     {
       "id": 33,
       "name": "Black Swan",
-      "icon": "/src/img/33.png",
+      "icon": "./img/33.png",
       "categoryId": 0,
       "category": "non_tech",
       "eventTypeId": 1,
