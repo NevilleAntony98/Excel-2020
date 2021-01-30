@@ -7,7 +7,7 @@ import SchedulePopup from './SchedulePopup';
 import DeadEnd from '../../components/DeadEnd';
 import Loader from '../../components/Loader';
 import schedulejson from '../../data/schedule.json';
-import constantsjson from '../../data/constants.json';
+import constantsjson from '../../data/scheduleconstants.json';
 
 import filterIcon from '../../assets/svg/filter.svg';
 import './ScheduleMain.scss';
