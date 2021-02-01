@@ -1,9 +1,10 @@
 import {useEffect, useState} from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 
 import EventCard from '../event-card';
 import DeadEnd from '../../../components/DeadEnd';
 import Loader from '../../../components/Loader';
+import eventsjson from '../../../data/events.json';
 
 import './index.scss';
 
@@ -12,27 +13,29 @@ const EventsContainer = () => {
   const [eventsData, setEventsData] = useState([]);
 
   useEffect(() => {
-    axios
-      .get('https://events.excelmec.org/events')
-      .then(res => {
-        let events = res.data.filter(event => event.eventType !== 'competition');
+    // axios
+    //   .get('https://events.excelmec.org/events')
+    //   .then(res => {
+    //     let events = res.data.filter(event => event.eventType !== 'competition');
 
-        let promises = [];
-        events.forEach(event => {
-          promises.push(axios.get('https://events.excelmec.org/events/' + event.id));
-        });
+    //     let promises = [];
+    //     events.forEach(event => {
+    //       promises.push(axios.get('https://events.excelmec.org/events/' + event.id));
+    //     });
 
-        Promise.all(promises).then(responses => {
-          let eventsData = [];
-          responses.forEach(response => {
-            eventsData.push(response.data);
-          });
+    //     Promise.all(promises).then(responses => {
+    //       let eventsData = [];
+    //       responses.forEach(response => {
+    //         eventsData.push(response.data);
+    //       });
 
-          setEventsData(eventsData);
-          setIsLoading(false);
-        });
-      })
-      .catch(err => console.log(err));
+    //       setEventsData(eventsjson);
+    //       setIsLoading(false);
+    //     });
+    //   })
+      setEventsData(eventsjson);
+      setIsLoading(false);
+      // .catch(err => console.log(err));
   }, []);
 
   return isLoading ? (
