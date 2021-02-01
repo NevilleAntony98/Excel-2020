@@ -1,0 +1,19 @@
+{
+    "category": [
+      "non_tech",
+      "computer_science",
+      "general_tech"
+    ],
+    "eventType": [
+      "general",
+      "competition",
+      "workshop",
+      "talk",
+      "conference"
+    ],
+    "eventStatus": [
+      "yet_to_start",
+      "started",
+      "finished"
+    ]
+  }

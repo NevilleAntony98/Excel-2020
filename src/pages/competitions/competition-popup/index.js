@@ -121,6 +121,14 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
         )
     }
 
+    const ResultsSection = () => {
+        return (
+            <div className="section">
+                {competition.result}
+            </div>
+        )
+    }
+
     return (
         <div className="popup-bg">
         <div className="popup-content-container">
@@ -154,6 +162,7 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
                         <li className={activeSection === "Format" ? "active" : ""} onClick={() => setActiveSection("Format")}>Format</li>
                         <li className={activeSection === "Rules" ? "active" : ""} onClick={() => setActiveSection("Rules")}>Rules</li>
                         <li className={activeSection === "Contact" ? "active" : ""} onClick={() => setActiveSection("Contact")}>Contact</li>
+                        <li className={activeSection === "Results" ? "active" : ""} onClick={() => setActiveSection("Results")}>Results</li>
                     </ul>
                 </div>
             </div>
@@ -171,7 +180,8 @@ const CompetitionPopup = ({ competition, closeFunc }) => {
                             competition={competition}
                             setHasRegistered={setHasRegistered}
                             setActiveSection={setActiveSection} />,
-                        "Manage": <ManageTeamSection competition={competition} />
+                        "Manage": <ManageTeamSection competition={competition} />,
+                        "Results":<ResultsSection />
                     }[activeSection]
                 }
             </div>
